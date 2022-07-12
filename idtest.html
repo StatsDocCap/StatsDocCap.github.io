@@ -121,7 +121,7 @@ function identify(n) {
 	if ( attdate2000 < startdate2000 || classDay > 25 ) {	window.alert("Attendance may only be posted on a day class is scheduled to meet."); 
 								document.getElementById("SubmitButton").disabled = true;
 								window.close();}
-	var dateTesterA = (attdate2000 - 2) / 7;
+	var dateTesterA = (attdate2000 - startdate2000) / 7;
 	var dateTesteeA = Math.floor(dateTesterA);
 	var dateTesterB = (attdate2000 - 3) / 7;
 	var dateTesteeB = Math.floor(dateTesterB);
@@ -263,9 +263,9 @@ if ( NUser === 1 ) { newUser(uid); }
 document.getElementById("dev").value = deviceID;
 document.getElementById("fnm").value = fname;
 document.getElementById("lnm").value = lname;
-document.getElementById("id").value = id;
-document.getElementById("crs").value = crs;
-document.getElementById("date").value = date;
+document.getElementById("id").value = idn;
+document.getElementById("crs").value = courseNumber;
+document.getElementById("date").value = attdate;
 document.getElementById("dst").value = distance;
 document.getElementById("urldate").value = encodedclassday;} 
 
