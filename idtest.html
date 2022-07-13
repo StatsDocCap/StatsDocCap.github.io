@@ -48,17 +48,23 @@
 
 </body>
 
-<script type="text/JavaScript">
-
-const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
+<script>
+  // Initialize the agent at application startup.
+  const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
     .then(FingerprintJS => FingerprintJS.load())
 
+  // Get the visitor identifier when you need it.
   fpPromise
     .then(fp => fp.get())
     .then(result => {
+      // This is the visitor identifier:
       const visitorId = result.visitorId
       console.log(visitorId)
     })
+</script>
+
+<script type="text/JavaScript">
+
 
 	navigator.geolocation.getCurrentPosition(showPosition); 
 
