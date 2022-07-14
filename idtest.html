@@ -261,10 +261,14 @@ if ( NUser === 1 ) { newUser(uid); }
 	document.getElementById("MagicButton").hidden = true;
 	document.getElementById("SubmitButton").hidden = false;
 
+   // Initialize the agent at application startup.
+  const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
+    .then(FingerprintJS => FingerprintJS.load())
+
   // Get the visitor identifier when you need it.
   fpPromise
     .then(fp => fp.get())
-    .then(result => console.log(result.visitorId))
+    .then(result => console.log(result.visitorId));
 document.getElementById("Title").innerHTML=visitorID;
 document.getElementById("dev").value = deviceID;
 document.getElementById("fnm").value = firstname;
