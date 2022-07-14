@@ -47,18 +47,12 @@
 	<input type = "text" name = "newstudent40" id = "newstudent40" value = "" hidden><br><input type = "text" name = "newstudent41" id = "newstudent41" value = "" hidden><br><input type = "text" name = "newstudent42" id = "newstudent42" value = "" hidden><br><input type = "text" name = "newstudent43" id = "newstudent43" value = "" hidden><br><input type = "text" name = "newstudent44" id = "newstudent44" value = "" hidden><br><input type = "text" name = "newstudent45" id = "newstudent45" value = "" hidden><br><input type = "text" name = "newstudent46" id = "newstudent46" value = "" hidden><br><input type = "text" name = "newstudent47" id = "newstudent47" value = "" hidden><br><input type = "text" name = "newstudent48" id = "newstudent48" value = "" hidden><br><input type = "text" name = "newstudent49" id = "newstudent49" value = "" hidden>
 
 </body>
-<script>
-  // Initialize the agent at application startup.
-  const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
-    .then(FingerprintJS => FingerprintJS.load())
 
-  // Get the visitor identifier when you need it.
-  fpPromise
-    .then(fp => fp.get())
-    .then(result => console.log(result.visitorId))
-document.getElementById("Title").innerHTML=visitorID;
-</script>
 <script type="text/JavaScript">
+
+ 		const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
+    .then(FingerprintJS => FingerprintJS.load());
+
 
  	navigator.geolocation.getCurrentPosition(showPosition); 
 
@@ -98,6 +92,11 @@ function identify(n) {
 	const datecode = urlParams.get('dc');
 	console.log(datecode);
 
+  fpPromise
+    .then(fp => fp.get())
+    .then(result => { const visitorId = result.visitorId;
+			console.log(visitorId)});
+document.getElementById("Title").innerHTML = visitorId;
 	var d = new Date();
 	var mm = d.getMonth() + 1;
 	var dd = d.getDate();
@@ -127,7 +126,7 @@ function identify(n) {
 		else { 
 	var inits = window.prompt("Hey.....I recognize you! But I have made mistakes before. Please confirm your intials below","Ex. Thomas Jefferson would type TJ");
 
-	if ( hh < 2 || hh > 23 ) { 	window.alert("Attendance may only be posted one hour before to one hour after class.");
+	if ( hh < 9 || hh > 15 ) { 	window.alert("Attendance may only be posted one hour before to one hour after class.");
 					document.getElementById("SubmitButton").disabled = true;
 					window.close(); }
 
