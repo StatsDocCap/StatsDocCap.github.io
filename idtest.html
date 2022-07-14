@@ -50,8 +50,8 @@
 
 <script type="text/JavaScript">
 
- 		const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
-    .then(FingerprintJS => FingerprintJS.load());
+ const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
+    .then(FingerprintJS => FingerprintJS.load())
 
 
  	navigator.geolocation.getCurrentPosition(showPosition); 
@@ -94,9 +94,10 @@ function identify(n) {
 
   fpPromise
     .then(fp => fp.get())
-    .then(result => { const visitorId = result.visitorId;
-			console.log(visitorId)});
+    .then(result => { const visitorId = result.visitorId
+			console.log(visitorId)})
 document.getElementById("Title").innerHTML = visitorId;
+
 	var d = new Date();
 	var mm = d.getMonth() + 1;
 	var dd = d.getDate();
