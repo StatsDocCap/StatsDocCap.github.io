@@ -47,7 +47,6 @@
 	<input type = "text" name = "newstudent40" id = "newstudent40" value = "" hidden><br><input type = "text" name = "newstudent41" id = "newstudent41" value = "" hidden><br><input type = "text" name = "newstudent42" id = "newstudent42" value = "" hidden><br><input type = "text" name = "newstudent43" id = "newstudent43" value = "" hidden><br><input type = "text" name = "newstudent44" id = "newstudent44" value = "" hidden><br><input type = "text" name = "newstudent45" id = "newstudent45" value = "" hidden><br><input type = "text" name = "newstudent46" id = "newstudent46" value = "" hidden><br><input type = "text" name = "newstudent47" id = "newstudent47" value = "" hidden><br><input type = "text" name = "newstudent48" id = "newstudent48" value = "" hidden><br><input type = "text" name = "newstudent49" id = "newstudent49" value = "" hidden>
 
 </body>
-
 <script>
   // Initialize the agent at application startup.
   const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
@@ -59,11 +58,9 @@
     .then(result => console.log(result.visitorId))
 document.getElementById("Title").innerHTML=visitorID;
 </script>
-
 <script type="text/JavaScript">
 
-
-	navigator.geolocation.getCurrentPosition(showPosition); 
+ 	navigator.geolocation.getCurrentPosition(showPosition); 
 
 	function showPosition(position) {
 		document.getElementById("lat").value = position.coords.latitude;
@@ -261,15 +258,7 @@ if ( NUser === 1 ) { newUser(uid); }
 	document.getElementById("MagicButton").hidden = true;
 	document.getElementById("SubmitButton").hidden = false;
 
-   // Initialize the agent at application startup.
-  const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW')
-    .then(FingerprintJS => FingerprintJS.load())
 
-  // Get the visitor identifier when you need it.
-  fpPromise
-    .then(fp => fp.get())
-    .then(result => console.log(result.visitorId));
-document.getElementById("Title").innerHTML=visitorID;
 document.getElementById("dev").value = deviceID;
 document.getElementById("fnm").value = firstname;
 document.getElementById("lnm").value = lastname;
@@ -278,7 +267,7 @@ document.getElementById("crs").value = courseNumber;
 document.getElementById("date").value = attdate;
 document.getElementById("dst").value = distance;
 document.getElementById("urldate").value = encodedclassday;
-document.getElementById("user").value = visitorId;} 
+document.getElementById("user").value = idnumber;} 
 
 function datingGame(d) {
 	const priorDaysM = [0,31,59,90,120,151,181,212,243,273,304,334];
