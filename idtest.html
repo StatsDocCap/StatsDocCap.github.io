@@ -10,14 +10,15 @@
 <p1 id="course"></p1><input type="button" name="new1314" id="NC1314" value="MATH 1314" onclick="CourseAdd(1314);" hidden=""><input type="button" name="new1342" id="NC1342" value="MATH 1342" onclick="CourseAdd(1342);" hidden=""><input type="button" name="new9999" id="NC9999" value="Both Courses" onclick="CourseAdd(9999);" hidden=""><input type="text" name="NCN" id="CN" hidden=""><br>
 <p1 id="location"></p1><br><br>
 
-<form id="attForm" method="post" action="https://script.google.com/macros/s/AKfycbz3NGZPDM_m_hiSH_XXRIId3W_aCXCCYFjo_o4EaWDFygvq5vC11A5J_kgnIfcDWYsPwQ/exec"><input type="hidden" name="dev" id="dev" value="05010064649302010010193001080192024">
-<input type="hidden" name="fnm" id="fnm" value="MATTHEW">
-<input type="hidden" name="lnm" id="lnm" value="CAPUTO">
-<input type="hidden" name="id" id="id" value="01234567">
-<input type="hidden" name="crs" id="crs" value="1314">
-<input type="hidden" name="date" id="date" value="07142022">
-<input type="hidden" name="lat" id="lat" value="29.7236419">
-<input type="hidden" name="lon" id="lon" value="-95.3454292">
+<form id="attForm" method="post" action="https://script.google.com/macros/s/AKfycbz3NGZPDM_m_hiSH_XXRIId3W_aCXCCYFjo_o4EaWDFygvq5vC11A5J_kgnIfcDWYsPwQ/exec">
+<input type="hidden" name="dev" id="dev" value="">
+<input type="hidden" name="fnm" id="fnm" value="">
+<input type="hidden" name="lnm" id="lnm" value="">
+<input type="hidden" name="id" id="id" value="">
+<input type="hidden" name="crs" id="crs" value="">
+<input type="hidden" name="date" id="date" value="">
+<input type="hidden" name="lat" id="lat" value="">
+<input type="hidden" name="lon" id="lon" value="">
 <input type="hidden" name="dst" id="dst" value="">
 <input type="hidden" name="user" id="user" value="">
 <input type="hidden" name="urldate" id="urldate" value="">
@@ -225,9 +226,9 @@ document.getElementById("lnm").value = lastname;
 document.getElementById("id").value = idnumber;
 document.getElementById("crs").value = courseNumber;
 document.getElementById("date").value = attdate;
-document.getElementById("dst").value = distance;
-document.getElementById("urldate").value = result.visitorId;
-document.getElementById("user").value = idnumber;} 
+document.getElementById("dst").value = dist;
+document.getElementById("urldate").value = encodedclassday;
+document.getElementById("user").value = result.visitorId;} 
 
 function datingGame(d) {
 	const priorDaysM = [0,31,59,90,120,151,181,212,243,273,304,334];
