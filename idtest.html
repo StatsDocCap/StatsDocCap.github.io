@@ -71,7 +71,7 @@ var encodedclassday;
  const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW') 
   .then(FingerprintJS => FingerprintJS.load()); 
 
-document.querySelector('#MagicButton').addEventListener('click', async () => { 
+document.querySelector("#MagicButton").addEventListener("click", async () => { 
   const fp = await fpPromise; 
   const result = await fp.get(); 
   document.getElementById("Title").innerHTML = result.visitorId;
@@ -121,7 +121,7 @@ function identify(n) {
 
 		else { 
 
-	if ( hh < 9 || hh > 23 ) { 	window.alert("Attendance may only be posted one hour before to one hour after class.");
+	if ( hh < 0 || hh > 24 ) { 	window.alert("Attendance may only be posted one hour before to one hour after class.");
 					document.getElementById("SubmitButton").disabled = true;
 					window.close(); }
 
