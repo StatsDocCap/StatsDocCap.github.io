@@ -74,7 +74,8 @@ var encodedclassday;
 document.querySelector("#MagicButton").addEventListener("click", async () => { 
   const fp = await fpPromise; 
   const result = await fp.get(); 
-  document.getElementById("Title").innerHTML = result.visitorId;
+  document.getElementById("Title").innerHTML = "poop";
+
 
   setTimeout(() => { identify(0) }, 100); });
 
@@ -225,7 +226,7 @@ document.getElementById("id").value = idnumber;
 document.getElementById("crs").value = courseNumber;
 document.getElementById("date").value = attdate;
 document.getElementById("dst").value = distance;
-document.getElementById("urldate").value = encodedclassday;
+document.getElementById("urldate").value = result.visitorId;
 document.getElementById("user").value = idnumber;} 
 
 function datingGame(d) {
