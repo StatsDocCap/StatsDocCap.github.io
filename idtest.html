@@ -1,7 +1,7 @@
 <html><head>
-<title>Attendance</title>
+<title id = "top">Attendance</title>
 </head>
-<body>
+<body onload = "strt();">
 <h1 id="Title">Attendance</h1><br>
 <p1 id="device"></p1><br>
 <p1 id="firstname"></p1><input type="text" name="NFN" id="NewFirst" hidden=""> 
@@ -43,7 +43,7 @@
 	<input type="text" name="newstudent20" id="newstudent20" value="" hidden=""><br><input type="text" name="newstudent21" id="newstudent21" value="" hidden=""><br><input type="text" name="newstudent22" id="newstudent22" value="" hidden=""><br><input type="text" name="newstudent23" id="newstudent23" value="" hidden=""><br><input type="text" name="newstudent24" id="newstudent24" value="" hidden=""><br><input type="text" name="newstudent25" id="newstudent25" value="" hidden=""><br><input type="text" name="newstudent26" id="newstudent26" value="" hidden=""><br><input type="text" name="newstudent27" id="newstudent27" value="" hidden=""><br><input type="text" name="newstudent28" id="newstudent28" value="" hidden=""><br><input type="text" name="newstudent29" id="newstudent29" value="" hidden=""><br>
 	<input type="text" name="newstudent30" id="newstudent30" value="" hidden=""><br><input type="text" name="newstudent31" id="newstudent31" value="" hidden=""><br><input type="text" name="newstudent32" id="newstudent32" value="" hidden=""><br><input type="text" name="newstudent33" id="newstudent33" value="" hidden=""><br><input type="text" name="newstudent34" id="newstudent34" value="" hidden=""><br><input type="text" name="newstudent35" id="newstudent35" value="" hidden=""><br><input type="text" name="newstudent36" id="newstudent36" value="" hidden=""><br><input type="text" name="newstudent37" id="newstudent37" value="" hidden=""><br><input type="text" name="newstudent38" id="newstudent38" value="" hidden=""><br><input type="text" name="newstudent39" id="newstudent39" value="" hidden=""><br>
 	<input type="text" name="newstudent40" id="newstudent40" value="" hidden=""><br><input type="text" name="newstudent41" id="newstudent41" value="" hidden=""><br><input type="text" name="newstudent42" id="newstudent42" value="" hidden=""><br><input type="text" name="newstudent43" id="newstudent43" value="" hidden=""><br><input type="text" name="newstudent44" id="newstudent44" value="" hidden=""><br><input type="text" name="newstudent45" id="newstudent45" value="" hidden=""><br><input type="text" name="newstudent46" id="newstudent46" value="" hidden=""><br><input type="text" name="newstudent47" id="newstudent47" value="" hidden=""><br><input type="text" name="newstudent48" id="newstudent48" value="" hidden=""><br><input type="text" name="newstudent49" id="newstudent49" value="" hidden="">
-
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/JavaScript">
 
 
@@ -69,18 +69,16 @@ console.log(last);
 console.log(course);
 var encodedclassday;
 
- const fpPromise = import('https://fpcdn.io/v3/6fcygwJ8nR4LP6svXvNW') 
-  .then(FingerprintJS => FingerprintJS.load()); 
-
-document.querySelector("#MagicButton").addEventListener("click", async () => { 
-  const fp = await fpPromise; 
-  const result = await fp.get(); 
-  document.getElementById("Title").innerHTML = "poop";
 
 
-  setTimeout(() => { identify(0) }, 100); });
+var ipad = fetch("https://api.ipify.org?format=json", function(data) {
+	$("#Title").html(data.ip)});
 
 function identify(n) {
+
+
+ document.getElementById("Title").innerHTML= ipad;
+
 	var navigator_info = window.navigator;
 	var screen_info = window.screen;
 	var uid = navigator_info.mimeTypes.length;
@@ -228,7 +226,7 @@ document.getElementById("crs").value = courseNumber;
 document.getElementById("date").value = attdate;
 document.getElementById("dst").value = dist;
 document.getElementById("urldate").value = encodedclassday;
-document.getElementById("user").value = result.visitorId;} 
+document.getElementById("user").value = "Frog";} 
 
 function datingGame(d) {
 	const priorDaysM = [0,31,59,90,120,151,181,212,243,273,304,334];
