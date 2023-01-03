@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Check In</title>
+<script type = "text/javascript" src = "https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id="Title1">Check In to the Test</font><br>
+<font face = "Comic Sans MS" size = "4" id="Title2">(You will need your photo ID, either your UH ID card or<br>a valid state-issued ID card, such as a driver's license to Check In.)</font><br><br>
+<font face = "Luminari" size = "5" id="Step"><b>Step 1:</b> Please enter your Student ID Number, and click &quot;Next Step&quot;<br>You will be prompted to give permission for this page to use your webcam, and then your camera.  Accept both of these.</font><br><br>
+<font face = "Sans-serif" size = "5" id = "tagID">Enter your Student ID Number Here: </font><input type = "text" name = "InputID" id = "InputID"><input type = "button" name = "StartCam" id = "StartCam" value = "Next Step" onclick = "cameraStart();"> <br>
+<video id = "webcam" autoplay playsinline width = "640" height = "480"></video>
+<canvas id = "canvas" class = "d-none"></canvas><br>
+<input type = "button" name = "TakePic" id = "TakePic" value = "Capture Face and ID" onclick = "fotoSnap();" disabled><br>
+<font face = "Sans-serif" size = "5" id = "codeTag"></font><font face = "Monospace" size = "7" id="AttCode"></font><br>
+<input type = "button" name = "IDReady" id = "IDReady" value = "Accept Picture and Create Code" onclick = "codeDisplay();" disabled>
+<input type = "hidden" name = "IDStore" id = "IDStore"><br>
+<input type = "button" name = "StartNew" id = "StartNew" value = "Start Over" onclick = "location.reload();">
+</body>
+
+<script type = "text/JavaScript">
+
+const numbers = ["J122050098","F074024050","O017011020","G099096137","L101100068","M001097042","K006110139","M083111111","B098122013","C035008000","M122011050","N043115061","M019057139","B139022107","O069101088","N109045051","T148083077","N005029009","G118139029","K028029117","O102032028","B045114106","A094042102","O006065106","P022019140","K019043019","S028085017","C023017111","R101122107","R080052093","M043097011","N128141085","R017140026","A094128045","H078065013","G042100017","N011080088","S005131148","D062018031","F060010016","H114068094","M011026099","T109057017","R001040022","T109102040","F057010120","R020037115","P148089118","K000100012","L006074036","O134060032","O017064067","O034008037","G043084131","T019067081","B023114031","L085036013","K102006116","T020016116","D067108114","E123056095","I118016152","D139128050","Q006123013","B057014045","T001132064","S134110002","T028108068","M106041037","E114110043","E115022034","U073032017","C094113140","N109120028","G096101080","S006031004","P011045024"];
+const lastname = ["017001101011080085","001025085085148001","019028011025005019","020085069005101002","122134148148134001022069","106005148148005102","102085148109001019","006102134069128025","080001019001069002","001017005083005109085","001148001069002043001102","069085148001019085","005069101134019085069001","028001134080001019","017102011026","101134019005109001","102085109102134028011005026","019122001019019001","148001122001148","102085128134019069085019","001148148001002001022","022085102134019","102005025005069","019001002001069","069001148001026001102","102011134026","028011005102102001","080085102102005069","002085148148001019109","022001102080134019005026","022001122134","002085001019028","083011","148001019109005102085069","109011019019","001148083005001102","101005080080134080","101085102080134148148085","028011005083001102001","022001011102005102","001109005122011019022134","122134148069085019","069002102005069080002001","028011080134005102102005026","102011006006005102","043001026134","006148085102005069","080102001019","069080005122001102080","128001128001","022001017134005148","122005019109080","101102134017005","001109005025005022134","022085102028001019","102085022005102085","022085022134019","002005019102025","069134022022069","019001102001019028","069002085005128","101001148001017134085069","102085109102134028011005026","001083134148001019","006148085122005102069","028085022128001","019001019069","102085069001102134085","006148085102005069","022001148085019005","028085019026001148005026","080005085","005148022085122001006134","002001083005102080025","102001026001","080002102005001109028134148148","001148022001102001026"];
+const firstname = ["022001080080002005122","006011019022134148085148001","019001080002001019","001001102085019","109001019001","002001019019001002","001148005034001019109102134001","034001083134001019","022005102102134001022","002005019102025","069001102001","020085069002","002001019019001002","022001102134001002","002005148005019","017001134","134069001102005148134","083005102085019134017001","080134020001019134","017002148085005","002001025001","006134085102005148148001","017005017134148134085","019025148001","109001025001019134102001","083134017080085102134001","025001019005080","020085005148","020001017106069085019","148085102005019001","109001102","017002102134069080134001019","109085019","102001019109025","069148085001019","001128134028001134148","134069001128005148148001","006005102019001019109001","022001011102134017134085","001001102085019","001109005122085148005","109005019026005148","001019025001","134019005025109001","020005069069134017001","006001080134022001","102085128005102080085","148134019109069005025","001019080085134019005080080005","148001025001019","102134017001102109085","109001069002134005148148","148005034","005083005148025019","001022001019109001001","020002001134102","102085022001134069001","001102134001019019001","025022085019019134","109002102011083","002011026001134006001","102134001019001","069005128001069080134001019","001025148134019","020001025","022128001","022134102001017148005","148134083134001","106001134148005025","019134001","028148001109025069","005102134017","102001002022001002","022001080080002005122","069002001002102025001102","028102001017005","001019001"];
+const numbersEnd = [];
+const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const symbols = ["&excl;","&#65312;","&num;","&dollar;","&percnt;","&Hat;","&amp;","&ast;","&plus;","&quest;","&apos;","&colon;"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function cameraStart() {
+	document.getElementById("StartCam").disabled = true;
+	document.getElementById("TakePic").disabled = false;
+	document.getElementById("tagID").innerHTML = "You Have Entered:";
+	document.getElementById("Step").innerHTML = "<b>Step 2:</b> Confirm the information above. <br>Next, you must snap a picture of yourself holding your photo ID.<br>Make sure both your face and your ID are visible.";
+	codeCreate();
+	const webcamElement = document.getElementById("webcam");
+	const canvasElement = document.getElementById("canvas");
+	const webcam = new Webcam(webcamElement, 'user',canvasElement);
+	webcam.start().then(result => {console.log("webcam started"); }).catch(err => {console.log(err); }); }
+
+function fotoSnap() {
+	document.getElementById("Step").innerHTML ="<b>Step 3:</b> Does the image on the right show both your face and your ID clearly?<br>If so, click &quot;Accept Picture and Create Code&quot;<br>If not, retake the picture.";
+	const webcamElement = document.getElementById("webcam");
+	const canvasElement = document.getElementById("canvas");
+	const webcam = new Webcam(webcamElement, 'user',canvasElement);
+	var picture = webcam.snap();
+	document.getElementById("TakePic").value = "Retake Picture"; 
+	document.getElementById("IDReady").disabled = false;}
+
+function codeDisplay() {
+	document.getElementById("Step").innerHTML = "Your attendance code is below.<br>It contains 6 numbers, 2 letters and 2 special characters in a random order.<br>Copy it down. You will need it to begin your exam.";
+	document.getElementById("webcam").width = "1";
+	document.getElementById("webcam").height = "1";
+	document.getElementById("TakePic").disabled = "true";
+	document.getElementById("IDReady").disabled = "true";
+	document.getElementById("codeTag").innerHTML = "Your Attendance Code is:";
+	var myCode = document.getElementById("IDStore").value;
+	document.getElementById("AttCode").innerHTML = myCode; }
+
+function codeCreate() {
+	var idTxt = document.getElementById("InputID").value;
+	const idDigs = idTxt.split("");
+	if ( idDigs.length !== 7 ) {	document.getElementById("tagID").innerHTML = document.getElementById("tagID").innerHTML + "<br>You must enter a seven digit student ID Number to proceed.<br><em>You may need to use a zero in front of the number you entered</em>"; }
+	else {	var frst = String(idDigs[3]) + String(idDigs[4]);
+		var scnd = String(idDigs[5]) + String(idDigs[6]);
+		var frenc = numEncode(frst);
+		var scenc = numEncode(scnd);
+		var numberPart = String(frenc) + String(scenc);
+		var classSize = numbers.length;
+		for ( n = 0; n < classSize; n++ ) {
+			const ndigs = numbers[n].split("");
+			numbersEnd[n] = String(ndigs[4])+String(ndigs[5])+String(ndigs[6])+String(ndigs[7])+String(ndigs[8])+String(ndigs[9]); }
+		var encInd = numbersEnd.findIndex( function(n) { return n == numberPart;});
+		var encFName = firstname[encInd];
+		var encLName = lastname[encInd]; 
+		var encID = numbers[encInd];
+		var FrName = letDecode(encFName);
+		var LsName = letDecode(encLName);
+		var IDNum = IdentDecode(encID);
+		if ( String(IDNum) !== idTxt ) { document.getElementById("tagID").innerHTML = "There seems to be a problem.  Ask your instructor for assistance."; }
+		else {	document.getElementById("InputID").disabled = "true";
+			const begin = new Date(); 
+			var mnth = begin.getMonth() + 1;
+			var clday = begin.getDate();
+			var wkday = begin.getDay()+1;
+			var yr = begin.getYear()-100; 
+			document.getElementById("Title1").innerHTML = FrName + " " + LsName;
+			document.getElementById("Title2").innerHTML = "(" + IDNum + ")<br>" + months[mnth-1] + " " + clday + ", 20" + yr;
+			const AttCd = [];
+			var rand1 = Math.floor(Math.random()*2.5);
+			var val1 = Number(idDigs[0]) * 4 + rand1;
+			AttCd[0] = symbols[val1];
+			var rand2a = Math.floor(Math.random()*2.999);
+			var rand2b = Math.floor(Math.random()*4.999);
+			var val2a = Number(idDigs[1]) + Number(idDigs[2]);
+			if ( val2a > 9 ) { var val2b = val2a - 10; }
+			else { var val2b = val2a; }
+			if ( val2b < 6 ) { AttCd[2] = letters[3*val2b+rand2a]; }
+			else { AttCd[2] = letters[2*val2b+rand2b]; }
+			var val3a = Number(idDigs[2]) + wkday;
+			if ( val3a > 9 ) { var val3b = val3a - 10; }
+			else { var val3b = val3a; }
+			if ( val3b < 6 ) { AttCd[3] = letters[3*val3b+rand2a]; }
+			else { AttCd[3] = letters[2*val3b+rand2b]; }
+			var Twodnum1 = String(idDigs[3]) + String(idDigs[4]);
+			var p = numEncode(Twodnum1);
+			var Twodnum2 = String(idDigs[5]) + String(idDigs[6]);
+			var q = numEncode(Twodnum2);
+			var pq = String(p) + String(q);
+			var n1a = String(pq.split("")[0]) + String(pq.split("")[1]);
+			var n2a = String(pq.split("")[2]) + String(pq.split("")[3]);
+			var n3a = String(pq.split("")[4]) + String(pq.split("")[5]);
+			var n1b = Number(n1a) + Number(clday);
+			if ( n1b > 99 ) { var num1 = n1b - 100; }
+			else { var num1 = n1b; }
+			if ( num1 < 10 ) {	AttCd[4] = "0" + String(num1); }
+			else {	AttCd[4] = String(num1); }
+			var n2b = Number(n2a) + Number(mnth);
+			if ( n2b > 99 ) { var num2 = n2b - 100; }
+			else { var num2 = n2b; }
+			if ( num2 < 10 ) {	AttCd[5] = "0" + String(num2); }
+			else {	AttCd[5] = String(num2); }
+			var n3b = Number(n3a) + Number(yr);
+			if ( n3b > 99 ) { var num3 = n3b - 100; }
+			else { var num3 = n3b; }
+			if ( num3 < 10 ) {	AttCd[6] = "0" + String(num3); }
+			else {	AttCd[6] = String(num3); }
+			var randc = Math.floor(Math.random()*12);
+			AttCd[1] = symbols[randc];
+			const codeItems = ["S","S","L","L","N","N","N"];
+			const codeOrder = [];
+			const randNums = [];
+			for ( n = 0;  n < 7; n++ ) { randNums[n] = Math.random(); }
+			for ( m = 0; m < 7; m++ ) {
+				var small = Math.min.apply(null, randNums);
+				var smLoc = randNums.findIndex(function (g) { return g == small; });
+				codeOrder[m] = codeItems[smLoc];
+				randNums[smLoc] = 10; }
+			var Scnt = 0;
+			var Lcnt = 0;
+			var Ncnt = 0;
+			var theCode = "";
+			for ( o = 0; o < 7; o++ ) {
+				if ( codeOrder[o] == "S" ) { 	theCode = theCode + String(AttCd[Scnt]);
+								Scnt = Scnt + 1; }
+				else { if ( codeOrder[o] == "L" ) {	theCode = theCode + String(AttCd[Lcnt + 2]);
+									Lcnt = Lcnt + 1; }
+				else {	theCode = theCode +  String(AttCd[Ncnt + 4]);
+					Ncnt = Ncnt + 1; }}}
+	document.getElementById("IDStore").value = theCode;
+	return null; }}}
+
+function numEncode(k) {
+	var v = Number(k);
+	var Bam = Math.pow(v,7);
+	var Slice = Bam - Math.floor(Bam / 155) * 155;
+	var w = String(Slice);
+	if ( w < 100 ){	if ( w < 10 ) { var rdy = "00" + w; }
+			else { var rdy = "0" + w; }}
+	else { var rdy = w; }
+return rdy; }
+
+function letDecode(k) {
+	var m = numDecode(k);
+	const n = m.split("");
+	var letct = n.length / 2;
+	var theWord = "";
+	for ( c = 0; c < letct; c++ ) {
+		var letSrch = String(n[2*c]) + String(n[2*c+1]);
+		var letFnd = letters[Number(letSrch)-1];
+		theWord = theWord + letFnd; }
+return theWord; }
+
+function numDecode(k) {
+	const p = k.split("");
+	var numct = p.length / 3;
+	var theNum = "";
+	for ( d = 0; d < numct; d++ ) {
+		var numC = String(p[3*d]) + String(p[3*d+1]) + String(p[3*d+2]);
+		var phase1a = Math.pow(Number(numC),5);
+		var phase1b = phase1a - Math.floor(phase1a / 155) * 155;
+		var phase2a = Math.pow(phase1b,5);
+		var phase2b = phase2a - Math.floor(phase2a / 155) * 155;
+		var phase3a = Math.pow(phase2b,4);
+		var phase3b = phase3a - Math.floor(phase3a / 155) * 155;
+		var phase4a = Math.pow(Number(numC),3);
+		var phase4b = phase4a - Math.floor(phase4a / 155) * 155;
+		var phase5a = phase3b * phase4b;
+		var phase5b = phase5a - Math.floor(phase5a / 155) * 155;
+		if ( phase5b < 10 ) { theNum = theNum + "0" + String(phase5b); }
+		else { theNum = theNum + String(phase5b); }}
+return theNum; }
+
+function IdentDecode(k) {
+	const q = k.split("");
+	var letChk = q.splice(0,1); 
+	var numEnc = q.join('');
+	var numChk = numDecode(numEnc);
+	var letInd = letters.findIndex( function(a) { return a == letChk;});
+	if ( letInd < 10 ) { var ident = "1" + String(numChk); }
+	else {	if ( letInd < 20 ) { var ident = "2" + String(numChk); }
+		else { var ident = "0" + String(numChk); }}
+return ident; }
+
+</script>
+</html>
