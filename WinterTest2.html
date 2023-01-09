@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsgetstarted">Test 2</title>
+</head>
+
+<body>
+<font face = "Comic Sans MS" size = "7" id="Title">Test 2....The Middle Test....The Intermediate Step on a Grand Quest the Bards will certainly forget about when scoring their Epic Tale.</font><h1 id = "fun"></h1><br>
+<h1 id = "TestStatus"></h1><br>
+<font face = "WildWest" size = "5" id="Inst1">Please Enter your Attendance Code Here: </font><input type = "text" name = "attcode" id = "attcode"><br><br>
+<p1 id="Inst2">Once you have entered your Attendance Code, click the button below to begin your test.<br></p1><font face = "Bedrock" size = "5" id = "notice"><b><em>Your test WILL NOT load until 11:00am, so don't click early.<br>After you begin your test, Do Not Refresh your browser.  Doing so will give you a new exam!</em></b></font><br><br>
+
+<input type = "button" name = "startbut" id = "startbut" value = "Click to Begin" onclick = "sort(10);"><br><br>
+<p1 id = "linkTitle"></p1><br>
+<a id = "Link1" target = "_blank" href = "http://129.7.181.58/cgi-bin/irs"></a><br>
+<a id = "Link2" target = "_blank" href = "http://www.casa.uh.edu/CourseWare/Support/Calculator.htm"></a><br>
+<font face = "Courier" size = "3" id = "directions"></font><span title = "Click here for more information about correctly inputting numbers for this exam."><u style = "color:blue; cursor:pointer" onclick = "NumberHelp(NH);"><font face = "Courier" size = "3" id = "directionsEmph"></font></u></span><font face = "Courier" size = "3" id = "directionsEnd"></font><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q0Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q0Text"></font><br><br>
+<canvas id = "Q0Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans0Title"></h1><input type = "text" name = "Ans0" id = "Ans0" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q1Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q1Text"></font><br><br>
+<canvas id = "Q1Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans1Title"></h1><input type = "text" name = "Ans1" id = "Ans1" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q2Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q2Text"></font><br><br>
+<canvas id = "Q2Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans2Title"></h1><input type = "text" name = "Ans2" id = "Ans2" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q3Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q3Text"></font><br><br>
+<canvas id = "Q3Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans3Title"></h1><input type = "text" name = "Ans3" id = "Ans3" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q4Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q4Text"></font><br><br>
+<canvas id = "Q4Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans4Title"></h1><input type = "text" name = "Ans4" id = "Ans4" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q5Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q5Text"></font><br><br>
+<canvas id = "Q5Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans5Title"></h1><input type = "text" name = "Ans5" id = "Ans5" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q6Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q6Text"></font><br><br>
+<canvas id = "Q6Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans6Title"></h1><input type = "text" name = "Ans6" id = "Ans6" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q7Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q7Text"></font><br><br>
+<canvas id = "Q7Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans7Title"></h1><input type = "text" name = "Ans7" id = "Ans7" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q8Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q8Text"></font><br><br>
+<canvas id = "Q8Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans8Title"></h1><input type = "text" name = "Ans8" id = "Ans8" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "Q9Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "Q9Text"></font><br><br>
+<canvas id = "Q9Graphic" height = "0" width = "0";></canvas><br>
+<h1 id = "Ans9Title"></h1><input type = "text" name = "Ans9" id = "Ans9" hidden><br><br><br><br>
+
+<h1 id = "directions2"></h1><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "FRQ0Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "FRQ0Text"></font><br><br>
+<canvas id = "FRQ0Graph" width = "0" height = "0"></canvas><br><br>
+<font face = "Times" size = "6" id = "FRQ0ATitle"></font><font face = "Times" size = "5" id = "FRQ0AText"></font><br>
+<input type = "text" name = "FRQ0AAns" id = "FRQ0AAns" size = "40" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ0BTitle"></font><font face = "Times" size = "5" id = "FRQ0BText"></font><br>
+<input type = "text" name = "FRQ0BAns" id = "FRQ0BAns" size = "10" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ0CTitle"></font><font face = "Times" size = "5" id = "FRQ0CText"></font><br>
+<input type = "text" name = "FRQ0CAns" id = "FRQ0CAns" size = "10" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ0DTitle"></font><font face = "Times" size = "5" id = "FRQ0DText"></font><br>
+<input type = "text" name = "FRQ0DAns" id = "FRQ0DAns" size = "10" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ0ETitle"></font><font face = "Times" size = "5" id = "FRQ0EText"></font><br>
+<input type = "text" name = "FRQ0EAns" id = "FRQ0EAns" size = "40" hidden><br><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "FRQ1Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "FRQ1Text"></font><br>
+<canvas id = "FRQ1Table" width = "0" height = "0"></canvas><br><br>
+<font face = "Times" size = "6" id = "FRQ1ATitle"></font><font face = "Times" size = "5" id = "FRQ1AText"></font><input type = "text" name = "FRQ1AAns" id = "FRQ1AAns" size = "40" value = "Explanatory;Response" hidden><br>
+<font face = "Times" size = "6" id = "FRQ1BTitle"></font><font face = "Times" size = "5" id = "FRQ1BText"></font><br>
+<font face = "Calibri" size = "6" id = "FRQ1GraphTitle"></font><br><font face = "Calibri" size = "6" id = "FRQ1GraphText"></font><br><font face = "Calibri" size = "6" id = "FRQ1GraphXSclTitle"></font><input type = "text" name = "FRQ1XScl" id = "FRQ1XScl" size = "10" hidden><br><font face = "Calibri" size = "6" id = "FRQ1GraphYSclTitle"></font><input type = "text" name = "FRQ1YScl" id = "FRQ1YScl" size = "10" hidden><br><input type = "button" name = "CreateGraph" id = "CreateGraph" value = "Fill In Graph" onclick = "ScatterPlot();" hidden><input type = "button" name = "FillGraph" id = "FillGraph" value = "Add Points" onclick = "FillScatter();" hidden><input type = "button" name = "EmptyGraph" id = "EmptyGraph" value = "Remove Points" onclick = "EraseScatter();" hidden><br>
+<input type = "hidden" name = "xdata" id = "xdata" value = ""><input type = "hidden" name = "ydata" id = "ydata" value = ""><br>
+<canvas id = "FRQ1Graph" width = "0" height = "0"></canvas><br><br>
+<font face = "Times" size = "6" id = "FRQ1CTitle"></font><font face = "Times" size = "5" id = "FRQ1CText"></font><input type = "text" name = "FRQ1CAns" id = "FRQ1CAns" size = "50" hidden><br>
+<font face = "Times" size = "6" id = "FRQ1DTitle"></font><font face = "Times" size = "5" id = "FRQ1DText"></font><input type = "text" name = "FRQ1DAns" id = "FRQ1DAns" size = "50" hidden><br>
+<font face = "Times" size = "6" id = "FRQ1ETitle"></font><font face = "Times" size = "5" id = "FRQ1EText"></font><input type = "text" name = "FRQ1EAns" id = "FRQ1EAns" size = "50" hidden><br><br><br>
+
+<font face = "Comic Sans MS" size = "7" id = "FRQ2Title"></font><br><br>
+<font face = "WildWest" size = "5" id = "FRQ2Text"></font><br><br>
+<font face = "Times" size = "6" id = "FRQ2ATitle"></font><font face = "Times" size = "5" id = "FRQ2AText"></font><input type = "text" name = "FRQ2AAns" id = "FRQ2AAns" size = "10" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ2BTitle"></font><font face = "Times" size = "5" id = "FRQ2BText"></font><input type = "text" name = "FRQ2BAns" id = "FRQ2BAns" size = "10" value = "Enter Answer" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ2CTitle"></font><font face = "Times" size = "5" id = "FRQ2CText"></font><input type = "text" name = "FRQ2CAns" id = "FRQ2CAns" size = "10" value = "Enter Answer" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ2DTitle"></font><font face = "Times" size = "5" id = "FRQ2DText"></font><input type = "text" name = "FRQ2DAns" id = "FRQ2DAns" size = "10" value = "Enter Answer" hidden><br><br>
+<font face = "Times" size = "6" id = "FRQ2ETitle"></font><font face = "Times" size = "5" id = "FRQ2EText"></font><input type = "text" name = "FRQ2EAns" id = "FRQ2EAns" size = "10" value = "Enter Answer" hidden><br><br><br>
+
+
+<input type = "button" id = "sbut" value = "Click to Submit" onclick = "endProcedure();"><br><font face = "Impact" size = "4" id = "BePatient">After Clicking the Submit Button, Be Patient!  It will take a few seconds to process.<br>If you close your window now, you will lose everything.<br>When you get a confirmation screen, then you can close your window.</font>
+<a id = "emergency" target = "_blank" href = ""></a><br><br>
+<form id = "myform" method = "post" action = "https://script.google.com/macros/s/AKfycbwBXYDTKbEH2Xrrz-RUu17PkVH5imGt9lqAaIRi7FaLdiYHAjT0bCuNO8TtrDrQ8H1H/exec" >
+<input type = "hidden" name = "studId" id = "studId" value = "">
+<input type = "hidden" name = "order" id = "order" value = "">
+<input type = "hidden" name = "varsq1" id = "varsq1" value = "">
+<input type = "hidden" name = "stanswersq1" id = "stanswersq1" value = "">
+<input type = "hidden" name = "varsq2" id = "varsq2" value = "">
+<input type = "hidden" name = "stanswersq2" id = "stanswersq2" value = "">
+<input type = "hidden" name = "varsq3" id = "varsq3" value = "">
+<input type = "hidden" name = "stanswersq3" id = "stanswersq3" value = "">
+<input type = "hidden" name = "varsq4" id = "varsq4" value = "">
+<input type = "hidden" name = "stanswersq4" id = "stanswersq4" value = "">
+<input type = "hidden" name = "varsq5" id = "varsq5" value = "">
+<input type = "hidden" name = "stanswersq5" id = "stanswersq5" value = "">
+<input type = "hidden" name = "varsq6" id = "varsq6" value = "">
+<input type = "hidden" name = "stanswersq6" id = "stanswersq6" value = "">
+<input type = "hidden" name = "varsq7" id = "varsq7" value = "">
+<input type = "hidden" name = "stanswersq7" id = "stanswersq7" value = "">
+<input type = "hidden" name = "varsq8" id = "varsq8" value = "">
+<input type = "hidden" name = "stanswersq8" id = "stanswersq8" value = "">
+<input type = "hidden" name = "varsq9" id = "varsq9" value = "">
+<input type = "hidden" name = "stanswersq9" id = "stanswersq9" value = "">
+<input type = "hidden" name = "varsq10" id = "varsq10" value = "">
+<input type = "hidden" name = "stanswersq10" id = "stanswersq10" value = "">
+<input type = "hidden" name = "varsq11" id = "varsq11" value = "">
+<input type = "hidden" name = "stanswersq11" id = "stanswersq11" value = "">
+<input type = "hidden" name = "varsq12" id = "varsq12" value = "">
+<input type = "hidden" name = "stanswersq12" id = "stanswersq12" value = "">
+<input type = "hidden" name = "varsq13" id = "varsq13" value = "">
+<input type = "hidden" name = "stanswersq13" id = "stanswersq13" value = "">
+</form>
+</body>
+
+<script type = "text/JavaScript">
+var NH = 1;
+const numbers = ["J122050098","F074024050","O017011020","G099096137","L101100068","M001097042","K006110139","M083111111","B098122013","C035008000","M122011050","N043115061","M019057139","B139022107","O069101088","N109045051","T148083077","N005029009","G118139029","K028029117","O102032028","B045114106","A094042102","O006065106","P022019140","K019043019","S028085017","C023017111","R101122107","R080052093","M043097011","N128141085","R017140026","A094128045","H078065013","G042100017","N011080088","S005131148","D062018031","F060010016","H114068094","M011026099","T109057017","R001040022","T109102040","F057010120","R020037115","P148089118","K000100012","L006074036","O134060032","O017064067","O034008037","G043084131","T019067081","B023114031","L085036013","K102006116","T020016116","D067108114","E123056095","I118016152","D139128050","Q006123013","B057014045","T001132064","S134110002","T028108068","M106041037","E114110043","E115022034","U073032017","C094113140","N109120028","G096101080","S006031004","P011045024"];
+const lastname = ["017001101011080085","001025085085148001","019028011025005019","020085069005101002","122134148148134001022069","106005148148005102","102085148109001019","006102134069128025","080001019001069002","001017005083005109085","001148001069002043001102","069085148001019085","005069101134019085069001","028001134080001019","017102011026","101134019005109001","102085109102134028011005026","019122001019019001","148001122001148","102085128134019069085019","001148148001002001022","022085102134019","102005025005069","019001002001069","069001148001026001102","102011134026","028011005102102001","080085102102005069","002085148148001019109","022001102080134019005026","022001122134","002085001019028","083011","148001019109005102085069","109011019019","001148083005001102","101005080080134080","101085102080134148148085","028011005083001102001","022001011102005102","001109005122011019022134","122134148069085019","069002102005069080002001","028011080134005102102005026","102011006006005102","043001026134","006148085102005069","080102001019","069080005122001102080","128001128001","022001017134005148","122005019109080","101102134017005","001109005025005022134","022085102028001019","102085022005102085","022085022134019","002005019102025","069134022022069","019001102001019028","069002085005128","101001148001017134085069","102085109102134028011005026","001083134148001019","006148085122005102069","028085022128001","019001019069","102085069001102134085","006148085102005069","022001148085019005","028085019026001148005026","080005085","005148022085122001006134","002001083005102080025","102001026001","080002102005001109028134148148","001148022001102001026"];
+const firstname = ["022001080080002005122","006011019022134148085148001","019001080002001019","001001102085019","109001019001","002001019019001002","001148005034001019109102134001","034001083134001019","022005102102134001022","002005019102025","069001102001","020085069002","002001019019001002","022001102134001002","002005148005019","017001134","134069001102005148134","083005102085019134017001","080134020001019134","017002148085005","002001025001","006134085102005148148001","017005017134148134085","019025148001","109001025001019134102001","083134017080085102134001","025001019005080","020085005148","020001017106069085019","148085102005019001","109001102","017002102134069080134001019","109085019","102001019109025","069148085001019","001128134028001134148","134069001128005148148001","006005102019001019109001","022001011102134017134085","001001102085019","001109005122085148005","109005019026005148","001019025001","134019005025109001","020005069069134017001","006001080134022001","102085128005102080085","148134019109069005025","001019080085134019005080080005","148001025001019","102134017001102109085","109001069002134005148148","148005034","005083005148025019","001022001019109001001","020002001134102","102085022001134069001","001102134001019019001","025022085019019134","109002102011083","002011026001134006001","102134001019001","069005128001069080134001019","001025148134019","020001025","022128001","022134102001017148005","148134083134001","106001134148005025","019134001","028148001109025069","005102134017","102001002022001002","022001080080002005122","069002001002102025001102","028102001017005","001019001"];
+const numbersEnd = [];
+const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const digits = ["0","1","2","3","4","5","6","7","8","9"];
+const symbols = ["&excl;","&#65312;","&num;","&dollar;","&percnt;","&Hat;","&amp;","&ast;","&plus;","&quest;","&apos;","&colon;"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const funny = ["There are two types of people in the world.  Those that can extrapolate from incomplete data sets.", "There are 10 kinds of people in the world.  Those that understand binary, and those that don't.", "Question: Do the numbers 2.5, <sup>5</sup>/<sub>2</sub> and 2 <sup>1</sup>/<sub>2</sub> constitute math's version of the &quot;there&quot;, &quot;their&quot;, and &quot;they're&quot; argument among Engliticians?<br> Answer: No.", "Interesting fact: Many world-famous mathematicians spent the final years of their lives in mental institutions.  Stay strong.", "As a child, using your imagination was probably a lot more fun than using imaginary number now.","&#128200;&#61;&#128513;","{(&#128020;<sup>3</sup>, &#129374;<sup>&#128020</sup>)|&#9975;+&#129531;=&#127831}...Obviously.","In Ancient Roman, mastering long division was something only geniouses could manage. After all, if you need to borrow an X from the L so that VII/III you would be horrified at the thought of a remainder!","Don't tell anyone, but my ATM PIN is the final four decimals places of &pi;.", "It has been stated that 99% of statistics should not be trusted.  This makes statiticians nearly 10% more trustworthy than an average duck-billed platypus.", "Just like people, some numbers are irrational, others are just plain odd.", "When the Triggy Family had parties, they usually kept their kids Sinch and Cosh out of sight.  They would always get dirty looks from their neighbor's wife, Evie Tothex.", "According to some: &#120529 &#8712; &#8476; According to others, &#120529 &#8712; <em>Greek Alphabet</em>; All can agree that &#120529 &#8712; &#129383;", "The function (2&pi;)<sup>-0.5</sup>e<sup>-(x^2)/2</sup> has been described by many as &quot;quite normal&quot;","&#3058;.  Not sure what it is or what it wants, but it was a result of the search &quot;numbers&quot;"]; 
+const quests = ["From a normally distributed population [Aa], determine the following: P([Ba] [Ca] [Ab] [Cb] [Bb]).","In a uniform distribution, P([E] &le; X &le; [F]) = P ( X < [F] ) = [D], determine the mean and standard deviation of this distribution.","From a population with [F2] distribution of variable X, where &mu; = [G] and &sigma; = [H], samples of size n = [I] individuals were selected.  Determine &mu;<sub>x&#772;</sub> and &sigma;<sub>x&#772;</sub>.  Is this distribution of sample means normally distributed?","The personelle director of a large corporation is trying to determine [Ja]the proportion of employees that bring their own lunch, buy lunch at work, or go out to eat at a restaurant.  To do this he [Ka]watches and monitors the activities of a selected group of employees at lunchtime [Kb]brings a group of selected employees, with equal parts of underweight, average weight, and over weight employees represented, to a simulated office environment at lunch time where they have options placed in a given three dining options by a technician and their answers will be recorded [Kend][Jb] the proportion of male employees that wear neckties to the office.  To do this, he [Ka]stands at the main entrance for an hour before the start of shift and documents which employees, from a sample of male employees, arrive wearing neckties. [Kb]divides a random selection of male employees, representing equal numbers first year employees, second to tenth year employees, and employees at the company over ten years, into two groups, and told them to change their clothes into something provided for them.  One group was given jeans and tee-shirts, another slacks and button-up shirts, and the last group was given slacks, button-up shirts and a necktie.  Their language in an interview was then monitored to determine if they used more &quot;work-place&quot; language or more casual language.[Kend][Jend]  [JKQa]Is this research considered an experiment or an observational study? Provide a reason.[JKQb][JKS]This sample was selected by [JKSa]using a random number generator to match the employee's ID number. [JKSb]using the employees the expressed interest in being part of a workplace environment study advertised throughout the building the prevoius week. [JKSc]using the first hundred eligible employees he sees. [JKSend]What sampling technique was used here? [JKQc]By equally representing possibly influential subject traits in this study is what experimental feature?","The following two-way table describes the [La]beverage preference of 100 individuals, categorized by their age group.  [Lb]average dinner bill for 100 adults based on their occupational field.  [Lend]Determine the probability that a randomly selected [M][N] is also [O].","The following diagram represents a normal distribution, with a mean of [P] and a standard deviation of [Q] where the shaded region has an area of approximately [R].  Determine the range of x-values covered by the shaded region.","Based on a normal distribution, determine the value of <em>c</em> which satisfies the following: P([S][T]<em>c</em>) = [U].","Regression analysis was performed on a set of bivariate data, yielding four potential regression models.  The following table gives each model and its coefficient of determination.  Based on this, which model (<em>Answer either: linear, quadratic, exponential, or logarithmic</em>) is the best fit to the data set?[W][X][Y][Z][AA][AB][AC]","When two people (A and B) were asked how big their [ADa] was, they answered in two different ways.  Person A said [AEa] [ADb], and Person B said [AFa][ADc].  Knowing that the mean [ADd] is [AEb] with a standard deviation of [AG], and the average [ADf] is [AFb] with a standard deviation of [AH], which person (A or B) had the larger [ADa]?","In a simulated experiment conducted by [AHa]the American Medical Association, the concern of availability of medical care due to cost was to be studied for a sample of [AI] simulated individuals.  Using the previously attained data that: [AJa]% use employer-provided medical insurance, [AK]% use privately-obtained medical insurance, and [AL]% use both of these methods.  If the digits [AJb] were used to represent individuals using employer-provided medical insurance, what is a possible set of digits to represent those paying with privately obtained insurance?[AHb]a local homeowner's association, it was discovered that [AJa]% of owners are married, [AK]% are two-income homes, and [AL]% are both of these.  If the digits [AJb] were used to represent homeowners that are married, then what is a possible set of digits to represent two-income homes?[AHend]"];
+
+function endProcedure() {
+	document.getElementById("sbut").value = "Working...";
+	document.getElementById("sbut").disabled = true;
+	document.getElementById("sbut").style="background-color: red";
+	answers();
+	document.getElementById("myform").submit(); }
+
+window.addEventListener("load", function() {
+  const form = document.getElementById("myForm");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+  });
+});
+
+function answers() {
+	var ansList = "";
+	for ( a = 0; a < 10; a++ ) {
+		var ansId = "Ans" + String(a);
+		var realq = a + 1;
+		var stSlt = "stanswersq" + realq;
+		var answer = document.getElementById(ansId);
+		if ( answer.value.length == 0 || answer.value == "FirstAnswer ; SecondAnswer" ) { var ansVal = "Blank"; }
+		else { var ansVal = answer.value; } 
+		answer.disabled = true;
+		if ( ansList.split("/")[0] != ansList ) { 	var numer = ansList.split("/")[0];
+								var denom = ansList.split("/")[1];
+								var divided = Number(numer) / Numer(denom);
+								ansList = Math.round(divided * 10000) / 10000; }
+		if ( ansList === "" ) { ansList = ansList + "[" + ansVal + "]"; }
+		else { ansList = ansList + ",[" + ansVal + "]"; }
+		document.getElementById(stSlt).value = ansList;
+		ansList = ""; }
+		ansList = "[";
+	for ( f = 0; f < 5; f++ ) {
+		var ansId = "FRQ0" + letters[f] + "Ans";
+		var answer = document.getElementById(ansId);
+		if ( answer.value.length == 0 ) { var ansVal = "Blank"; }
+		else { var ansVal = answer.value; }
+		answer.disabled = true;
+		ansList = ansList + "(" + letters[f] + ")" + ansVal; }
+	ansList = ansList + "]";
+	document.getElementById("stanswersq11").value = ansList;
+	ansList = "[";	
+	for ( g = 0; g < 5; g++ ) {
+		var ansId = "FRQ1" + letters[g] + "Ans";
+		if ( g == 1 ) { var ansVal = "x:" + document.getElementById("xdata").value + "y:" + document.getElementById("ydata").value; }
+		else {  var answer = document.getElementById(ansId);
+			if ( answer.value.length == 0 || answer.value == "Explanatory;Response" || answer.value == "ax + b;Interpretation" || answer.value == "Yes/No;Alternate" ) { var ansVal = "Blank"; }
+			else { var ansVal = answer.value; }
+		answer.disabled = true; }
+		ansList = ansList + "(" + letters[g] + ")" + ansVal; }
+	ansList = ansList + "]";
+	document.getElementById("stanswersq12").value = ansList;
+	ansList = "[";	
+	for ( h = 0; h < 5; h++ ) {
+		var ansId = "FRQ2" + letters[h] + "Ans";
+		var answer = document.getElementById(ansId);
+		if ( answer.value.length == 0 || answer.value == "Enter Answer" ) { var ansVal = "Blank"; }
+		else { var ansVal = answer.value; }
+		answer.disabled = true; 
+		ansList = ansList + "(" + letters[h] + ")" + ansVal; }
+	ansList = ansList + "]";
+	document.getElementById("stanswersq13").value = ansList;
+
+	var stud = document.getElementById("studId").value;
+	var numero = stud.split(",")[0];
+	var primos = stud.split(",")[1];
+	var ultimos = stud.split(",")[2];
+	var primo = primos.toUpperCase();
+	var ultimo = ultimos.toUpperCase();
+	const nmr = numero.split("");
+	var one = Number(nmr[0]) + 4;
+	var twothree = numEncode(String(nmr[1]) + String(nmr[2]));
+	var fourfive = numEncode(String(nmr[3]) + String(nmr[4]));
+	var sixseven = numEncode(String(nmr[5]) + String(nmr[6]));
+	var newId = String(one) + String(twothree) + String(fourfive) + String(sixseven);
+	const prm = primo.split("");
+	var newFn = "";
+	for ( g = 0; g < prm.length; g++ ) {
+		var bam = prm[g].toUpperCase();
+		var letty = letters.findIndex( function(k) { return k == bam; });
+		var screwy = numEncode(letty);
+		newFn = newFn + String(screwy); }
+	const ult = ultimo.split("");
+	var newLn = "";
+	for ( h = 0; h < ult.length; h++ ) {
+		var kabam = ult[h].toUpperCase();
+		var getty = letters.findIndex( function(k) { return k == kabam; });
+		var screwball = numEncode(getty);
+		newLn = newLn + String(screwball); }
+	document.getElementById("studId").value = newId + "," + newFn + "," + newLn;
+	var comboList = "[" + document.getElementById("studId").value + "][" + document.getElementById("order").value + "]";
+	var varList = "";
+	var ansList = "";
+	for ( p = 1; p < 14; p++ ) {
+		var vary = "varsq" + String(p);
+		var studly = "stanswersq" + String(p);
+		varList = varList + "[" + document.getElementById(vary).value + "]"; 
+		ansList = ansList + "[" + document.getElementById(studly).value + "]"; }
+	var emailURL = "mailto:mgcaputo@central.uh.edu?subject=MATH1342Test2&body=" + comboList + varList + ansList;
+	document.getElementById("emergency").href = emailURL;
+	document.getElementById("emergency").innerHTML = "Just in case";
+return null; }
+
+function sort(n) {
+	var d = new Date();
+	var mon = d.getMonth() + 1;
+	var monName = months[mon-1];
+	var wkDay = d.getDay() + 1;
+	var day = d.getDate();
+	var hour = d.getHours();
+	var year = d.getYear() - 100;
+	var mins = d.getMinutes();
+	var secs = d.getSeconds();
+
+	if ( document.getElementById("attcode").value.split(";")[0] === "Heavy Weightlessness" ) {
+		var escapeHatch = "Heavy Weightlessness";
+		var FN = document.getElementById("attcode").value.split(";")[1];
+		var LN = document.getElementById("attcode").value.split(";")[2];
+		var IDN = document.getElementById("attcode").value.split(";")[3];
+		document.getElementById("studId").value = IDN + "," + FN + "," + LN; }
+
+	else {	var attendance = document.getElementById("attcode").value;
+		const attbits = attendance.split("");
+		if ( attbits.length !== 10 ) {  document.getElementById("Inst1").innerHTML = attendance + " is not a valid Attendance Code. Please try again:"; 
+						return null; }
+
+		var specChar = "";
+		var lettCd = "";
+		var numbCd = "";
+
+		for ( c = 0; c < 10; c++ ) {
+			var dgt = String(attbits[c]);
+			var lind = letters.findIndex( function(a) { return a == dgt; });
+			if ( lind !== -1 ) { lettCd = lettCd + String(dgt); }
+			else {	var nind = digits.findIndex( function(b) { return b == dgt; });
+				if ( nind !== -1 ) { numbCd = numbCd + String(dgt); }
+				else { specChar = specChar + String(dgt); }}}
+		var first = specChar.split("")[0];
+		if ( first === "!" || first === "@" || first === "#" || first === "$" ) { var id1 = "0"; }
+		if ( first === "%" || first === "^" || first === "&" || first === "*" ) { var id1 = "1"; }
+		if ( first === "+" || first === "?" || first === "'" || first === ":" ) { var id1 = "2"; }
+		var third = lettCd.split("")[1];
+		var ind3 = letters.findIndex( function (c) { return c == third; });
+		if ( ind3 < 18 ) { var pre3 = Math.floor(ind3/3); }
+		else { var pre3 = Math.floor( 0.5 * ind3 - 9 ) + 6; }
+		var id3 = pre3 - wkDay;
+		if ( id3 < 0 ) { id3 = id3 + 10; }
+		var second = lettCd.split("")[0];
+		var ind2 = letters.findIndex( function (d) { return d == second; });
+		if ( ind2 < 18 ) { var pre2 = Math.floor(ind2/3); }
+		else { var pre2 = Math.floor( 0.5 * ind2 - 9 ) + 6; }
+		var id2 = pre2 - id3;
+		if ( id2 < 0 ) { id2 = id2 + 10; }
+		var forth = String(numbCd.split("")[0]) + String(numbCd.split("")[1]);
+		var fifth = String(numbCd.split("")[2]) + String(numbCd.split("")[3]);
+		var sixth = String(numbCd.split("")[4]) + String(numbCd.split("")[5]);
+		var pre4 = Number(forth) - day;
+		if ( pre4 < 0 ) { pre4 = pre4 + 100; }
+		var pre5 = Number(fifth) - mon;
+		if ( pre5 < 0 ) { pre5 = pre5 + 100; }
+		var pre6 = Number(sixth) - year;
+		if ( pre6 < 0 ) { pre6 = pre6 + 100; }
+		var renumber = "";
+		if ( pre4 < 10 ) { renumber = renumber + "0" + String(pre4); }
+		else { renumber = renumber + String(pre4); }
+		if ( pre5 < 10 ) { renumber = renumber + "0" + String(pre5); }
+		else { renumber = renumber + String(pre5); }
+		if ( pre6 < 10 ) { renumber = renumber + "0" + String(pre6); }
+		else { renumber = renumber + String(pre6); }
+		var forthish = String(renumber.split("")[0]) + String(renumber.split("")[1]) + String(renumber.split("")[2]);
+		var fifthish = String(renumber.split("")[3]) + String(renumber.split("")[4]) + String(renumber.split("")[5]);
+		var id4 = numDecode(forthish);
+		var id5 = numDecode(fifthish);
+		var idNum = String(id1)+String(id2)+String(id3)+String(id4)+String(id5);
+		var encNumL4 = String(forthish)+String(fifthish);
+		var classSize = numbers.length;
+		for ( p = 0; p < classSize; p++ ) {
+			const ndigs = numbers[p].split("");
+			numbersEnd[p] = String(ndigs[4])+String(ndigs[5])+String(ndigs[6])+String(ndigs[7])+String(ndigs[8])+String(ndigs[9]); }
+		var encInd = numbersEnd.findIndex( function(m) { return m == encNumL4;});
+		if ( encInd === -1 ) { document.getElementById("Inst1").innerHTML = "The code you entered does not correspond to anyone on this roster.  Try again: "; }
+		else {	var FN = letDecode(firstname[encInd]);
+			var LN = letDecode(lastname[encInd]);
+			var IDN = IdentDecode(numbers[encInd]);
+			document.getElementById("studId").value = IDN + "," + FN + "," + LN; }
+
+		const testdate = "0109202311";
+
+		if (mon < 10) { var heyMon = "0" + String(mon); }
+			else { var heyMon = String(mon + 1); }
+		if (day < 10) { var heyDay = "0" + String(day); }
+			else { var heyDay = String(day); }
+		if (hour < 10) { var notYours = "0" + String(hour); }
+			else {var notYours = String(hour);}
+
+		var goodOld = "20" + String(year);
+		var theNow = heyMon + heyDay + goodOld + notYours;
+
+		if ( testdate === theNow ) { var escapeHatch = "Heavy Weightlessness"; }
+		else {	document.getElementById("letsgetstarted").innerHTML = "INVALID TEST TIME";
+			document.getElementById("Title").innerHTML = "<b>You have attempted to view the test early, and you have been caught!</b> Refresh your page and sign in at the correct time.";
+			const timerSet = setInterval(function() { document.getElementById("Title").innerHTML = document.getElementById("Title").innerHTML + "<b>&#129327;You have attempted to view the test early, and you have been caught!</b> Refresh your page and sign in at the correct time.&#128562;<br>"},3000); }}
+
+	if ( escapeHatch === "Heavy Weightlessness" ) { document.getElementById("directions").innerHTML = "For Questions 1 - " + n + ", ";
+							document.getElementById("directionsEmph").innerHTML = "type your answer"; 
+							document.getElementById("directionsEnd").innerHTML = " in the blank space provided.<br><em>7 points each</em>"; }
+	else { return null; }
+
+	document.getElementById("Title").innerHTML = FN + " " + LN + " " + IDN + "<br>" + monName + " " + day + ", 20" + year +"<br>Test 2"; 
+	document.getElementById("attcode").disabled = "true"; 
+	document.getElementById("startbut").disabled = "true";
+	document.getElementById("Inst1").innerHTML = "You have entered: ";
+	document.getElementById("Inst2").innerHTML = "";
+	document.getElementById("notice").innerHTML = "Do Not Refresh your browser.  Doing so will give you a new exam!";
+
+	for ( haha = 0; haha < 6; haha++ ) {
+		var giggle = Math.random() * 70;
+		var chuckle = Math.floor(giggle);
+		var gafow = 128512 + chuckle;
+		var lol = "&#" + String(gafow) + ";"; 
+	document.getElementById("fun").innerHTML = document.getElementById("fun").innerHTML + lol + "  "; }
+	document.getElementById("fun").innerHTML = document.getElementById("fun").innerHTML + "<br>" + funny[Math.floor(Math.random()*14.78)];
+
+	const startingTime = 3600 * hour + 60 * mins + secs;
+	const totTime = 3600;
+	const timerSet = setInterval(function(){timer(startingTime,totTime)},1000);
+	setTimeout(function(){endMessage()},totTime*1000);
+
+	document.getElementById("linkTitle").innerHTML = "Useful links provided below:";
+	document.getElementById("Link1").innerHTML = "R Studio";
+	document.getElementById("Link2").innerHTML = "Casa Calculator";
+
+	const questions = [];
+
+	var varSwp = quests[0];
+	var Anum = Math.random();
+	var Bnum = Math.random();
+	var Cnum = Math.random();
+	if ( Anum < 0.5 ) { 	var Amean = ( Math.floor(Anum * 10000) - Math.floor(Anum * 10)*1000 ) / 10;
+				var Asd = ( Math.floor(Anum * 1000000) - Math.floor(Anum * 10000)*100 ) / 10;
+				var Aa = "with a mean of " + Amean + " and a standard deviation of " + Asd;
+				var Ab = "X"; }
+	else {	var Amean = 0;
+		var Asd = 1;
+		var Aa = "";
+		var Ab = "Z"; }
+
+	varSwp = varSwp.split("[Aa]").join(Aa);
+	varSwp = varSwp.split("[Ab]").join(Ab);
+	var varList = Ab + ";" + Amean + ";" + Asd;
+
+	if ( Cnum < 0.333 ) {	var Ca = "";
+				var Cb = "&lt;";
+				var C = "LessThan"; }
+	else {	if ( Cnum < 0.667 ) {	var Ca = "&lt;";
+					var Cb = "&lt;";
+					var C = "Between"; }
+		else {  var Ca = "";
+			var Cb = "&gt;";
+			var C = "GreaterThan"; }}
+
+	varSwp = varSwp.split("[Ca]").join(Ca);
+	varSwp = varSwp.split("[Cb]").join(Cb);
+	varList = varList + ";" + C;
+
+	var multy = Bnum * 100 - Math.floor(Bnum * 100);
+	if ( Bnum < 0.5 ) {	if ( Bnum < 0.25 ) {	var B1 = Amean - Asd - multy * Asd; }
+				else { var B1 = Amean - multy * Asd; }}
+	else {	if ( Bnum < .75 ) {	var B1 = Amean + Asd + multy * Asd; }
+		else { var B1 = Amean + multy * Asd; }}
+	var timesy = Cnum * 1000 - Math.floor(Cnum * 1000);
+	var newB = Bnum * 100000 - Math.floor(Bnum * 100000);
+	if ( newB < 0.5 ) {	if ( newB < 0.25 ) {	var B2 = Amean - Asd - timesy * Asd; }
+				else { var B2 = Amean - timesy * Asd; }}
+	else {	if ( newB < .75 ) {	var B2 = Amean + Asd + timesy * Asd; }
+		else { var B2 = Amean + timesy * Asd; }}
+
+	var sizer = Anum * 100000 - Math.floor(Anum * 100000);
+	if ( C == "LessThan" ) {	var Ba = "";
+					if ( sizer < 0.5 ) {	var Bb =  Math.round(Math.min(B1, B2)*10)/10; }
+					else {	var Bb = Math.round(Math.max(B1, B2)*10)/10; }}
+	if ( C == "GreaterThan" ) {	var Ba = "";
+					if ( sizer < 0.5 ) {	var Bb =  Math.round(Math.min(B1, B2)*10)/10; }
+					else {	var Bb = Math.round(Math.max(B1, B2)*10)/10; }}
+	if ( C == "Between" ) {		var Ba =  Math.round(Math.min(B1, B2)*10)/10;
+					var Bb = Math.round(Math.max(B1, B2)*10)/10; }
+
+	varSwp = varSwp.split("[Ba]").join(Ba);
+	varSwp = varSwp.split("[Bb]").join(Bb);
+	varList = varList + ";" + Ba + ";" + Bb;
+
+	document.getElementById("varsq1").value = varList;
+	varList = "";
+	questions[0] = varSwp;
+
+	varSwp = quests[1];
+
+	var Dnum = Math.random();
+	var Enum = Math.random();
+	var Fnum = Math.random();
+	var D = Math.floor ( Dnum * 100 ) / 100;
+
+	var val1 = Math.floor(Enum * 10);
+	var val2 = Math.floor(Fnum * 10);
+	var E = Math.min(val1, val2);
+	var F = Math.max(val1, val2);
+
+	varSwp = varSwp.split("[D]").join(D);
+	varSwp = varSwp.split("[E]").join(E);
+	varSwp = varSwp.split("[F]").join(F);
+	varList = String(D) + ";" + String(E) + ";" + String(F);
+	document.getElementById("varsq2").value = varList;
+	varList = "";
+	questions[1] = varSwp;
+
+	varSwp = quests[2];
+
+	var F2num = Math.random();
+	var Gnum = Math.random();
+	var Hnum = Math.random();
+	var Inum = Math.random();
+	if ( F2num < 0.5 ) { 	var F2text = "an exponential decay"; 
+				var F2 = "exp"; }
+	else {	var F2text = "a normal"; 
+		var F2 = "norm"; } 
+	if ( Inum < 0.5 ) { 	var G = Math.floor(Gnum * 100);
+				var H = Math.floor(Hnum * 100)/10; }
+	else {	var G = Math.floor(Gnum * 1000);
+		var H = Math.floor(Hnum * 1000)/10; }
+	var I = Math.floor(Inum *1000) - Math.floor(Inum*10)*100;
+
+	varSwp = varSwp.split("[F2]").join(F2text);
+	varSwp = varSwp.split("[G]").join(G);
+	varSwp = varSwp.split("[H]").join(H);
+	varSwp = varSwp.split("[I]").join(I);
+	questions[2] = varSwp;
+	varList = F2 + ";" + G + ";" + H + ";" + I;
+	document.getElementById("varsq3").value = varList;
+	varList = "";
+
+	varSwp = quests[3];
+
+	var Jnum = Math.random();
+	var Knum = Math.random();
+	var JKQnum = Math.random();
+	var beginning = varSwp.split("[Ja]")[0];
+	var ending = varSwp.split("[Jend]")[1];
+	var Jopt1 = varSwp.split("[Jb]")[0].split("[Ja]")[1];
+	var Jopt2 = varSwp.split("[Jend]")[0].split("[Jb]")[1];
+	if ( Jnum < 0.5 ) {	var J = "lunch";
+				varSwp = beginning + Jopt1 + ending; }
+	else {	var J = "ties";
+		varSwp = beginning + Jopt2 + ending; }
+	
+	beginning = varSwp.split("[Ka]")[0];
+	ending = varSwp.split("[Kend]")[1];
+	var Kopt1 = varSwp.split("[Kb]")[0].split("[Ka]")[1];
+	var Kopt2 = varSwp.split("[Kend]")[0].split("[Kb]")[1];
+	if ( Knum < 0.5 ) {	var K = "obs";
+				varSwp = beginning + Kopt1 + ending; }
+	else {	var K = "exp";
+		varSwp = beginning + Kopt2 + ending; }
+
+	beginning = varSwp.split("[JKQa]")[0];
+	var JKQopt1 = varSwp.split("[JKQb]")[0].split("[JKQa]")[1];
+	var JKQopt2 = varSwp.split("[JKQc]")[0].split("[JKQb]")[1];
+	var JKQopt3 = varSwp.split("[JKQc]")[1];
+	if ( JKQnum < 0.5 ) {	var JKQ = "ExpOrObs";
+				var JKS = "egriss";
+				varSwp = beginning + JKQopt1; }
+	else {	if ( K == "obs" ) {	var JKQ = "sample";
+					var test3 = Math.floor(JKQ * 100) / 3;
+					var sampleBeginning = JKQopt2.split("[JKSa]")[0].split("[JKS]")[1];
+					var JKSopt1 = JKQopt2.split("[JKSb]")[0].split("[JKSa]")[1];
+					var JKSopt2 = JKQopt2.split("[JKSc]")[0].split("[JKSb]")[1];
+					var JKSopt3 = JKQopt2.split("[JKSend]")[0].split("[JKSc]")[1];
+					var sampleEnding = JKQopt2.split("[JKSend]")[1];
+					if ( Math.floor(test3) == test3 ) {	var JKS = "srs"; 
+										varSwp = beginning + sampleBeginning + JKSopt1 + sampleEnding; }
+					else {  if ( Math.round(test3) == test3 ) {	var JKS = "vol";
+											varSwp = beginning + sampleBeginning + JKSopt2 + sampleEnding; }
+						else {  var JKS = "cnv";
+							varSwp = beginning + sampleBeginning + JKSopt3 + sampleEnding; }}}
+		else {	var JKQ = "match";
+			var JKS = "grvty";
+			varSwp = beginning + JKQopt3; }}
+	varList = J + ";" + K + ";" + JKQ + ";" + JKS;
+	document.getElementById("varsq4").value = varList;
+	varList = "";
+	questions[3] = varSwp;
+
+	varSwp = quests[4];
+
+	var Lnum = Math.random();
+	var Mnum = Math.random();
+	var Nnum = Math.random();
+	var Onum = Math.random();
+
+	beginning = varSwp.split("[La]")[0];
+	ending = varSwp.split("[Lend]")[1];
+	var Lopt1 = varSwp.split("[Lb]")[0].split("[La]")[1];
+	var Lopt2 = varSwp.split("[Lend]")[0].split("[Lb]")[1];
+	const catvals = [];
+	const cats1 = ["Water","Milk","Fruit Juice","Soft Drinks","Coffee","Tea","Alcoholic Beverages","Service","Retail","Construction","Business","Education","Legal","Medical"];
+	const cats2 = ["Under 20 Years","20 to 40 Years","40 to 60 Years","Over 60 Years","Under $25","$25 to $50","$50 to $100","Over $100"];
+	if ( Lnum < 0.5 ) {	varSwp = beginning + Lopt1 + ending;
+				var L = "drinks"; 
+				cats1.splice(7,7); 
+				cats2.splice(4,4);}
+	else {	varSwp = beginning + Lopt2 + ending;
+		var L = "dinner"; 
+		cats1.splice(0,7);
+		cats2.splice(0,4); }
+
+	var totMult = 0;
+	var dgsm = String(Mnum);
+	var dgsn = String(Nnum);
+	const md = dgsm.split("");
+	const nd = dgsn.split("");
+	for ( k = 2; k < 16; k++ ) {	var valm1 = Number(md[k]);
+					var valm2 = Number(nd[k]);
+					totMult = totMult + valm1 + valm2; }
+	var mltyVal = 100 / totMult;
+	var totChk = 0;
+	for ( c = 2; c < 30; c++ ) {	var val1 = Math.round(md[c]*mltyVal);
+					var val2 = Math.round(nd[c]*mltyVal);
+					catvals[2*c-4] = val1;
+					catvals[2*c-3] = val2;
+					totChk = totChk + val1 + val2; }
+
+	var tblMax = Math.max.apply(null,catvals);
+	var tblMin = Math.min.apply(null,catvals);
+	if ( totChk > 100 ) { 	var scared = totCheck - 100;
+				var tooFat = catvals.findIndex( function(f) { return f == tblMax; });
+				var temp =  catvals[tooFat];
+				catvals[tooFat] = temp - scared; }
+	if ( totChk < 100 ) {	var scared = 100 - totCheck;
+				var tooSkinny = catvals.findIndex ( function(s) { return s == tblMin; });
+				var temp = catvals[tooSkinny];
+				catvals[tooSkinny] = temp + scared; }
+
+	var Ldec = Math.floor(Lnum * 100) - Math.floor(Lnum * 10) * 10;
+	var Odec1 = Math.floor(Onum * 10);
+	var Odec2 = Math.floor(Onum * 100) - Odec1 * 10;
+	if ( Odec1 > 6 ) { Odec1 = Odec1 - 7; }
+	if ( Odec2 > 7 ) { Odec2 = Odec2 - 8; }
+	else { if ( Odec2 > 3 ) { Odec2 = Odec2 - 4; }}
+	var categ1 = cats1[Odec1];
+	var categ2 = cats2[Odec2];
+	beginning = varSwp.split("[M][N]")[0];
+	ending = varSwp.split("[O]")[0].split("[M][N]")[1];
+	if ( Ldec < 5 ) { if ( L == "drinks" ) { var theQuest = categ1 + "-drinker";
+						 var theDetail = categ2 + " of age."; }
+			  else { var theQuest = categ1 + "-worker";
+				 var theDetail = categ2 + " of average dinner spending."; }
+			var pof = "cat1then2"; }
+	else {	if ( L == "drinks" ) {	var theQuest = "person, " + categ2 + " of age, ";
+					var theDetail = "a(n) " + categ1 + "-drinker."; }
+		else {	var theQuest = "person spending, on average, " + categ2 + " on dinner ";
+			var theDetail = "a " + categ1 + "-worker."; }
+		var pof = "cat2then1"; }
+	varSwp = beginning + theQuest + ending + theDetail;
+	varList = L + ";" + String(Mnum) + ";" + String(Nnum) + ";" + categ1 + ";" + categ2 + ";" + pof;
+	document.getElementById("varsq5").value = varList;
+	varList = "";
+	questions[4] = varSwp;
+
+	varSwp = quests[5];
+
+	var Pnum = Math.random();
+	var Qnum = Math.random();
+	var Rnum = Math.random();
+	var Pdec = Math.floor(Pnum * 10);
+	var Qdec = Math.floor(Qnum * 10);
+	var Rdec1 = Math.floor(Rnum * 10);
+	var Rdec2 = Math.floor(Rnum * 100) - Rdec1 * 10;
+	var Rdec3 = Math.floor(Rnum * 1000) - Rdec1 * 100 - Rdec2 * 10;
+	if ( Pdec < 5 ) { var P = Math.floor(Pnum * 1000) - Pdec * 100; }
+	else { var P = Math.floor(Pnum * 10000) - Pdec * 1000; }
+	if ( Qdec < 5 ) { var Q = Math.floor(Qnum * 100) - Qdec * 10; }
+	else { var Q = Math.floor(Qnum * 1000) - Qdec * 100; }
+	if ( P < 10 ) { P = P * 10; }
+	if ( Q == 0 ) { Q = 1.12; }
+	if ( Q * 10 > P ) { Q = Q / 10; }
+	if ( Rdec1 < 5 ) { var R = 0.68; }
+	else { var R = 0.95; }
+	if ( Rdec2 < 5 ) { 	R = R / 2; 
+				if ( Rdec3 < 5 ) { var side = "left"; }
+				else { var side = "right"; }}
+	else { var side = "both"; }
+	varSwp = varSwp.split("[P]").join(P);
+	varSwp = varSwp.split("[Q]").join(Q);
+	varSwp = varSwp.split("[R]").join(R);
+
+	varList = String(P) + ";" + String(Q) + ";" + String(R) + side;
+	document.getElementById("varsq6").value = varList;
+	varList = "";
+	questions[5] = varSwp;
+
+	varSwp = quests[6];
+	var Snum = Math.random();
+	var Tnum = Math.random();
+	var Unum = Math.random();
+
+	if ( Snum < 0.5 ) { 	var S = "X";
+				var Smean = Math.floor(Snum * 1000) - Math.floor(Snum * 100) * 10;
+				var Ssd = Math.floor(Snum * 10000) - Math.floor(Snum *1000) * 10; 
+				if ( Ssd * 10 > Smean ) { Ssd = Ssd / 10; }}
+	else {	var S = "Z";
+		var Smean = 0;
+		var Ssd = 1; }
+	if ( Tnum < 0.5 ) { var T = "lessthan"; }
+	else { var T = "greaterthan"; }
+	var U = Math.floor(Unum * 1000) / 1000;
+	varSwp = varSwp.split("[S]").join(S);
+	varSwp = varSwp.split("[U]").join(U);
+	if ( T == "lessthan" ) { varSwp = varSwp.split("[T]").join('&lt;'); }
+	else { varSwp = varSwp.split("[T]").join('&gt;'); }
+	if ( S == "X" ) { varSwp = varSwp + " <em>Consider a mean of " + Smean + ", and a standard deviation of " + Ssd + ".</em>"; }
+
+	varList = S + ";" + Smean + ";" + Ssd + ";" + T + ";" + U;
+	document.getElementById("varsq7").value = varList;
+	varList = "";
+	questions[6] = varSwp;
+
+	varSwp = quests[7];
+	varSwp = varSwp.split("[W]")[0];
+	var Wnum = Math.random();
+	var Xnum = Math.random();
+	var Ynum = Math.random();
+	var Znum = Math.random();
+	var AAnum = Math.random();
+	var ABnum = Math.random();
+	var ACnum = Math.random();
+
+	var W = Math.floor( Wnum * 10000 ) / 10000;
+	var X = Math.floor( Xnum * 10000 ) / 10000;
+	var Y = Math.floor( Ynum * 10000 ) / 10000;
+	var Z = Math.floor( Znum * 10000 ) / 10000;
+
+	var sl = (Math.floor(AAnum * 10000 ) - Math.floor(AAnum * 1000) * 10) / 100;
+	var yi = (Math.floor(ABnum * 10000 ) - Math.floor(ABnum * 1000) * 10) / 10;
+	var lc = (Math.floor(ACnum * 10000 ) - Math.floor(ACnum * 1000) * 10) / 100;
+	if ( AAnum < 0.5 ) { sl = "-" + sl; }
+	if ( ABnum < 0.5 ) { yi = "- " + yi; }
+	else { yi = "+ " + yi; }
+	if ( ACnum < 0.5 ) { lc = "- " + lc; }
+	else { lc = "+ " + lc; }
+
+	var lin = " = " + sl + "x " + yi;
+	var qud = " = " + sl + "x^2 " + lc + "x " + yi;
+	var xpn = " = " + sl + "^(x " + lc + ") " + yi;
+	var lgr = " = ln|x " + lc + "|" + yi;
+
+	varList = W + ";" + X + ";" + Y + ";" + Z + ";" + sl + ";" + yi + ";" + lc;
+	document.getElementById("varsq8").value = varList;
+	varList = "";
+	questions[7] = varSwp;
+
+	varSwp = quests[8];
+
+	var ADnum = Math.random();
+	var AEnum = Math.random();
+	var AFnum = Math.random();
+	var AGnum = Math.random();
+	var AHnum = Math.random();
+
+	if ( ADnum < 0.5 ) { 	var ADa = "house";
+				var ADb = "rooms";
+				var ADc = " of cubic feet";
+				var ADd = "number of rooms in a house";
+				var ADf = "cubic footage of a house"; }
+	else {  var ADa = "child";
+		var ADb = "feet";
+		var ADc = " pounds";
+		var ADd = "height of a child";
+		var ADf = "weight of a child"; } 
+	var AEa = Math.floor(AEnum * 3) + 2;
+	var newAE = AEnum * 100 - Math.floor(AEnum*100);
+	var AEb = Math.floor(newAE * 3) + 2;
+	if ( AEa == AEb ) { AEb = AEb + 0.5; }
+	var AFa = Math.floor(AFnum * 30 ) + 30;
+	var newAF = AFnum * 100 - Math.floor(AFnum*100);
+	var AFb = Math.floor(newAF * 30) + 30;
+	if ( AFa == AFb ) { AFb = AFb + 0.5; }
+	var AG = Math.floor(AGnum * 50)/100;
+	var AH = Math.floor(AHnum * 100)/100;
+	varSwp = varSwp.split("[ADa]").join(ADa);
+	varSwp = varSwp.split("[ADb]").join(ADb);
+	varSwp = varSwp.split("[ADc]").join(ADc);
+	varSwp = varSwp.split("[ADd]").join(ADd);
+	varSwp = varSwp.split("[ADf]").join(ADf);
+	varSwp = varSwp.split("[AEa]").join(AEa);
+	varSwp = varSwp.split("[AEb]").join(AEb);
+	varSwp = varSwp.split("[AFa]").join(AFa);
+	varSwp = varSwp.split("[AFb]").join(AFb);
+	varSwp = varSwp.split("[AG]").join(AG);
+	varSwp = varSwp.split("[AH]").join(AH);
+
+	varList = ADa + ";" + String(AEa) + ";" + String(AEb) + ";" + String(AFa) + ";" + String(AFb) + ";" + AG + ";" + AH;
+
+	document.getElementById("varsq9").value = varList;
+	varList = "";
+
+	questions[8] = varSwp;
+
+	varSwp = quests[9];
+
+	var AHnum = Math.random();
+	var AInum = Math.random();
+	var AJnum = Math.random();
+	var AKnum = Math.random();
+	var ALnum = Math.random();
+
+	beginning = varSwp.split("[AHa]")[0];
+	var AHopt1 = varSwp.split("[AHb]")[0].split("[AHa]")[1];
+	var AHopt2 = varSwp.split("[AHend]")[0].split("[AHb]")[1];
+	if ( AHnum < 0.5 ) { 	var AH = "insurance";
+				varSwp = beginning + AHopt1; }
+	else {  var AH = "houses";
+		varSwp = beginning + AHopt2; }
+	var AI = Math.floor(AInum * 100);
+	var P1 = Math.floor(AJnum * 5) * 10 + 10;
+	var P2 = Math.floor(AKnum * 5) * 10 + 20;
+	var P3 = Math.floor(ALnum * 5) * 10 + 30;
+	var AL = Math.min(P1,P2,P3);
+	if ( AL == P1 ) { 	var AJa = P2;
+				var AK = P3; }
+	else { if ( AL == P2 ) { var AJa = P1;
+				 var AK = P3; }
+	else {	var AJa = P1;
+		var AK = P2; }}
+	var over = AJa + AK - AL - 100;
+	if ( over > 0 ) { AL = over + 10; }
+	if ( AL > Math.min(AJa,AK) ) {  AJa = AJa + 10;
+					AK = AK + 10; } 
+	var digs = AJa / 10;
+	var AJb = "";
+	for ( rd = 0; rd < digs; rd++ ) { AJb = AJb + String(rd); }
+	AJb = AJb.split("").join(',');
+
+	varSwp = varSwp.split("[AJa]").join(AJa);
+	varSwp = varSwp.split("[AJb]").join('{' + AJb + '}');
+	varSwp = varSwp.split("[AK]").join(AK);
+	varSwp = varSwp.split("[AL]").join(AL);
+	varSwp = varSwp.split("[AI]").join(AI);
+
+	varList = String(AI) + ";" + String(AJa) + ";" + String(AK) + ";" + String(AL);
+	document.getElementById("varsq10").value = varList;
+	varList = "";
+	questions[9] = varSwp;
+
+	const randomOrder = [];
+	const qstOrd = [];
+	for ( p = 0; p < 10; p++ ) { randomOrder[p] = Math.random(); }
+	var qord = "";
+	for ( q = 0; q < 10; q++ ) { 
+		var nextVal = Math.min.apply(null,randomOrder); 
+		var nextQst = randomOrder.findIndex(function(h) { return h == Number(nextVal); });
+		qstOrd[q] = nextQst;
+		randomOrder[nextQst] = Number(randomOrder[nextQst]) + 2; 
+		if ( qord === "" ) { qord = String(qstOrd[q]); }
+		else { qord = qord + "," + String(qstOrd[q]); }}
+	document.getElementById("order").value = qord;
+
+	for ( v = 0; v < 10; v++ ) {
+		var QT = "Q" + String(v) + "Title";
+		var QW = "Q" + String(v) + "Text";
+		var QG = "Q" + String(v) + "Graphic";
+		var AT = "Ans" + String(v) + "Title";
+		var AD = "Ans" + String(v);
+		var QN = v + 1;
+		var qustTxt = questions[qstOrd[v]];
+
+		document.getElementById(QT).innerHTML = "Question " + QN + ":";
+		document.getElementById(QW).innerHTML = qustTxt;
+		document.getElementById(AT).innerHTML = "Answer: ";
+		document.getElementById(AD).hidden = false;
+		if ( String(qstOrd[v]) === "4" ) { 	var tbl = document.getElementById(QG);
+
+	tbl.width = 1250;
+	tbl.height = 150;		
+	
+	var c = tbl.getContext("2d");
+
+	for ( c1 = 0; c1 < 7; c1++ ) {
+		var StrtX = c1 * 150 + 160;
+		c.beginPath();
+		c.lineStyle = "black";
+		c.lineWidth = "3";
+		c.rect(StrtX,10,150,20);
+		c.font = "15px Arial";
+		c.fillText(cats1[c1],StrtX + 2,26);
+		c.stroke(); }
+
+	for ( c2 = 0; c2 < 4; c2++ ) {
+		var StrtY = c2 * 20 + 30;
+		c.beginPath();
+		c.lineStyle = "black";
+		c.lineWidth = "3";
+		c.rect(10,StrtY,150,20);
+		c.font = "15px Arial";
+		c.fillText(cats2[c2],12,StrtY+16);
+		c.stroke(); }
+	var row = 0;
+	var rowCounter = 0;
+	for ( b = 0; b < 28; b++ ) {
+		var StrtX = rowCounter * 150 + 160;
+		var StrtY = row * 20 + 30;
+		c.beginPath();
+		c.lineStyle = "black";
+		c.lineWidth = "3";
+		c.rect(StrtX,StrtY,150,20);
+		c.font = "15px Arial";
+		c.fillText(catvals[b],StrtX+2,StrtY+16);
+		c.stroke(); 
+		rowCounter = rowCounter + 1;
+		if ( rowCounter == 7 ) { rowCounter = 0;
+					 row = row + 1; }}}
+		if ( String(qstOrd[v]) === "5" ) { 	var nrm = document.getElementById(QG);
+
+	nrm.width = 1502;
+	nrm.height = 505;
+	var n = nrm.getContext("2d");
+
+	n.beginPath();
+	n.lineStyle = "black";
+	n.lineWidth = "6";
+	n.moveTo(1,502);
+	n.lineTo(1501,502);
+	n.stroke();
+
+	var coeff = Math.pow(2 * Math.PI, -0.5);
+	const cols = ["blue","yellow","red","green","orange"];
+	var randcol = cols[Math.floor(Math.random()*5)];
+	for ( d = 0; d < 751; d++ ) {
+		var xval = d / 150;
+		var normexp = -0.5 * Math.pow(xval,2);
+		var h = coeff * Math.exp(normexp);
+
+		if ( d > 300 ) { var shade = "N"; }
+		else {  if ( R == 0.95 || R == 0.475 ) { var shade = "Y"; }
+			else {  if ( d < 150 ) { var shade = "Y"; }
+				else { var shade = "N"; }}}
+		if ( shade == "Y" ) {
+			if ( side == "right" || side == "both" ) {
+				n.beginPath();
+				n.fillStyle = randcol;
+				n.rect(d + 751, 499,1,h * -1200);
+				n.fill(); }
+			if ( side == "left" || side == "both" ) {
+				n.beginPath();
+				n.fillStyle = randcol;
+				n.rect(751 - d, 499, 1,h * -1200);
+				n.fill(); }}
+			
+		n.beginPath();
+		n.fillStyle = "black";
+		n.arc(d + 751, 500 - h * 1200, 3, 0, 2*Math.PI);
+		n.fill();
+		n.beginPath();
+		n.fillStyle = "black";
+		n.arc(751 - d, 500 - h * 1200, 3, 0, 2*Math.PI);
+		n.fill(); }}
+		if ( String(qstOrd[v]) === "7" ) { 	var rgs = document.getElementById(QG);
+
+	rgs.width = 320;
+	rgs.height = 125;
+	var r = rgs.getContext("2d");
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(10,10,200,25);
+	r.font = "15px Arial";
+	r.fillText("y\u0302",12,26);
+	r.fillText(lin,17,26);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(10,35,200,25);
+	r.font = "15px Arial";
+	r.fillText("y\u0302",12,51);
+	r.fillText(qud,17,51);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(10,60,200,25);
+	r.font = "15px Arial";
+	r.fillText("y\u0302",12,76);
+	r.fillText(xpn,17,76);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(10,85,200,25);
+	r.font = "15px Arial";
+	r.fillText("y\u0302",12,101);
+	r.fillText(lgr,17,101);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(210,10,100,25);
+	r.font = "15px Arial";
+	r.fillText(W,214,26);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(210,35,100,25);
+	r.font = "15px Arial";
+	r.fillText(X,214,51);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(210,60,100,25);
+	r.font = "15px Arial";
+	r.fillText(Y,214,76);
+	r.stroke();
+
+	r.beginPath();
+	r.lineStyle = "black";
+	r.lineWidth = "3";
+	r.rect(210,85,100,25);
+	r.font = "15px Arial";
+	r.fillText(Z,214,101);
+	r.stroke(); }}
+
+	document.getElementById("directions2").innerHTML = "Questions 11 - 13, will have multiple parts and will require additional explanation, evidence, etc.  Follow the instructions attached to each question.<br><em>10 Points Each</em>";
+
+	var AMnum = Math.random();
+	var ANnum = Math.random();
+
+	var AMa = Math.floor( AMnum * 10 );
+	if ( AMa < 2 ) { AMa = 2; }
+
+	var AMc1 = 1 / AMa;
+	var AMc = Math.round( AMc1 * 1000 ) / 1000;
+	var AMb1 = AMc1 * Math.log(2);
+	var AMb = Math.round( AMb1 * 1000 ) / 1000;
+	var AMe1 = AMc1 * Math.log(4);
+	var AMe = Math.round( AMe1 * 1000 ) / 1000;
+	var AMd1 = AMe1 - AMc1 * Math.log(3);
+	var AMd = Math.round( AMd1 * 1000 ) / 1000;
+	var AMf1 = Math.random() * 2;
+	var AMf = Math.round(AMf1 * 100) / 100;
+	var fdec = AMf1 * 1000 - AMf * 1000;
+	if ( fdec < 0 ) { fdec = -1 * fdec; }
+	if ( fdec < 5 ) { var fvs = AMd; }
+	else { var fvs = AMe; }
+	var lower = Math.min(AMf, fvs);
+	var upper = Math.max(AMf, fvs);
+	var AMg1 = 2 * AMc1 * ( 1 - AMc1 ) / (AMa - 1) - Math.pow(AMc1,2);
+	var AMg2 = Math.pow(AMg1,0.5);
+	var AMg = Math.round(AMg2 * 1000) / 1000;
+
+	if ( ANnum < 0.2 ) { 	var AN = "X &lt; " + AMd; 
+				var ANdsp = "lessthanQ1"; }
+	else { if ( ANnum < 0.4 ) { 	var AN = "X &gt; " + AMd; 
+					var ANdsp = "greaterthanQ1"; }
+	else { if ( ANnum < 0.6 ) { 	var AN = "X &lt; " + AMe; 
+					var ANdsp = "lessthanQ3"; }
+	else { if ( ANnum < 0.8 ) { 	var AN = "X &gt; " + AMe; 
+					var ANdsp = "greaterthanQ3"; }
+	else {	var AN = AMd + " &lt; X &lt; " + AMe; 
+		var ANdsp = "betweenQ1Q3"; }}}}	
+
+	var AO1 = Math.exp(-1*AMa*AMf1);
+	var AO = Math.round(AO1 * 1000) / 1000;
+	if ( AO == 0 ) { AMf = 0.5;
+			 AO1 = Math.exp(-1 * AMa * AMf);
+			 AO = Math.round(AO1 * 1000) / 1000; }
+	varList = AMa + ";" + AMf + "vs" + fvs + ";" + ANdsp + ";" + AO;
+	document.getElementById("varsq11").value = varList;
+	varList = "";
+
+	document.getElementById("FRQ0Title").innerHTML = "Question 11: ";
+	document.getElementById("FRQ0Text").innerHTML = "The function f(x) = " + AMa + "e<sup>-" + AMa + "x</sup>, illustrated below, is a probability distribution function on the interval [0,&infin;).";
+	document.getElementById("FRQ0ATitle").innerHTML = "Part A: ";
+	document.getElementById("FRQ0AText").innerHTML = "Based on f(x) being a probability distribution function alone, what two features of this function's graph are certain?"
+	document.getElementById("FRQ0AAns").hidden = false;
+	document.getElementById("FRQ0BTitle").innerHTML = "Part B: ";
+	document.getElementById("FRQ0BText").innerHTML = "Based on the skewedness of this distribution, which of the lines illustrated, in red, can represent the mean, median, and mode?<br><em>Give your answer as mean,median,mode for example, D,E,F.</em>";
+	document.getElementById("FRQ0BAns").hidden = false;
+	document.getElementById("FRQ0CTitle").innerHTML = "Part C: ";
+	document.getElementById("FRQ0CText").innerHTML = "Given that the lower quartile has the value of " + AMd + ", and the upper quartile has the value of " + AMe + ", indicated by dashed blue lines, determine the following: P(" + AN + ").";
+	document.getElementById("FRQ0CAns").hidden = false;
+	document.getElementById("FRQ0DTitle").innerHTML = "Part D: ";
+	document.getElementById("FRQ0DText").innerHTML = "Given that P(X > " + AMf + ") = " + AO + ", indicated by the shaded area, determine the value of P(" + lower + " < X < " + upper + ").";
+	document.getElementById("FRQ0DAns").hidden = false;
+	document.getElementById("FRQ0ETitle").innerHTML = "Part E: ";
+	document.getElementById("FRQ0EText").innerHTML = "Given that the mean of this probability distribution is " + AMc + " and the standard deviation is " + AMg + ", how can the Empirical Rule be used to verify that this distribution is not normal?";
+	document.getElementById("FRQ0EAns").hidden = false;
+
+	var expGr = document.getElementById("FRQ0Graph");
+	expGr.width = 1600;
+	expGr.height = 600;
+	var g = expGr.getContext("2d");
+
+	g.beginPath();
+	g.lineStyle = "black";
+	g.lineWidth = "3";
+	g.moveTo(50, 1);
+	g.lineTo(45, 6);
+	g.lineTo(55, 6);
+	g.lineTo(50, 1);
+	g.lineTo(50, 550);
+	g.lineTo(45, 545);
+	g.lineTo(55, 545);
+	g.lineTo(50, 550);
+	g.stroke();
+
+	g.beginPath();
+	g.lineStyle = "black";
+	g.lineWidth = "3";
+	g.moveTo(40, 542);
+	g.lineTo(45, 547);
+	g.lineTo(45, 537);
+	g.lineTo(40, 542);
+	g.lineTo(1550, 542);
+	g.lineTo(1545, 547);
+	g.lineTo(1545, 537);
+	g.lineTo(1550, 542);
+	g.stroke();
+
+	for ( h = 0; h < 1501; h++ ) {
+		var xval = h / 300;
+		if ( xval > AMf ) { var shade = "Y"; }
+		else { var shade = "N"; }
+		var yval = Math.exp(-1 * xval);
+		var xCnt = h + 50;
+		var yCnt = 540 - 500 * yval;
+
+		g.beginPath();
+		g.fillStyle = "black";
+		g.arc(xCnt, yCnt, 3, 0, 2*Math.PI);
+		g.fill(); 
+		if ( shade == "Y" ) {
+			g.beginPath();
+			g.fillStyle = "yellow";
+			g.rect(xCnt, yCnt, 1,540 - yCnt);
+			g.fill(); }}
+
+	for ( l = 0; l < 6; l++ ) {
+		g.font = "25px Arial";
+		g.fillStyle = "black";
+		g.fillText(l, l*300+50,575); }
+
+	var yJump = 500 / AMa;
+	for ( m = 0; m < AMa + 1; m++ ) {
+		var lab = AMa - m;
+		var ySt = 50 + m * yJump;
+		g.font = "25px Arial";
+		g.fillStyle = "black";
+		g.fillText(lab, 20, ySt); } 
+
+		g.beginPath();
+		g.fillStyle = "red";
+		g.rect(50,40,3,500);
+		g.fill();
+
+		g.font = "23px Courier";
+		g.fillText("A",54,37);
+
+		var meanVal = 300 * AMc + 50;
+		var meanC = 500 * Math.exp(-1 * AMc);
+		var meanY = 540 - meanC;
+		g.beginPath();
+		g.fillStyle = "red";
+		g.rect(meanVal,meanY,3,meanC);
+		g.fill();
+
+		g.font = "23px Courier";
+		g.fillText("C",meanVal + 4,meanY - 3);
+
+		var medVal = 300 * AMb + 50;
+		var medC = 500 * Math.exp(-1 * AMb);
+		var medY = 540 - medC;
+		g.beginPath();
+		g.fillStyle = "red";
+		g.rect(medVal,medY,3,medC);
+		g.fill();
+
+		g.font = "23px Courier";
+		g.fillText("B",medVal + 4,medY - 3);	
+
+		var q1Val = 300 * AMd + 50;
+		var q1C = 500 * Math.exp(-1 * AMd);
+		var q1Y = 540 - q1C;
+		var dashJump = Math.round(q1C / 25);
+		for ( d = 0; d < dashJump; d++ ) {
+			var dashSt = q1Y + 25 * d;
+			g.beginPath();
+			g.fillStyle = "blue";
+			g.rect(q1Val,dashSt,3,15);
+			g.fill(); }
+
+			g.beginPath();
+			g.fillStyle = "blue";
+			g.rect(q1Val,dashSt + 25,3,515 - dashSt);
+			g.fill();
+
+		var q3Val = 300 * AMe + 50;
+		var q3C = 500 * Math.exp(-1 * AMe);
+		var q3Y = 540 - q3C;
+		var dashJump = Math.round(q3C / 25);
+		for ( e = 0; e < dashJump; e++ ) {
+			var dashSt = q3Y + 25 * e;
+			g.beginPath();
+			g.fillStyle = "blue";
+			g.rect(q3Val,dashSt,3,15);
+			g.fill(); }
+
+			g.beginPath();
+			g.fillStyle = "blue";
+			g.rect(q3Val,dashSt + 25,3,515 - dashSt);
+			g.fill();
+
+	var APnum = Math.random();
+	var AQnum = Math.random();
+	var ARnum = Math.random();
+	var ASnum = Math.random();
+	var ATnum = Math.random();
+	var AUnum = Math.random();
+	var AVnum = Math.random();
+
+	var APdig = Math.floor(APnum * 10);
+	if ( APdig < 5 ) { 	varSwp = "As part of a study on language proficiency, a sample of [AQ] individuals were monitored as to their progress in learning a new language.  The following table compares the number of days studying a new language and the number of words mastered for each individual.";
+				var AP = "language"; }
+	else {	varSwp = "As part on cooling rates of water based on salinity levels, a sample of [AQ] solutions were monitored as to their temperature based on exposure to a stable room temperature.  The number of hours to reach within one degree of room temperature was recorded.  The following table compares salinity concentration in parts per thousand and the number of hours needed to reach the desired temperature.";
+		var AP = "salinity"; }
+	var AQ = 10 + Math.floor(AQnum * 5);
+	varSwp = varSwp.split("[AQ]").join(AQ);
+
+	const xesA = [];
+	const xes = [];
+	const yes = [];
+	var AR = Math.floor(ARnum * 10);
+	if ( AR < 2 ) { AR = 3; }
+	var ARsign = Math.floor(ARnum * 100) - AR * 10;
+	if ( ARsign < 5) { AR = -1 * AR; }
+	var AS = Math.floor(ASnum * 10);
+	if ( AS < 2 ) { AS = 2; }
+	for ( v = 0; v < AQ; v++ ) {
+		var temp = String(ATnum).split("")[v+2];
+		xesA[v] = Number(temp); }
+	var ndx = 0;
+	while ( xes.length < AQ ) {
+		var tempx = Math.min.apply(null,xesA);
+		var loc = xesA.findIndex( function(t) { return t == tempx; });
+		if ( ndx > 0 && xes[ndx - 1] == tempx ) { tempx = String(Number(tempx) + 10);
+							 xesA[loc] = tempx; }
+		else {	xes[ndx] = tempx;
+			xesA[loc] = 100;
+			var tempy = AS + AR * Math.log( Number(tempx) + 1 );
+			if ( tempy < 0 ) { tempy = 0.5; }
+			yes[ndx] = Math.round(tempy); 
+			ndx = ndx + 1; }}
+	var AU = xes[Math.floor(AUnum * AQ)];
+	var AV = Math.floor(AVnum * 100);
+	if ( AV < 10 ) { AV = 10 + AV; }
+
+	var QPF = "Find and interpret the residual associated with x = " + AU + " of this study.";
+	var QPG = "Use the LSRL to extrapolate the value associate with x = " + AV + ".";
+	const questParts = ["Find the correlation coefficient and give an interpretation.","Find the coefficient of determination and give an interpretation.",QPF,QPG,"Is a linear model a good fit for this data? If not, propose an alternate model."];
+	
+	document.getElementById("FRQ1Title").innerHTML = "Question 12: ";
+	document.getElementById("FRQ1Text").innerHTML = varSwp;
+	var frqTbl = document.getElementById("FRQ1Table");
+
+	frqTbl.width = 850;
+	frqTbl.height = 60;		
+	
+	var t = frqTbl.getContext("2d");
+
+	t.beginPath();
+	t.lineStyle = "black";
+	t.lineWidth = "3";
+	t.rect(10,10,75,20);
+	t.font = "15px Arial";
+	if ( AP == "language" ) { t.fillText("Days",12,26); }
+	else { t.fillText("Salinity",12,26); }
+	t.stroke(); 
+
+	t.beginPath();
+	t.lineStyle = "black";
+	t.lineWidth = "3";
+	t.rect(10,30,75,20);
+	t.font = "15px Arial";
+	if ( AP == "language" ) { t.fillText("Words",12,46); }
+	else { t.fillText("Hours",12,46); }
+	t.stroke(); 
+
+	for ( a = 0; a < AQ; a++ ) {
+		var StrtX = a * 50 + 85;
+		t.beginPath();
+		t.lineStyle = "black";
+		t.lineWidth = "3";
+		t.rect(StrtX,10,50,20);
+		t.font = "15px Arial";
+		t.fillText(xes[a],StrtX+4,26);
+		t.stroke(); 
+
+		t.beginPath();
+		t.lineStyle = "black";
+		t.lineWidth = "3";
+		t.rect(StrtX,30,50,20);
+		t.font = "15px Arial";
+		t.fillText(yes[a],StrtX+4,46);
+		t.stroke(); }
+	var PD = Math.floor(Math.random()*5);
+	var PE = Math.floor(Math.random()*5);
+	var dataListx = xes.join(',');
+	var dataListy = yes.join(',');
+	if ( PD == PE ) { if ( PD < 4 ) { PD = PD + 1; }
+			  else { PD = PD - 1; }}
+	varList = AP + ";" + AQ + ";" + AR + ";" + AS + ";" + AU + ";" + AV + ";" + PD + ";" + PE + ";" + dataListx + ":" + dataListy;
+	document.getElementById("varsq12").value = varList;
+	varList = "";
+	document.getElementById("FRQ1ATitle").innerHTML = "Part A: ";
+	document.getElementById("FRQ1BTitle").innerHTML = "Part B: ";
+	document.getElementById("FRQ1CTitle").innerHTML = "Part C: ";
+	document.getElementById("FRQ1DTitle").innerHTML = "Part D: ";
+	document.getElementById("FRQ1ETitle").innerHTML = "Part E: ";
+	document.getElementById("FRQ1AAns").hidden = false;
+	document.getElementById("FRQ1CAns").hidden = false;
+	document.getElementById("FRQ1DAns").hidden = false;
+	document.getElementById("FRQ1EAns").hidden = false;
+	document.getElementById("FRQ1CAns").value = "ax + b;Interpretation";
+	document.getElementById("FRQ1AText").innerHTML = "Identify the Explantory and Response Variables in this study.";
+	document.getElementById("FRQ1BText").innerHTML = "Create a scatter plot of this data below.";
+	document.getElementById("FRQ1CText").innerHTML = "Determine the LSRL and interpret the slope in terms of this question. y&#770; = ";
+	document.getElementById("FRQ1DText").innerHTML = questParts[PD];
+	if ( PD < 3 ) { document.getElementById("FRQ1DAns").value = "Value;Interpretation"; }
+	if ( PD == 4 ) { document.getElementById("FRQ1DAns").value = "Yes/No;Alternate"; }
+	document.getElementById("FRQ1EText").innerHTML = questParts[PE];
+	if ( PE < 3 ) { document.getElementById("FRQ1EAns").value = "Value;Interpretation"; }
+	if ( PE == 4 ) { document.getElementById("FRQ1EAns").value = "Yes/No;Alternate"; }
+	document.getElementById("FRQ1GraphTitle").innerHTML = "Scatter Plot: ";
+	document.getElementById("FRQ1GraphText").innerHTML = "Identify your X and Y scale, then click the button to continue.";
+	document.getElementById("FRQ1GraphXSclTitle").innerHTML = "X Scale: From 0 to ";
+ 	document.getElementById("FRQ1GraphYSclTitle").innerHTML = "Y Scale: <em>(Minimum 10)</em> From 0 to ";
+	document.getElementById("FRQ1XScl").hidden = false;
+	document.getElementById("FRQ1YScl").hidden = false;
+	document.getElementById("CreateGraph").hidden = false;
+
+	var AWnum = Math.random();
+	var AXnum = Math.random();
+	var AZnum = Math.random();
+	var BAnum = Math.random();
+	var BBnum = Math.random();
+
+	var AXa = Math.floor( AXnum * 10 );
+	if ( AXa < 5 ) { var AX = Math.floor(AXnum * 1000 ) - AXa * 100; }
+	else { var AX = Math.floor(AXnum * 10000 ) - AXa * 1000; }
+	if( AWnum < 0.5 ) { 	var text13 = "A study is being conducted to determine the if watching television or reading a book before bed will result in better sleep for adults with insomnia.  To do this, " + AX + " people currently in treatment for insomnia were gathered and divided into three groups, two treatment groups and a control group, each given a different activity to perform prior to bed.  During the night, data is collected about the number of minutes the subjects were asleep."; 
+				var AW = "sleep"; }
+	else {	var text13 = "To determine the effectiveness of a recycling rewards initiative, " + AX + " residences in a large community were watched for several weeks prior to and several weeks after the implementation of this initiative.  Their weekly quanitity of recyclables left for pickup was recorded and compared.";
+		var AW = "recycle"; }
+	var AZ1 = Math.floor(AZnum * 3 + 4) * 10;
+	if ( AZnum * 10 - Math.floor(AZnum*10) < 0.5) { var AZa = AZ1; }
+	else { var AZa = AZ1 + 5; }
+	var AZb = 100 - AZa;
+	if ( AZa == AZb ) { AZa = 40;
+			    AZb = 60; }
+	if ( BAnum < 0.5 ) { var BA = "probability"; }
+	else { var BA = "stratified"; }
+	if ( AW == "sleep" ) {  var qp1 = "In order to match previous studies, the sample was to be " + AZa + "% males and " + AZb + "% females.  Describe how " + BA + " sampling can be used to do this."; 
+				var whom = "subject"; }
+	else {  var qp1 = "In order to match previous studies, the sample was to be " + AZa + "% with married homeowners and " + AZb + "% with single homeowners.  Describe how " + BA + " sampling can be used to do this."; ; 
+		var whom = "homeowner"; }
+
+	const races = ["European", "African", "Asian", "Central American", "South American", "Native American", "South Asian", "Italian", "Irish", "Polish"];
+	var BB1 = Math.floor(BBnum * 10);
+	var BB = races[BB1];
+	const questparts13 = ["Identify the sample and population.", qp1,"When the sample was selected, all persons of " + BB + " decent were excluded from the sample.  This would be an example of type of bias?","Alongside the main variable of the study, data on " + whom + "'s age was also recorded to show if any new trends were revealed.  This would be an example of what?","Describe the possible control and treatment groups.","If one of the researchers never owned or watched a television, and was raised to think they were evil, this would represent what experimental drawback?  How can it be resolved?","After the study, it was discovered that the corridor on the facility housing one group had a problem with the thermostat causing very hot temperatures.  What is this unplanned event called?","How can matching, based on severity of previous symptoms be used to create these groups.","The subjects were not informed of the nature of this study until afterwards, and the researcher was not informed of the group assignment until data was collected.  What is this lack of knowledge called?","Several of the subjects stated that they could never sleep in a bed that wasn't there own, and others said that they had trouble sleeping without their partner next to them. Many were overheard discussing what they thought this study was about.  What is this drawback of the research process called?"];
+	if ( AW == "recycle" ) { var PB = questparts13[0];
+				 var PC = questparts13[1];
+				 var PD = questparts13[2];
+				 var PE = questparts13[3]; 
+				 var parts = "0123"; }
+	else {  var pb = Math.floor(Math.random()*10);
+		var pc = Math.floor(Math.random()*10);
+		if ( pc == pb ) { 	if ( pc < 9 ) { pc = pc + 1; }
+					else { pc = 0; }}
+		var pd = Math.floor(Math.random()*10);
+		if ( pd == pb || pd == pc ) { 	if ( Math.max(pb,pc) == 9 && Math.min(pb,pc) == 0 ) { pd = 1; }
+						else {  if ( Math.max(pb,pc) == 9 ) { pd = 0; }
+							else { pd = Math.max(pb,pc) + 1; }}}							
+		var pe = Math.floor(Math.random()*10);
+		if ( pe == pb || pe == pc || pe == pd ) { if ( pe < 9 ) { pe = Math.max(pb, pc, pd ) + 1; }
+							  else { pe = 0; }}
+		if ( pe == pb || pe == pc || pe == pd ) { if ( pe < 9 ) { pe = Math.max(pb, pc, pd ) + 1; }
+							  else { pe = 0; }}
+		if ( pe == pb || pe == pc || pe == pd ) { if ( pe < 9 ) { pe = Math.max(pb, pc, pd ) + 1; }
+							  else { pe = 0; }}
+ 		var PB = questparts13[pb];
+		var PC = questparts13[pc];
+		var PD = questparts13[pd];
+		var PE = questparts13[pe]; 
+		var parts = String(pb) + String(pc) + String(pd) + String(pe); } 
+
+	varList = AW + String(AX) + String(AZa) + "/" + String(AZb) + BA + BB + parts;
+	document.getElementById("varsq13").value = varList;
+	varList = "";
+	document.getElementById("FRQ2Title").innerHTML = "Question 13: ";
+	document.getElementById("FRQ2Text").innerHTML = text13;
+	document.getElementById("FRQ2ATitle").innerHTML = "Part A: ";
+	document.getElementById("FRQ2AText").innerHTML = "Is this study an experiment or an observational study? Why?";
+	document.getElementById("FRQ2AAns").hidden = false;
+	document.getElementById("FRQ2BTitle").innerHTML = "Part B: ";
+	document.getElementById("FRQ2BText").innerHTML = PB;
+	document.getElementById("FRQ2BAns").hidden = false;
+	document.getElementById("FRQ2CTitle").innerHTML = "Part C: ";
+	document.getElementById("FRQ2CText").innerHTML = PC;
+	document.getElementById("FRQ2CAns").hidden = false;
+	document.getElementById("FRQ2DTitle").innerHTML = "Part D: ";
+	document.getElementById("FRQ2DText").innerHTML = PD;
+	document.getElementById("FRQ2DAns").hidden = false;
+	document.getElementById("FRQ2ETitle").innerHTML = "Part E: ";
+	document.getElementById("FRQ2EText").innerHTML = PE;
+	document.getElementById("FRQ2EAns").hidden = false; }
+
+function ScatterPlot() {
+	var ymax = document.getElementById("FRQ1YScl").value;
+	var xmax = document.getElementById("FRQ1XScl").value;
+	var sct = document.getElementById("FRQ1Graph");
+	sct.height = 550;
+	sct.width = 560;
+	var s = sct.getContext("2d");
+	s.beginPath();
+	s.lineStyle = "black";
+	s.lineWidth = "3";
+	s.moveTo(50,5);
+	s.lineTo(45,10);
+	s.lineTo(55,10);
+	s.lineTo(50,5);
+	s.lineTo(50,545);
+	s.lineTo(45,540);
+	s.lineTo(55,540);
+	s.lineTo(50,545);
+	s.stroke();
+
+	s.beginPath();
+	s.lineStyle = "black";
+	s.lineWidth = "3";
+	s.moveTo(45,530);
+	s.lineTo(50,525);
+	s.lineTo(50,535);
+	s.lineTo(45,530);
+	s.lineTo(550,530);
+	s.lineTo(545,525);
+	s.lineTo(545,535);
+	s.lineTo(550,530);
+	s.stroke();
+
+	if ( xmax > 10 ) { 	var xScTop = Math.ceil( xmax / 10 ) * 10; 
+				var xStps = xScTop / 10 + 1; }
+	else {  var xScTop = xmax;
+		var xStps = xmax + 1; }
+	if ( ymax > 10 ) { 	var yScTop = Math.ceil( ymax / 10 ) * 10; 
+				var yStps = yScTop / 10 + 1; }
+	else {  var yScTop = ymax; 
+		var yStps = ymax + 1; }
+
+	var xJ = 500 / (xStps-1);
+	var yJ = 500 / (yStps-1);
+	var xJump = Math.max(xJ, 50);
+	var yJump = Math.max(yJ, 50);
+
+	for ( h = 0; h < xStps; h++ ) {
+		s.font = "25px Arial";
+		s.fillStyle = "black";
+		if ( xmax > 10 ) { s.fillText(h * 10, h * xJump + 30, 550); 
+				   var xtop = h * 10; }
+		else {  s.fillText(h, h * xJump + 30, 550); 
+			var xtop = h; }
+		var xtoploc = h * xJump + 30; }
+	for ( v = 0; v < yStps; v++ ) {
+		s.font = "25px Arial";
+		s.fillStyle = "black";
+		if ( ymax > 10 ) { s.fillText(v * 10, 20, v * -1 * yJump + 550);
+				   var ytop = v * 10; }
+		else {  s.fillText(v, 20, v * -1 * yJump + 550); 
+			var ytop = v; }
+		var ytoploc = v * -1 * yJump + 550; }
+	document.getElementById("FillGraph").hidden = false;
+	document.getElementById("EmptyGraph").hidden = false;
+	document.getElementById("FRQ1GraphText").innerHTML = "Click either &quot;Add Points&quot; to graph new points,<br>or &quot;Remove Points&quot; to erase incorrect points.<br> Then click directly on the graph.<br>To rescale the axes, you can change the scale boxes and click &quot;Fill In Graph&quot;";
+	document.getElementById("xdata").value = "[" + xtop + "," + xtoploc + "]";
+	document.getElementById("ydata").value = "[" + ytop + "," + ytoploc + "]"; }
+
+function FillScatter() {
+	var origColor = document.getElementById("FillGraph").style;
+	document.getElementById("FillGraph").style = "background-color:yellow";
+	document.getElementById("FillGraph").disabled = true;
+	document.getElementById("EmptyGraph").style = origColor;
+	document.getElementById("EmptyGraph").disabled = false;
+	var grph = document.getElementById("FRQ1Graph");
+	grph.removeEventListener("click",removeDot);
+	grph.addEventListener("click",addDot); }
+
+function EraseScatter() {
+	var origColor = document.getElementById("EmptyGraph").style;
+	document.getElementById("EmptyGraph").style = "background-color:yellow";
+	document.getElementById("EmptyGraph").disabled = true;
+	document.getElementById("FillGraph").style = origColor;
+	document.getElementById("FillGraph").disabled = false;
+	var grph = document.getElementById("FRQ1Graph");
+	grph.removeEventListener("click",addDot);
+	grph.addEventListener("click",removeDot); }
+
+function addDot(e) {
+	var xtop = document.getElementById("xdata").value.split(",")[0].split("[")[1];
+	var ytop = document.getElementById("ydata").value.split(",")[0].split("[")[1];
+	var xtoploc = document.getElementById("xdata").value.split("]")[0].split(",")[1];
+	var ytoploc = document.getElementById("ydata").value.split("]")[0].split(",")[1];
+	var xconv = (xtoploc - 50) / xtop;
+	var yconv = (550 - ytoploc ) / ytop;
+	var grph = document.getElementById("FRQ1Graph");
+	var xstrt = grph.offsetLeft;
+	var ystrt = grph.offsetTop;
+	var xposR = e.pageX;
+	var yposR = e.pageY;
+	var xpos = xposR - xstrt;
+	var ypos = yposR - ystrt;
+	var xval = Math.round(( xpos - 50 ) / xconv);
+	var yval = Math.round(( 550 - ypos ) / yconv);
+	var g = grph.getContext("2d");
+	g.beginPath();
+	g.fillStyle = "black";
+	g.arc(xpos,ypos,3, 0, 2*Math.PI);
+	g.fill(); 
+	document.getElementById("xdata").value = document.getElementById("xdata").value + "," + xval;
+	document.getElementById("ydata").value = document.getElementById("ydata").value + "," + yval; }
+
+function removeDot(e) {
+	var xtop = document.getElementById("xdata").value.split(",")[0].split("[")[1];
+	var ytop = document.getElementById("ydata").value.split(",")[0].split("[")[1];
+	var xtoploc = document.getElementById("xdata").value.split("]")[0].split(",")[1];
+	var ytoploc = document.getElementById("ydata").value.split("]")[0].split(",")[1];
+	var xconv = (xtoploc - 50) / xtop;
+	var yconv = (550 - ytoploc ) / ytop;
+	var grph = document.getElementById("FRQ1Graph");
+	var xstrt = grph.offsetLeft;
+	var ystrt = grph.offsetTop;
+	var xposR = e.pageX;
+	var yposR = e.pageY;
+	var xpos = xposR - xstrt;
+	var ypos = yposR - ystrt;
+	var xval = Math.round(( xpos - 50 ) / xconv);
+	var yval = Math.round(( 550 - ypos ) / yconv);
+	var g = grph.getContext("2d");
+	g.beginPath();
+	g.clearRect(xpos-5, ypos-5, 10, 10,);
+	document.getElementById("xdata").value = document.getElementById("xdata").value.split("," + xval ).join('');
+	document.getElementById("ydata").value = document.getElementById("ydata").value.split("," + yval ).join(''); }
+
+function questionPart(n) {
+	var buttonId = "FRQ13" + letters[n];
+	var thebutton = document.getElementById(buttonId);
+	var oldColor = thebutton.style;
+	document.getElementById("FRQ13B").style = oldColor;
+	document.getElementById("FRQ13C").style = oldColor;
+	document.getElementById("FRQ13D").style = oldColor;
+	thebutton.style = "background-color: yellow;"
+	document.getElementById("PartID").innerHTML = "<b>Part " + letters[n] + "</b>";
+	for ( p = 0; p < 22; p++) {
+		var item = "Select" + p;
+		document.getElementById(item).hidden = false;}}
+
+function NumberHelp(k) {
+	var chicken = document.getElementById("directionsEmph").innerHTML;
+	if ( k == 1 ) {
+		document.getElementById("directionsEmph").innerHTML = chicken + "<br><em>Click anywhere on this message to collapse and return to previous directions</em><br><b>Numeric Answers must be written as follows: <br>Whole number answers or Decimals terminating before 4 decimal places should be written exactly. <br><em>Example: 0.5, 3, 1.625 are all appropriate answers.</em><br>Other decimals should be rounded to 4 places after the decimal point.<br>Fractions, either reduced or not, will also be accepted.<br><em>Example: 0.4129, .4129, 1/7, 4/28 and even 0.5/3.5 would all receive credit (assuming that is the correct answer).</em></b>"; 
+		NH = 2; }
+	if ( k == 2 ) {
+		document.getElementById("directionsEmph").innerHTML = "type your answers"; 
+		NH = 1; }}
+
+function disp(n) {
+	var partIs = document.getElementById("PartID").innerHTML.split("")[8];
+	const others = ["+","-","&times;","/","P(A)","P(B)","P(A&cup;B)","P(A&cap;B)","P(A|B)","P(B|A)","="];
+	if ( n == 99 ) { var stuff = ""; }
+	else { 	if ( n < 10 ) { var stuff = String(n); }
+		else { var stuff = others[n - 10]; }}
+	var docLab = "FRQ2" + partIs + "Form";
+	if ( n == 99 ) { document.getElementById(docLab).innerHTML = ""; }
+	else { 	if ( document.getElementById(docLab).innerHTML ==  "Provide a formula that will help answer this question. <em>Use the buttons below</em>" ) { document.getElementById(docLab).innerHTML = "<b>Formula: </b>" + stuff + "<b> Answer: </b>"; }
+		else { 	var oldMessage = document.getElementById(docLab).innerHTML.split("<b> Answer: </b>")[0].split("<b>Formula: </b>")[1];
+			oldMessage = oldMessage + stuff;
+			document.getElementById(docLab).innerHTML = "<b>Formula: </b>" + oldMessage + "<b> Answer: </b>"; }}
+	document.getElementById(docLab).innerHTML = document.getElementById(docLab).innerHTML.split("undefined").join(''); }
+
+function BoxWhisk() {
+	document.getElementById("CreateGraph").hidden = true;
+	document.getElementById("ReviseGraph").hidden = false;
+
+	var dots = document.getElementById("FRQ1ODots").value;
+	if ( dots === "None" ) { 	var littled = "N";
+					var bigd = "N"; }
+	else {
+	const d = dots.split(",");
+	if ( d.length > 1 ) {	var littled = Math.min.apply(null,d);
+				var bigd = Math.max.apply(null,d); }
+	else {	if ( d.length === 1 ) {	var littled = Number(d[0]); 
+					var bigd = Number(d[0]); }
+		else {	var littled = "N"; 
+			var bigd = "N"; }}}
+
+	var rects = document.getElementById("FRQ1ORect").value;
+	const r = rects.split(";");
+	var hline = document.getElementById("FRQ1OHorz").value;
+	const h = hline.split(";");
+	var vline = document.getElementById("FRQ1OVert").value;
+	const v = vline.split(",");
+	if ( v.length > 1 ) {	var littlev = Math.min.apply(null,v);
+				var bigv = Math.max.apply(null,v); }
+	else {	if ( v.length === 1 ) {	var littlev = Number(v[0]);
+					var bigv = Number(v[0]); }
+		else {	var littlev = "N";
+			var bigv = "N"; }}
+
+	if ( littled == "N" ) { var lowlow = littlev; }
+	else { var lowlow = Math.min(littled, littlev); }
+	if ( lowlow < 10 ) {	var strLine = 0; }
+	else {	var strLine = Math.floor(lowlow / 10); }
+	if ( bigd == "N" ) { var bigbig = bigv; }
+	else { var bigbig = Math.max(bigd,bigv); }
+	var endLine = Math.ceil(bigbig / 10);
+	var jumpSpc = "No";
+	var jumptags = endLine - strLine + 1;
+	if ( jumptags < 5 ) {	jumptags = 5; 
+				jumpSpc = "Yes"; } 
+	var jumpdist = 1300 / ( jumptags - 1 );
+
+	document.getElementById("FRQ1ODots").disabled = true;
+	document.getElementById("FRQ1ORect").disabled = true;
+	document.getElementById("FRQ1OHorz").disabled = true;
+	document.getElementById("FRQ1OVert").disabled = true;
+
+	var canvas = document.getElementById("FRQ1Graph");
+	canvas.height = 500;
+	canvas.width = 1500;
+
+	var ctx = canvas.getContext("2d");
+
+	ctx.beginPath();
+	ctx.lineStyle = "black";
+	ctx.lineWidth = "4";
+	ctx.moveTo(100,425);
+	ctx.lineTo(1400,425);
+	ctx.stroke();
+
+	for ( t = 0; t < jumptags + 1; t++ ) {
+		if ( jumpSpc === "No" ) { var label = ( Number(strLine) + t ) * 10; }
+		else { 	var label = ( ( endLine - strLine ) / 4 ) * t + Number(strLine); }
+		var lblStr = 100 + t * jumpdist - t; 
+		if ( t === jumptags ) { lblStr = lblStr - 15; }
+		ctx.font = "15px Arial"	
+		ctx.fillText( label, lblStr,450); }
+
+	if ( bigd !== "N" ) { 
+		for ( o = 0; o < d.length; o++ ) {
+			var newX = Math.round(( Number(d[o]) - Number(strLine*10) ) / (Number(endLine*10) - Number(strLine*10)) * 1300) + 100 - Number(strLine*10);
+			ctx.beginPath();
+			ctx.fillStyle = "black";
+			ctx.arc(newX, 200,5,0,2*Math.PI);
+			ctx.fill(); }}
+
+	for ( q = 0; q < v.length; q++ ) {
+		var newX = Math.round(( Number(v[q]) - Number(strLine*10) ) / (Number(endLine*10) - Number(strLine*10)) * 1300) + 100 - Number(strLine*10);
+		ctx.beginPath();
+		ctx.lineStyle = "black";
+		ctx.lineWidth = "3";
+		ctx.moveTo(newX, 100);
+		ctx.lineTo(newX,300);
+		ctx.stroke(); }
+
+	for ( s = 0; s < h.length; s++ ) {
+		var lineStr = h[s].split(",")[0].split("[")[1];
+		var lineStp = h[s].split("]")[0].split(",")[1];
+		var newStr = Math.round((Number(lineStr) - Number(strLine*10)) / (Number(endLine*10) - Number(strLine*10)) * 1300 ) + 100 - Number(strLine*10);
+		var newStp = Math.round((Number(lineStp) - Number(strLine*10)) / (Number(endLine*10) - Number(strLine*10)) * 1300 ) + 100 - Number(strLine*10);
+		ctx.beginPath();
+		ctx.lineStyle = "black";
+		ctx.lineWidth = "3";
+		ctx.moveTo(newStr, 200);
+		ctx.lineTo(newStp,200);
+		ctx.stroke(); }
+
+	for ( i = 0; i < r.length; i++ ) {
+		var lineStr = r[i].split(",")[0].split("[")[1];
+		var lineStp = r[i].split("]")[0].split(",")[1];
+		var newStr = Math.round((Number(lineStr) - Number(strLine*10)) / (Number(endLine*10) - Number(strLine*10)) * 1300 ) + 100 - Number(strLine*10);
+		var newStp = Math.round((Number(lineStp) - Number(strLine*10)) / (Number(endLine*10) - Number(strLine*10)) * 1300 ) + 100 - Number(strLine*10);
+		ctx.beginPath();
+		ctx.lineStyle = "black";
+		ctx.lineWidth = "3";
+		ctx.moveTo(newStr, 100);
+		ctx.lineTo(newStp,100);
+		ctx.lineTo(newStp, 300);
+		ctx.lineTo(newStr,300);
+		ctx.lineTo(newStr,100);
+		ctx.stroke(); }}
+
+function NewBoxWhisk() {
+	document.getElementById("FRQ1ODots").disabled = false;
+	document.getElementById("FRQ1ORect").disabled = false;
+	document.getElementById("FRQ1OHorz").disabled = false;
+	document.getElementById("FRQ1OVert").disabled = false;
+	document.getElementById("CreateGraph").hidden = false;
+	document.getElementById("ReviseGraph").hidden = true;
+
+	var canvas = document.getElementById("FRQ1Graph");
+
+	var ctx = canvas.getContext("2d");
+	ctx.clearRect(0,0,1500,500);
+}
+
+function CreateTable() {
+	document.getElementById("FRQ0AFinal").hidden = false;
+	document.getElementById("FRQ0ACreate").value = "Resize";
+	var rows = Number(document.getElementById("FRQ0ARows").value);
+	var columns = Number(document.getElementById("FRQ0AColumns").value);
+
+	if ( rows * columns == 0 ) { document.getElementById("FRQ0ATableTitle").innerHTML = "<b><em>You need to have at least 1 row and 1 column to create a table!</em></b>"; }
+	else {	for ( r = 0; r < rows; r++ ) {
+			for ( c = 0; c < columns; c++ ) {
+				var cellAdd = "FRQ0AC" + String(c) + "R" + String(r);
+				document.getElementById(cellAdd).hidden = false; }}
+		document.getElementById("FRQ0ATableTitle").innerHTML = "Now, you can place your values into the table.  When the table is finished,click the &quot;Finalize Table&quot; button.<br>If you need to resize the table, change your entries for rows and columns and click &quot;Resize&quot;"; }}
+
+function FinalTable() {
+	var rows = Number(document.getElementById("FRQ0ARows").value);
+	var columns = Number(document.getElementById("FRQ0AColumns").value);
+
+	var canvas = document.getElementById("FRQ0table");
+	canvas.height = rows * 25 + 20;
+	canvas.width = columns * 100 + 100;
+
+	var ctx = canvas.getContext("2d");
+
+	for ( r = 0; r < rows; r++ ) {
+		for ( c = 0; c < columns; c++ ) {
+			var xStr = c * 100 + 50;
+			var yStr = r * 25 + 10;
+			var cellAdd = "FRQ0AC" + String(c) + "R" + String(r);
+			var cellText = document.getElementById(cellAdd).value;
+			document.getElementById(cellAdd).hidden = true;
+
+			ctx.beginPath();
+			ctx.lineStyle = "black";
+			ctx.lineWidth = "3";
+			ctx.rect(xStr,yStr,100,25);
+			ctx.font = "15px Arial";
+			ctx.fillText(cellText, xStr + 5, yStr + 20);
+			ctx.stroke(); }}
+
+	document.getElementById("FRQ0ARows").disabled = true;
+	document.getElementById("FRQ0AColumns").disabled = true;
+	document.getElementById("FRQ0AFinal").disabled = true;
+	document.getElementById("FRQ0ACreate").disabled = true;
+	document.getElementById("FRQ0AReset").hidden = false; }
+
+function ResetTable() {
+	var table = document.getElementById("FRQ0table");
+	var tbl = table.getContext("2d");
+	tbl.clearRect(0,0,table.width,table.height);
+
+	for ( r = 0; r < 10; r++ ) {
+		for ( c = 0; c < 10; c++ ) {
+			var cellAdd = "FRQ0AC" + String(c) + "R" + String(r);
+			document.getElementById(cellAdd).value = "";
+			document.getElementById(cellAdd).hidden = true; }}
+
+	document.getElementById("FRQ0ARows").disabled = false;
+	document.getElementById("FRQ0ARows").value = "";
+	document.getElementById("FRQ0AColumns").disabled = false;
+	document.getElementById("FRQ0AColumns").value = "";
+	document.getElementById("FRQ0AFinal").disabled = false
+	document.getElementById("FRQ0AFinal").hidden = true;
+	document.getElementById("FRQ0ACreate").disabled = false; 
+	document.getElementById("FRQ0ACreate").value = "Create Blank Table";
+	document.getElementById("FRQ0AReset").hidden = true;}
+
+function numEncode(k) {
+	var v = Number(k);
+	var Bam = Math.pow(v,7);
+	var Slice = Bam - Math.floor(Bam / 155) * 155;
+	var w = String(Slice);
+	if ( w < 100 ){	if ( w < 10 ) { var rdy = "00" + w; }
+			else { var rdy = "0" + w; }}
+	else { var rdy = w; }
+return rdy; }
+
+function letDecode(k) {
+	var m = numDecode(k);
+	const n = m.split("");
+	var letct = n.length / 2;
+	var theWord = "";
+	for ( c = 0; c < letct; c++ ) {
+		var letSrch = String(n[2*c]) + String(n[2*c+1]);
+		var letFnd = letters[Number(letSrch)-1];
+		theWord = theWord + letFnd; }
+return theWord; }
+
+function numDecode(k) {
+	const p = k.split("");
+	var numct = p.length / 3;
+	var theNum = "";
+	for ( d = 0; d < numct; d++ ) {
+		var numC = String(p[3*d]) + String(p[3*d+1]) + String(p[3*d+2]);
+		var phase1a = Math.pow(Number(numC),5);
+		var phase1b = phase1a - Math.floor(phase1a / 155) * 155;
+		var phase2a = Math.pow(phase1b,5);
+		var phase2b = phase2a - Math.floor(phase2a / 155) * 155;
+		var phase3a = Math.pow(phase2b,4);
+		var phase3b = phase3a - Math.floor(phase3a / 155) * 155;
+		var phase4a = Math.pow(Number(numC),3);
+		var phase4b = phase4a - Math.floor(phase4a / 155) * 155;
+		var phase5a = phase3b * phase4b;
+		var phase5b = phase5a - Math.floor(phase5a / 155) * 155;
+		if ( phase5b < 10 ) { theNum = theNum + "0" + String(phase5b); }
+		else { theNum = theNum + String(phase5b); }}
+return theNum; }
+
+function IdentDecode(k) {
+	const q = k.split("");
+	var letChk = q.splice(0,1); 
+	var numEnc = q.join('');
+	var numChk = numDecode(numEnc);
+	var letInd = letters.findIndex( function(a) { return a == letChk;});
+	if ( letInd < 10 ) { var ident = "1" + String(numChk); }
+	else {	if ( letInd < 20 ) { var ident = "2" + String(numChk); }
+		else { var ident = "0" + String(numChk); }}
+return ident; }
+
+function timer(a,b,c) {
+	var current = new Date();
+	var currentHours = current.getHours();
+	var currentMins = current.getMinutes();
+	var currentSecs = current.getSeconds();
+
+	var elapsed = 3600 * currentHours + 60 * currentMins + currentSecs - a;
+	var remaining = b - elapsed;
+	var remainingMins = Math.floor(remaining/60);
+	if (remainingMins < 10) {var remainingMins = "0" + String(remainingMins); }
+	else { var remainingMins = String(remainingMins); }
+	var remainingSecs = remaining - remainingMins * 60;
+	if (remainingSecs < 10) {var remainingSecs = "0" + String(remainingSecs); }
+		else { var remainingSecs = String(remainingSecs); }
+	if (remaining > 0) {
+		document.getElementById("TestStatus").innerHTML = "Test In Progress.  Time Remaining: " + remainingMins + " Minutes and " + remainingSecs + " Seconds."; 
+		document.getElementById("letsgetstarted").innerHTML = "Time Remaining: " + remainingMins + ":" + remainingSecs;	}
+	else { 
+		document.getElementById("TestStatus").innerHTML = "Test Concluded.  Time Elapsed.";
+		document.getElementById("letsgetstarted").innerHTML = "Time Elapsed.";
+		endProcedure();
+		clearInterval(timerSet);}}
+
+</script>
+</html>
