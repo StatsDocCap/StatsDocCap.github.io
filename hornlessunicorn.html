@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsgetstarted">Question 13</title>
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id = "Title">Question 13: Independent or Not</font><br>
+<font face = "Courier" size = "6" id = "Student"></font><br>
+<font face = "Arial" size = "6" id = "Timer"></font><br>
+<font face = "Garamond" size = "6" id = "QText"></font><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "ATitle"></font><font face = "Didot" size = "5" id = "AText"></font><input type = "text" id = "AStd"></span><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "BTitle"></font><font face = "Didot" size = "5" id = "BText"></font><input type = "text" id = "BStd"></span><br>
+<font face = "Courier" size = "4" id = "BGrInst"></font><br>
+<canvas width="700" height="600" id="graph1"></canvas><br>
+<input type = "button" id = "reset1" value = "Reset Venn Diagram" onclick = "resetVD(1);"><br>
+<font face = "Courier" size = "4" id = "BButtInst"></font><br>
+<input type = "button" id = "BA" value = "P(A)" onclick = "ProbInput(10);"><input type = "button" id = "BB" value = "P(B)" onclick = "ProbInput(11);"><input type = "button" id = "BUnion" value = "P(A&#x22c3;B)" onclick = "ProbInput(12);"><input type = "button" id = "BInters" value = "P(A&#x2229;B)" onclick = "ProbInput(13);"><input type = "button" id = "BAc" value = "P(A&#x1d9c;)" onclick = "ProbInput(14);"><input type = "button" id = "BBc" value = "P(B&#x1d9c;)" onclick = "ProbInput(15);"><input type = "button" id = "BAonly" value = "P(A&#x2229;B&#x1d9c;)" onclick = "ProbInput(16);"><input type = "button" id = "BBonly" value = "P(A&#x1d9c;&#x2229;B)" onclick = "ProbInput(17);"><input type = "button" id = "BOutside" value = "P(A&#x22c3;B)&#x1d9c;" onclick = "ProbInput(18);"><input type = "button" id = "BSpace" value = "P(S)" onclick = "ProbInput(19);"><br><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "CTitle"></font><font face = "Didot" size = "5" id = "CText"></font><input type = "text" id = "CStd"></span><br>
+<font face = "Courier" size = "4" id = "CGrInst"></font><br>
+<canvas width="700" height="600" id="graph2"></canvas><br>
+<input type = "button" id = "reset2" value = "Reset Venn Diagram" onclick = "resetVD(2);"><br>
+<font face = "Courier" size = "4" id = "CButtInst"></font><br>
+<input type = "button" id = "CA" value = "P(A)" onclick = "ProbInput(20);"><input type = "button" id = "CB" value = "P(B)" onclick = "ProbInput(21);"><input type = "button" id = "CAgivB" value = "P(A&#x7c;B)" onclick = "ProbInput(24);"><input type = "button" id = "CBgivA" value = "P(B&#x7c;A)" onclick = "ProbInput(25);"><input type = "button" id = "CInters" value = "P(A&#x2229;B)" onclick = "ProbInput(23);"><br><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "DTitle"></font><font face = "Didot" size = "5" id = "DText"></font><input type = "text" id = "DStd"></span><br>
+<font face = "Courier" size = "4" id = "DGrInst"></font><br>
+<canvas width="700" height="600" id="graph3"></canvas><br>
+<input type = "button" id = "reset3" value = "Reset Venn Diagram" onclick = "resetVD(3);"><br>
+<font face = "Courier" size = "4" id = "DButtInst"></font><br>
+<input type = "button" id = "DA" value = "P(A)" onclick = "ProbInput(30);"><input type = "button" id = "DB" value = "P(B)" onclick = "ProbInput(31);"><input type = "button" id = "DAgivB" value = "P(A&#x7c;B)" onclick = "ProbInput(34);"><input type = "button" id = "DBgivA" value = "P(B&#x7c;A)" onclick = "ProbInput(35);"><input type = "button" id = "DInters" value = "P(A&#x2229;B)" onclick = "ProbInput(33);"><br><br>
+<span title = "Type your answer."><font face = "Copperplate Gothic" size = "6" id = "ETitle"></font><font face = "Didot" size = "5" id = "EText"></font><input type = "text" id = "EStd" size = "50"></span><br>
+<span title = "Select your answer."><font face = "Copperplate Gothic" size = "6" id = "FTitle"></font><font face = "Didot" size = "5" id = "FText"></font><select name = "PartF" id = "PartF"><option value = "Blank">Select:</option><option value = "Yes">Yes</option><option value = "No">No</option></select></span><br>
+<font face = "Courier" size = "4" id = "FButtInst"></font><br>
+<input type = "button" id = "FA" value = "P(A)" onclick = "ProbInput(50);"><input type = "button" id = "FB" value = "P(B)" onclick = "ProbInput(51);"><input type = "button" id = "FAgivB" value = "P(A&#x7c;B)" onclick = "ProbInput(54);"><input type = "button" id = "FBgivA" value = "P(B&#x7c;A)" onclick = "ProbInput(55);"><input type = "button" id = "FUnion" value = "P(A&#x22c3;B)" onclick = "ProbInput(52);"><input type = "button" id = "FInters" value = "P(A&#x2229;B)" onclick = "ProbInput(53);"><br>
+<input type = "button" id = "Fplus" value = "&#x2b;" onclick = "ProbInput(56);"><input type = "button" id = "Fminus" value = "&#x2212;" onclick = "ProbInput(57);"><input type = "button" id = "Ftimes" value = "&#xd7;" onclick = "ProbInput(58);"><input type = "button" id = "Fdiv" value = "&#xf7;" onclick = "ProbInput(59);"><input type = "button" id = "Fequal" value = "&#x3d;" onclick = "ProbInput(90);"><input type = "button" id = "Fnoteq" value = "&#x2260;" onclick = "ProbInput(91);"><input type = "button" id = "Fclear" value = "Clear Formula" onclick = "ProbInput(00);"><br>
+<font face = "Arial" size = "4" id = "Formula"></font><br>
+<input type = "text" id = "FStdL"><select name = "EquNEq" id = "EquNEq"><option value = "Blank"></option><option value = "Equals">&equals;</option><option value = "NotEquals">&ne;</option></select><input type = "text" id = "FStdR"><br>
+
+<br><br>
+<font face = "Courier" size = "4" id = "emailcode"></font><font face = "impact" size = "5" id = "subm"></font><input type = "button" id = "subq" value = "Submit Question" onclick = "endprocedure();">
+
+<input type = "hidden" name = "studId" id = "studId" value = "">
+<input type = "hidden" name = "order" id = "order" value = "">
+<input type = "hidden" name = "varsq1" id = "varsq1" value = "">
+<input type = "hidden" name = "stanswersq1" id = "stanswersq1" value = "">
+<input type = "hidden" name = "varsq2" id = "varsq2" value = "">
+<input type = "hidden" name = "stanswersq2" id = "stanswersq2" value = "">
+<input type = "hidden" name = "varsq3" id = "varsq3" value = "">
+<input type = "hidden" name = "stanswersq3" id = "stanswersq3" value = "">
+<input type = "hidden" name = "varsq4" id = "varsq4" value = "">
+<input type = "hidden" name = "stanswersq4" id = "stanswersq4" value = "">
+<input type = "hidden" name = "varsq5" id = "varsq5" value = "">
+<input type = "hidden" name = "stanswersq5" id = "stanswersq5" value = "">
+<input type = "hidden" name = "varsq6" id = "varsq6" value = "">
+<input type = "hidden" name = "stanswersq6" id = "stanswersq6" value = "">
+<input type = "hidden" name = "varsq7" id = "varsq7" value = "">
+<input type = "hidden" name = "stanswersq7" id = "stanswersq7" value = "">
+<input type = "hidden" name = "varsq8" id = "varsq8" value = "">
+<input type = "hidden" name = "stanswersq8" id = "stanswersq8" value = "">
+<input type = "hidden" name = "varsq9" id = "varsq9" value = "">
+<input type = "hidden" name = "stanswersq9" id = "stanswersq9" value = "">
+<input type = "hidden" name = "varsq10" id = "varsq10" value = "">
+<input type = "hidden" name = "stanswersq10" id = "stanswersq10" value = "">
+<input type = "hidden" name = "varsq11" id = "varsq11" value = "">
+<input type = "hidden" name = "stanswersq11" id = "stanswersq11" value = "">
+<input type = "hidden" name = "varsq12" id = "varsq12" value = "">
+<input type = "hidden" name = "stanswersq12" id = "stanswersq12" value = "">
+<input type = "hidden" name = "varsq13" id = "varsq13" value = "">
+<input type = "hidden" name = "stanswersq13" id = "stanswersq13" value = "">
+
+</body>
+
+<script type = "text/javascript">
+var stInfo = window.location.href.split("&stid=")[1];
+var theRest = window.location.href.split("&stid=")[0];
+var firstName = stInfo.split("_")[1];
+var lastName = stInfo.split("_")[0];
+var idNum = stInfo.split("_")[2];
+document.getElementById("Student").innerHTML = firstName + " " + lastName + " (" + idNum + ")";
+var daStuff = theRest.split("?str=")[1];
+const timerSet = setInterval(function() {
+	var now = new Date();
+	var nowH = now.getHours();
+	var nowM = now.getMinutes();
+	var nowS = now.getSeconds();
+	var whenst = 3600 * nowH + 60 * nowM + nowS;
+	var remainst = 5400 + Number(daStuff) - whenst;
+	var remH = Math.floor(remainst/3600);
+	var remM = Math.floor(( remainst - 3600 * remH ) / 60);
+	var remS = remainst - 3600 * remH - 60 * remM;
+	if ( remH > 0 ) { var dispH = remH + " hours, "; }
+	else { var dispH = ""; }
+	if ( remM > 9 ) { var dispM = remM + " minutes, "; }
+	else { if ( remM > 0 ) { var dispM = "0" + remM + " minutes, "; } 
+		else { var dispM = ""; }}
+	if ( remS > 9 ) { var dispS = remS + " seconds"; }
+	else { if ( remS > 0 ) { var dispS = "0" + remS + " seconds"; } 
+		else { var dispS = ""; }}
+	if ( remainst > 0 ) { document.getElementById("Timer").innerHTML = "Test Time Remaining: " + dispH + dispM + dispS; }
+	else { endprocedure(); }}, 1000);
+setTimeout( function() { document.getElementById("Timer").innerHTML = "Time Elapsed"; }, 3600000);
+const caps = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const lowly = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const digits = ["0","1","2","3","4","5","6","7","8","9"];
+const symbols = ["&dollar;","&amp;","&commat;","&num;","&ast;","&plus;","&equals;","&minus;","&percnt;","&excl;","&quest;","&gt;","&lt;","&VerticalLine;","&Hat;","&sol;"];
+const mixed = [];
+
+var Q1Text = "Is the number 13 really unlucky? We'll be testing this superstition in the following way: Does the number 13 appearing in a person's Driver's License Number <em>(Event A)</em> influence their likelihood of being invovled in a motor vehicle accident<em>(Event B)</em>?";
+var Q2Text = "Some people believe that children born on Leap Year Day (February 29th) are going to grow up to be lucky. Some people believe that children born on New Year's Day (January 1) are going to grow up lucky. We will be verifying these superstitions <em> (assigning having a lucky birthday as Event A, and being lucky as Even B)</em>, defining &quot;Lucky&quot; as not having lost a job or broken a bone or had a car accident in the past year.";
+const parts1 = ["Texas Driver License Numbers are 8 digits in length with no additional restrictions. What is the probability that a randomly selected person in Texas has the number 13 appear in their license number?","After gathering some information, the Department of Public Safety indicates that, annually, there is a [A]% for being in a motor vehicle accident.  Additionally, you know that the probability of either having an accident or a number 13 on your licence is 0.[B]. What is the probability of both of these events occuring for a randomly selected individual?","Determine the probability of a person with a 13 in their license number having an accident.","Determine the probability of someone that has been in an accident having a 13 appear in their license number.","What is the most signficant difference in the events described in parts B, C, and D?","Are events A and B independent?"];
+const parts2 = ["Determine the probability of a randomly selected person having one of these supposedly lucky birthdays. (Hint: there are 366 days in a Leap Year, which occurs one out of four years, and 365 days in other years).","After gathering some information by means of a survey, we can determine that [A]% of people match our definition of Lucky, and that [B]% are either lucky or have one of the indicated birthdays. What is the probability that a randomly selected person is both lucky and has a lucky birthday?","Determine the probability of a person with a lucky birthday being lucky.","Determine the probability of someone known to be lucky having one of the indicated birthdays.","What is the most significant difference in the events described in parts B, C, and D?","Are events A and B independent?"];
+
+if ( Math.random() < 0.5 ) {	var topic = "13"; 
+				document.getElementById("QText").innerHTML = Q1Text; }
+else {  var topic = "229or11";
+	document.getElementById("QText").innerHTML = Q2Text; }
+var Aval = Math.floor(Math.random()*10000)/100;
+if (Aval < 10) { Aval = "1" + Aval; }
+if ( topic == "13" ) { var Othval = 7; }
+else { var Othval = 0.3422313; }
+var Bval = Math.round((100 * Aval + 100 * Othval * Math.random()))/100;
+if ( Bval == Aval ) { Bval = Math.round(100*Aval + 50 * Othval)/100; }
+parts1[1] = parts1[1].split("[A]").join(Aval);
+parts2[1] = parts2[1].split("[A]").join(Aval);
+parts1[1] = parts1[1].split("[B]").join(Bval*100);
+parts2[1] = parts2[1].split("[B]").join(Bval);
+document.getElementById("subm").innerHTML = "Click here to submit THIS QUESTION ONLY";
+
+for ( b = 0; b < 6; b++ ) {
+	document.getElementById(caps[b]+"Title").innerHTML = "Part " + caps[b] + ": ";
+	if ( topic == "13" ) { document.getElementById(caps[b]+"Text").innerHTML = parts1[b]; }
+	else { document.getElementById(caps[b]+"Text").innerHTML = parts2[b]; }}
+document.getElementById("BGrInst").innerHTML = "Click the region(s) of the Venn Diagram that correspond to the probability you are finding.";
+document.getElementById("CGrInst").innerHTML = "Click the region of the Venn Diagram that will represent the adjusted Sample Space (Universal) for the indicated Conditional Probability.";
+document.getElementById("DGrInst").innerHTML = "Click the region of the Venn Diagram that will represent the adjusted Sample Space (Universal) for the indicated Conditional Probability.";
+document.getElementById("BButtInst").innerHTML = "Click the button that corresponds to the correct notation for this probability.";
+document.getElementById("CButtInst").innerHTML = "Click the button that corresponds to the correct notation for this probability.";
+document.getElementById("DButtInst").innerHTML = "Click the button that corresponds to the correct notation for this probability.";
+document.getElementById("FButtInst").innerHTML = "Use the buttons to type the formula you used to find your answer, then complete the formula with the values you calculated.";
+
+function endprocedure() {
+	document.getElementById("subq").value = "Working";
+	document.getElementById("subq").disabled = true;
+	document.getElementById("subq").style = "background-color: red;";
+	clearInterval(timerSet);
+	var g1 = document.getElementById("graph1");
+	var g2 = document.getElementById("graph2");
+	var g3 = document.getElementById("graph3");
+	g1.removeEventListener("click",shade1);
+	g2.removeEventListener("click",shade2);
+	g3.removeEventListener("click",shade3);
+	for ( q = 0; q < 5; q++ ) {
+		var StAns = caps[q] + "Std";
+		var trueQ = Number(q) + 1;
+		var curAns = document.getElementById(StAns).value;
+		document.getElementById(StAns).disabled = true;
+		document.getElementById("stanswersq" + trueQ).value = document.getElementById("stanswersq" + trueQ).value + curAns; }
+	document.getElementById("order").value = "Question 13";
+	document.getElementById("studId").value = document.getElementById("Student").innerHTML;
+	var varlist = Aval + "," + Bval;
+	document.getElementById("varsq1").value	= topic;
+	document.getElementById("varsq2").value	= varlist;
+	document.getElementById("stanswersq6").value = document.getElementById("PartF").value + ";" + document.getElementById("FStdL").value + document.getElementById("EquNEq").value + document.getElementById("FStdR").value;
+	var stdAns = "";
+	var dataset = "{" + document.getElementById("varsq1").value + "}{" + document.getElementById("varsq2").value + "}";
+	for ( p = 1; p < 8; p++ ) { 	stdAns = stdAns + "pb" + document.getElementById("stanswersq" + String(p)).value + "pf"; }
+	var theCodiest = codify(stdAns, dataset); 
+	var thisUrl = window.location.href;
+	var newUrl = thisUrl.split("hornlessunicorn").join('handitin');
+	newUrl = newUrl + "?who=" + document.getElementById("Student").innerHTML + "&what=MATH1342Test1Q13&eek=" + theCodiest; 
+	var subme = window.open(newUrl); }
+
+function ansCode(a) {
+	const Stans = a.split("");
+	var A = "";
+	for ( k = 0; k < Stans.length; k++ ) {
+		if ( k < Stans.length - 1 ) {
+		if( Stans[k] == "p" && Stans[k+1] == "b" ) {
+					var capi = Math.floor(Math.random()*26);
+					var starter = caps[capi];
+					A = A + starter;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( Stans[k] == "p" && Stans[k+1] == "f" ) {
+					var fini = Math.floor(Math.random()*36);
+					if ( fini < 10 ) { var finisher = digits[fini]; }
+					else { var finisher = lowly[fini-10]; } 
+					A = A + finisher;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( digits.indexOf(Stans[k]) > -1 ) {
+			if ( digits.indexOf(Stans[k+1]) > -1 ) { var val = digits.indexOf(Stans[k]) * 10 + Number(digits.indexOf(Stans[k+1]));
+								 var encv = numenc(val - 17);
+								 A = A + String(encv);
+								 Stans[k+1] = ""; }
+			else { if ( Stans[k] < 7 ) { var encv = 1 * Stans[k] + 3; }
+				else { var encv = Stans[k] - 7; }
+				A = A + encv; }}
+		else { if ( mixed.indexOf(Stans[k]) > -1 ) { 	var val = Math.floor(mixed.indexOf(Stans[k])/2);
+								var enc = Math.floor(val * 3.5);
+								if ( enc < 10 ) { var encv = "0" + enc; }
+								else { var encv = String(enc); }
+								A = A + encv; }
+			else { A = A + "."; }}}}
+return A; }
+
+function codify(a,b) { 
+	var A = ansCode(a);
+	var fn = document.getElementById("studId").value.split(" ")[0];
+	var ln = document.getElementById("studId").value.split(" ")[1];
+	var id = document.getElementById("studId").value.split("(")[1].split(")")[0];
+ 	var f3 = fn.split("")[0] + fn.split("")[1];
+	if (fn.length < 3) { f3 = f3 + "-"; }
+	else { f3 = f3 + fn.split("")[2]; }
+ 	var l3 = ln.split("")[0] + ln.split("")[1];
+	if (ln.length < 3) { l3 = l3 + "-"; }
+	else { l3 = l3 + ln.split("")[2]; }
+	var unlet = String(lenc(l3)) + String(lenc(f3)) +  String(idenc(id));
+	const randCdcs = [];
+	const sortCdcs = [];
+	var cdor = "";
+	var ultimo = "";
+	var primo = "";
+	var numero = unlet.split("")[18];
+	for ( t = 0; t < 9; t++ ) {	ultimo = ultimo + String(unlet.split("")[t]);
+					primo = primo + String(unlet.split("")[t+9]);
+					numero = numero + String(unlet.split("")[t+19]);}
+
+	const codeces = [ultimo, primo, numero, A];
+	for ( i = 0; i < 6; i++ ) { randCdcs[i] = Math.random(); }
+	for ( j = 0; j < 6; j++ ) {	var minimus = Math.min.apply(null,randCdcs);
+					var minInd = randCdcs.indexOf(minimus);
+					randCdcs[minInd] = 2;
+					sortCdcs[j] = codeces[minInd];
+					var cheese = minInd*3;
+					cdor = cdor + mixed[cheese]; }
+	
+var goodstuff = cdor + sortCdcs.join('') + b;
+goodstuff = goodstuff.split(" ").join('');
+var leng = goodstuff.length;
+const gs = goodstuff.split("");
+var badstuff = "";
+for ( b = 0; b < leng; b++ ) {
+	if ( mixed.indexOf(gs[b]) > -1 ) { badstuff = badstuff + gs[b]; }
+	if ( digits.indexOf(gs[b]) > -1 ) { 	if ( Math.random() < 0.5 ) { 
+							var digs = Number(gs[b]);
+							if ( digs < 6 ) {	var tester = Math.floor(Math.random()*3);
+										var lind = 3 * digs + 1 * tester; }
+							else { 	var tester = Math.floor(Math.random() * 2);
+								var lind = 2 * digs + 1 * tester + 6; }  
+							badstuff = badstuff + lowly[lind]; }
+						else { badstuff = badstuff + gs[b]; }}
+	else {  var tester = Math.floor(Math.random()*16);
+		badstuff = badstuff + symbols[tester]; }}
+
+document.getElementById("emailcode").innerHTML = "This code may be emailed to be with the other codes, or by itself: <br>" + badstuff; 
+return badstuff; }
+
+function lenc(a) {
+	var fl = caps.indexOf(a.split("")[0]);
+	var sl = caps.indexOf(a.split("")[1]);
+	var last = a.split("")[2];
+	if ( last == "-" ) { var ll = 50; }
+	else { var ll = caps.indexOf(last); }
+	var theletters = String(numenc(fl)) + String(numenc(sl)) + String(numenc(ll)); 
+return theletters; }
+
+function numenc(n) {
+	var m = 1 * n + 17;
+	var powpow = Math.pow(m,7)
+	var lefty = powpow - Math.floor(powpow/155)*155;
+	if ( lefty < 10 ) { var nenc = "00" + String(lefty); }
+	else { if ( lefty < 100 ) { var nenc = "0" + String(lefty); }
+	else { var nenc = String(lefty); }}
+return nenc; }
+
+function idenc(i) {
+	var first = i.split("")[0];
+	var second = i.split("")[1] + i.split("")[2];
+	var third = i.split("")[3] + i.split("")[4];
+	var forth = i.split("")[5] + i.split("")[6];
+	if ( first == "0" ) { var f = "a"; }
+	else {  if ( first == "1" ) { var f = "b"; }
+		else { var f = "c"; }}
+	var s = numenc(second);
+	var t = numenc(third);
+	var l = numenc(forth);
+	var retty = f + String(s) + String(t) + String(l);
+return retty; }
+var grp = document.getElementById("graph1");
+var l = grp.getContext("2d");
+
+l.beginPath(); 
+l.fillStyle = "black";
+l.rect(50,50,600,450);
+l.fill();
+
+l.beginPath(); 
+l.clearRect(60,60,580,430);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "black";
+l.arc(250,280,150,0,2*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "white";
+l.arc(250,280,140,0,2*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "black";
+l.arc(450,280,150,0,2*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "white";
+l.arc(450,280,140,0,2*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "black";
+l.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "white";
+l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "black";
+l.font = "50px Arial";
+l.fillText("A",120,150);
+l.fill();
+
+l.beginPath();
+l.fillStyle = "black";
+l.font = "50px Arial";
+l.fillText("B",540,150);
+l.fill();
+
+var gr2 = document.getElementById("graph2");
+var m = gr2.getContext("2d");
+
+m.beginPath(); 
+m.fillStyle = "black";
+m.rect(50,50,600,450);
+m.fill();
+
+m.beginPath(); 
+m.clearRect(60,60,580,430);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,0,2*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,0,2*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "black";
+m.arc(450,280,150,0,2*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "white";
+m.arc(450,280,140,0,2*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("A",120,150);
+m.fill();
+
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("B",540,150);
+m.fill();
+
+var gr3 = document.getElementById("graph3");
+var o = gr3.getContext("2d");
+
+o.beginPath(); 
+o.fillStyle = "black";
+o.rect(50,50,600,450);
+o.fill();
+
+o.beginPath(); 
+o.clearRect(60,60,580,430);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,0,2*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,0,2*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "black";
+o.arc(450,280,150,0,2*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "white";
+o.arc(450,280,140,0,2*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("A",120,150);
+o.fill();
+
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("B",540,150);
+o.fill();
+
+grp.addEventListener("click",shade1);
+gr2.addEventListener("click",shade2);
+gr3.addEventListener("click",shade3);
+var intFill = "N";
+var aFill = "N";
+var bFill = "N";
+function shade1(e) {
+	var gra = document.getElementById("graph1");
+	var xstrt = gra.offsetLeft;
+	var ystrt = gra.offsetTop;
+	var xposr = e.pageX;
+	var yposr = e.pageY;
+	var xval = xposr - xstrt;
+	var yval = yposr - ystrt;
+	var dist1 = Math.pow(xval - 250,2) + Math.pow(yval - 280,2);
+	var dist2 = Math.pow(xval - 450,2) + Math.pow(yval - 280,2);
+	if ( dist1 < 22501 ) {  if ( dist2 < 22501 ) {  var shady = "intersection";
+							document.getElementById("stanswersq2").value = document.getElementById("stanswersq2").value + "Intersection"; }
+				else {  var shady = "Aonly"; 
+					document.getElementById("stanswersq2").value = document.getElementById("stanswersq2").value + "ACrest";}}
+	else {  if ( dist2 < 22501 ) { var shady = "Bonly"; 
+					document.getElementById("stanswersq2").value = document.getElementById("stanswersq2").value + "BCrest";}
+		else {  var shady = "outside"; 
+			document.getElementById("stanswersq2").value = document.getElementById("stanswersq2").value + "Outside";}}
+	var j = gra.getContext("2d");
+	var ga2 = document.getElementById("graph2");
+	var k = ga2.getContext("2d");
+	var ga3 = document.getElementById("graph3");
+	var l = ga3.getContext("2d");
+	if ( shady == "intersection" ) {
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		k.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		l.fill(); 
+		intFill = "Y";}
+	if ( shady == "Aonly" ) {
+		if ( intFill == "Y" ) { var blkC = "#FFFF33"; }
+		else { var blkC = "#FFFFFF"; }
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(250,280,140,0,2*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(450,280,150,0.73*Math.PI,1.27*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = blkC;
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = blkC;
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill(); 
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(250,280,140,0,2*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#000000";
+		k.arc(450,280,150,0.73*Math.PI,1.27*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = blkC;
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = blkC;
+		k.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		k.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(250,280,140,0,2*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#000000";
+		l.arc(450,280,150,0.73*Math.PI,1.27*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = blkC;
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = blkC;
+		l.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		l.fill(); 
+		aFill = "Y"; }
+	if ( shady == "Bonly" ) {
+		if ( intFill == "Y" ) { var blkC = "#FFFF33"; }
+		else { var blkC = "#FFFFFF"; }
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(450,280,140,0,2*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = blkC;
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = blkC;
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(450,280,140,0,2*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#000000";
+		k.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = blkC;
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = blkC;
+		k.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		k.fill();
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(450,280,140,0,2*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#000000";
+		l.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = blkC;
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = blkC;
+		l.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		l.fill();
+		bFill = "Y";}
+	if ( shady == "outside" ) {
+		if ( aFill == "Y" ) { var blk1 = "#FFFF33"; }
+		else { var blk1 = "#FFFFFF"; }
+		if ( bFill == "Y" ) { var blk2 = "#FFFF33"; }
+		else { var blk2 = "#FFFFFF"; }
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.rect(60,60,580,430);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(250,280,150,0,2*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = blk1;
+		j.arc(250,280,140,0,2*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(450,280,150,0,2*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = blk2;
+		j.arc(450,280,140,0,2*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = blk1;
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "black";
+		j.font = "50px Arial";
+		j.fillText("A",120,150);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "black";
+		j.font = "50px Arial";
+		j.fillText("B",540,150);
+		j.fill();
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.rect(60,60,580,430);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#000000";
+		k.arc(250,280,150,0,2*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = blk1;
+		k.arc(250,280,140,0,2*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#000000";
+		k.arc(450,280,150,0,2*Math.PI);
+		k.fill();
+		k.beginPath();
+		k.fillStyle = blk2;
+		k.arc(450,280,140,0,2*Math.PI);
+		k.fill();
+		k.beginPath();
+		k.fillStyle = "#000000";
+		k.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		k.fill();
+		k.beginPath();
+		k.fillStyle = blk1;
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill();
+		k.beginPath();
+		k.fillStyle = "black";
+		k.font = "50px Arial";
+		k.fillText("A",120,150);
+		k.fill();
+		k.beginPath();
+		k.fillStyle = "black";
+		k.font = "50px Arial";
+		k.fillText("B",540,150);
+		k.fill();
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.rect(60,60,580,430);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#000000";
+		l.arc(250,280,150,0,2*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = blk1;
+		l.arc(250,280,140,0,2*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#000000";
+		l.arc(450,280,150,0,2*Math.PI);
+		l.fill();
+		l.beginPath();
+		l.fillStyle = blk2;
+		l.arc(450,280,140,0,2*Math.PI);
+		l.fill();
+		l.beginPath();
+		l.fillStyle = "#000000";
+		l.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		l.fill();
+		l.beginPath();
+		l.fillStyle = blk1;
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill();
+		l.beginPath();
+		l.fillStyle = "black";
+		l.font = "50px Arial";
+		l.fillText("A",120,150);
+		l.fill();
+		l.beginPath();
+		l.fillStyle = "black";
+		l.font = "50px Arial";
+		l.fillText("B",540,150);
+		l.fill();
+		if ( intFill == "Y" ) {
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#FFFF33";
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#FFFF33";
+		k.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		k.fill();
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFF33";
+		l.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		l.fill(); }
+		else {
+		j.beginPath();
+		j.fillStyle = "#FFFFFF";
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill(); 
+		j.beginPath();
+		j.fillStyle = "#FFFFFF";
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		k.beginPath();
+		k.fillStyle = "#FFFFFF";
+		k.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		k.fill(); 
+		k.beginPath();
+		k.fillStyle = "#FFFFFF";
+		k.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		k.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFFFF";
+		l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		l.fill(); 
+		l.beginPath();
+		l.fillStyle = "#FFFFFF";
+		l.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		l.fill(); }}}
+
+function shade2(e) {
+	var ga2 = document.getElementById("graph2");
+	var xstrt = ga2.offsetLeft;
+	var xposr = e.pageX;
+	var xval = xposr - xstrt;
+	var i = ga2.getContext("2d");
+	i.beginPath(); 
+	i.fillStyle = "#6D7B8D";
+	i.rect(60,60,580,430);
+	i.fill();
+	if ( xval < 350 ) {
+		i.beginPath();
+		i.fillStyle = "black";
+		i.font = "50px Arial";
+		i.fillText("A",120,150);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = "black";
+		i.arc(250,280,150,0,2*Math.PI);
+		i.fill();
+		if ( aFill == "Y" ) { var acol = "#FFFF33"; }
+		else { var acol = "#E5E4E2"; }
+		i.beginPath();
+		i.fillStyle = acol;
+		i.arc(250,280,140,0,2*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = "#000000";
+		i.arc(450,280,150,0.73*Math.PI,1.27*Math.PI);
+		i.fill();
+		if ( intFill == "Y" ) { var icol = "#FFFF33"; }
+		else { var icol = "#FFFFFF"; }
+		i.beginPath();
+		i.fillStyle = icol;
+		i.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = icol;
+		i.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.lineStyle = "#000000";
+		i.lineWidth = "3px";
+		i.arc(450,280,150,0,2*Math.PI);
+		i.stroke(); 
+		i.beginPath();
+		i.fillStyle = "black";
+		i.font = "20px Arial";
+		i.fillText("B",525,375);
+		i.fill();
+		document.getElementById("stanswersq3").value = document.getElementById("stanswersq3").value + "GivenA";}
+	else {	i.beginPath();
+		i.fillStyle = "black";
+		i.font = "50px Arial";
+		i.fillText("B",540,150);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = "black";
+		i.arc(450,280,150,0,2*Math.PI);
+		i.fill();
+		if ( bFill == "Y" ) { var bcol = "#FFFF33"; }
+		else { var bcol = "#E5E4E2"; }
+		i.beginPath();
+		i.fillStyle = bcol;
+		i.arc(450,280,140,0,2*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = "#000000";
+		i.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		i.fill();
+		if ( intFill == "Y" ) { var icol = "#FFFF33"; }
+		else { var icol = "#FFFFFF"; }
+		i.beginPath();
+		i.fillStyle = icol;
+		i.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.fillStyle = icol;
+		i.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		i.fill();
+		i.beginPath();
+		i.lineStyle = "#000000";
+		i.lineWidth = "3px";
+		i.arc(250,280,150,0,2*Math.PI);
+		i.stroke(); 
+		i.beginPath();
+		i.fillStyle = "black";
+		i.font = "20px Arial";
+		i.fillText("A",150,375);
+		i.fill();
+		document.getElementById("stanswersq3").value = document.getElementById("stanswersq3").value + "GivenB";}}
+
+function shade3(e) {
+	var ga3 = document.getElementById("graph3");
+	var xstrt = ga3.offsetLeft;
+	var xposr = e.pageX;
+	var xval = xposr - xstrt;
+	var j = ga3.getContext("2d");
+	j.beginPath(); 
+	j.fillStyle = "#6D7B8D";
+	j.rect(60,60,580,430);
+	j.fill();
+	if ( xval < 350 ) {
+		j.beginPath();
+		j.fillStyle = "black";
+		j.font = "50px Arial";
+		j.fillText("A",120,150);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "black";
+		j.arc(250,280,150,0,2*Math.PI);
+		j.fill();
+		if ( aFill == "Y" ) { var acol = "#FFFF33"; }
+		else { var acol = "#E5E4E2"; }
+		j.beginPath();
+		j.fillStyle = acol;
+		j.arc(250,280,140,0,2*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(450,280,150,0.73*Math.PI,1.27*Math.PI);
+		j.fill();
+		if ( intFill == "Y" ) { var icol = "#FFFF33"; }
+		else { var icol = "#FFFFFF"; }
+		j.beginPath();
+		j.fillStyle = icol;
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = icol;
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.lineStyle = "#000000";
+		j.lineWidth = "3px";
+		j.arc(450,280,150,0,2*Math.PI);
+		j.stroke(); 
+		j.beginPath();
+		j.fillStyle = "black";
+		j.font = "20px Arial";
+		j.fillText("B",525,375);
+		j.fill();
+		document.getElementById("stanswersq4").value = document.getElementById("stanswersq4").value + "givenA";}
+	else {	j.beginPath();
+		j.fillStyle = "black";
+		j.font = "50px Arial";
+		j.fillText("B",540,150);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "black";
+		j.arc(450,280,150,0,2*Math.PI);
+		j.fill();
+		if ( bFill == "Y" ) { var bcol = "#FFFF33"; }
+		else { var bcol = "#E5E4E2"; }
+		j.beginPath();
+		j.fillStyle = bcol;
+		j.arc(450,280,140,0,2*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = "#000000";
+		j.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+		j.fill();
+		if ( intFill == "Y" ) { var icol = "#FFFF33"; }
+		else { var icol = "#FFFFFF"; }
+		j.beginPath();
+		j.fillStyle = icol;
+		j.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.fillStyle = icol;
+		j.arc(450,280,140,0.75*Math.PI,1.25*Math.PI);
+		j.fill();
+		j.beginPath();
+		j.lineStyle = "#000000";
+		j.lineWidth = "3px";
+		j.arc(250,280,150,0,2*Math.PI);
+		j.stroke(); 
+		j.beginPath();
+		j.fillStyle = "black";
+		j.font = "20px Arial";
+		j.fillText("A",150,375);
+		j.fill();
+		document.getElementById("stanswersq4").value = document.getElementById("stanswersq4").value + "givenB";}}
+
+function ProbInput(n) {
+document.getElementById("stanswersq7").value = document.getElementById("stanswersq7").value + "[" + String(n) + "]";
+const butts = ["P(A)","P(B)","P(A\u222aB)","P(A\u2229B)","P(A\u0368)","P(B\u0368)","P(A\u2229B\u0368)","P(A\u0368\u2229B)","P(A\u222aB)\u0368","P(S)"];
+if ( n == "00" ) { document.getElementById("Formula").innerHTML = ""; }
+else { if ( n < 90 ) { var location = Math.floor(n/10); 
+		var symb = n - 10 * location;}
+else {  var location = 5;
+	var symb = n; }
+
+if ( location > 1 ) { 	butts[4] = "P(A\u23D0B)";
+			butts[5] = "P(B\u23D0A)"; }
+if ( location < 5 ) {
+	var grr = document.getElementById("graph" + String(location));
+	var p = grr.getContext("2d");
+	p.beginPath();
+	p.clearRect(0,0,650,49);
+	p.fill();
+	p.beginPath();
+	p.fillStyle = "#000000";
+	p.font = "45px Courier";
+	p.fillText(butts[symb],300,45);
+	p.fill(); }
+else {	butts[2] = "P(A&#8746;B)";
+	butts[3] = "P(A&#8745;B)";
+	butts[4] = "P(A&#9168;B)";
+	butts[5] = "P(B&#9168;A)";
+	butts[6] = "&#43;";
+	butts[7] = "&#8722;";
+	butts[8] = "&#215;";
+	butts[9] = "&#247;";
+	butts[90] = "&#61;";
+	butts[91] = "&#8800;";
+	document.getElementById("Formula").innerHTML = document.getElementById("Formula").innerHTML + butts[symb]; }}}
+
+function resetVD(n){
+if ( n == 1 ) {
+var grp = document.getElementById("graph1");
+var l = grp.getContext("2d");
+l.beginPath(); 
+l.fillStyle = "black";
+l.rect(50,50,600,450);
+l.fill();
+l.beginPath(); 
+l.clearRect(60,60,580,430);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.arc(250,280,150,0,2*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "white";
+l.arc(250,280,140,0,2*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.arc(450,280,150,0,2*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "white";
+l.arc(450,280,140,0,2*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "white";
+l.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.font = "50px Arial";
+l.fillText("A",120,150);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.font = "50px Arial";
+l.fillText("B",540,150);
+l.fill();
+
+var gr2 = document.getElementById("graph2");
+var m = gr2.getContext("2d");
+m.beginPath(); 
+m.fillStyle = "black";
+m.rect(50,50,600,450);
+m.fill();
+m.beginPath(); 
+m.clearRect(60,60,580,430);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(450,280,150,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(450,280,140,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("A",120,150);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("B",540,150);
+m.fill();
+
+var gr3 = document.getElementById("graph3");
+var o = gr3.getContext("2d");
+o.beginPath(); 
+o.fillStyle = "black";
+o.rect(50,50,600,450);
+o.fill();
+o.beginPath(); 
+o.clearRect(60,60,580,430);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(450,280,150,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(450,280,140,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("A",120,150);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("B",540,150);
+o.fill();
+intFill = "N";
+aFill = "N";
+bFill = "N";}
+
+if ( n == 2 ) {
+var gr2 = document.getElementById("graph2");
+var m = gr2.getContext("2d");
+m.beginPath(); 
+m.fillStyle = "black";
+m.rect(50,50,600,450);
+m.fill();
+m.beginPath(); 
+m.clearRect(60,60,580,430);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(450,280,150,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(450,280,140,0,2*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "white";
+m.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("A",120,150);
+m.fill();
+m.beginPath();
+m.fillStyle = "black";
+m.font = "50px Arial";
+m.fillText("B",540,150);
+m.fill(); }
+if ( n == 3 ) {
+var gr3 = document.getElementById("graph3");
+var o = gr3.getContext("2d");
+o.beginPath(); 
+o.fillStyle = "black";
+o.rect(50,50,600,450);
+o.fill();
+o.beginPath(); 
+o.clearRect(60,60,580,430);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(450,280,150,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(450,280,140,0,2*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.arc(250,280,150,-0.27*Math.PI,0.27*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "white";
+o.arc(250,280,140,-0.25*Math.PI,0.25*Math.PI);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("A",120,150);
+o.fill();
+o.beginPath();
+o.fillStyle = "black";
+o.font = "50px Arial";
+o.fillText("B",540,150);
+o.fill();}}
+
+</script></html>

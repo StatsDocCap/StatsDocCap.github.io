@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsgetstarted">Question 12</title>
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id = "Title">Question 12: Probability Distribution Table</font><br>
+<font face = "Courier" size = "6" id = "Student"></font><br>
+<font face = "Arial" size = "6" id = "Timer"></font><br>
+<font face = "Garamond" size = "6" id = "QText"></font><br>
+<font face = "Copperplate Gothic" size = "6" id = "ATitle"></font><font face = "Didot" size = "5" id = "AText"></font><br>
+<canvas id = "spacer1" width = "0" height = "0"></canvas><span title = "Click to Remove the Last Column"><input type = "button" id = "OldCol" value = "&#x97;" onclick = "ChangeTable(10);" class = "gridb" hidden></span><span title = "Click to Add a New Column"><input type = "button" id = "NewCol" value = "&#x2b;" onclick = "ChangeTable(11);" class = "gridb"></span><br>
+<input type = "text" id = "A00" class = "grid" hidden><input type = "text" id = "A01" class = "grid" hidden><input type = "text" id = "A02" class = "grid" hidden><input type = "text" id = "A03" class = "grid" hidden><input type = "text" id = "A04" class = "grid" hidden><input type = "text" id = "A05" class = "grid" hidden><input type = "text" id = "A06" class = "grid" hidden><input type = "text" id = "A07" class = "grid" hidden><input type = "text" id = "A08" class = "grid" hidden><input type = "text" id = "A09" class = "grid" hidden><p1 id="br0"></p1>
+<input type = "text" id = "A10" class = "grid" hidden><input type = "text" id = "A11" class = "grid" hidden><input type = "text" id = "A12" class = "grid" hidden><input type = "text" id = "A13" class = "grid" hidden><input type = "text" id = "A14" class = "grid" hidden><input type = "text" id = "A15" class = "grid" hidden><input type = "text" id = "A16" class = "grid" hidden><input type = "text" id = "A17" class = "grid" hidden><input type = "text" id = "A18" class = "grid" hidden><input type = "text" id = "A19" class = "grid" hidden><p1 id="br1"></p1>
+<input type = "text" id = "A20" class = "grid" hidden><input type = "text" id = "A21" class = "grid" hidden><input type = "text" id = "A22" class = "grid" hidden><input type = "text" id = "A23" class = "grid" hidden><input type = "text" id = "A24" class = "grid" hidden><input type = "text" id = "A25" class = "grid" hidden><input type = "text" id = "A26" class = "grid" hidden><input type = "text" id = "A27" class = "grid" hidden><input type = "text" id = "A28" class = "grid" hidden><input type = "text" id = "A29" class = "grid" hidden><p1 id="br2"></p1>
+<input type = "text" id = "A30" class = "grid" hidden><input type = "text" id = "A31" class = "grid" hidden><input type = "text" id = "A32" class = "grid" hidden><input type = "text" id = "A33" class = "grid" hidden><input type = "text" id = "A34" class = "grid" hidden><input type = "text" id = "A35" class = "grid" hidden><input type = "text" id = "A36" class = "grid" hidden><input type = "text" id = "A37" class = "grid" hidden><input type = "text" id = "A38" class = "grid" hidden><input type = "text" id = "A39" class = "grid" hidden><p1 id="br3"></p1>
+<input type = "text" id = "A40" class = "grid" hidden><input type = "text" id = "A41" class = "grid" hidden><input type = "text" id = "A42" class = "grid" hidden><input type = "text" id = "A43" class = "grid" hidden><input type = "text" id = "A44" class = "grid" hidden><input type = "text" id = "A45" class = "grid" hidden><input type = "text" id = "A46" class = "grid" hidden><input type = "text" id = "A47" class = "grid" hidden><input type = "text" id = "A48" class = "grid" hidden><input type = "text" id = "A49" class = "grid" hidden><p1 id="br4"></p1>
+<input type = "text" id = "A50" class = "grid" hidden><input type = "text" id = "A51" class = "grid" hidden><input type = "text" id = "A52" class = "grid" hidden><input type = "text" id = "A53" class = "grid" hidden><input type = "text" id = "A54" class = "grid" hidden><input type = "text" id = "A55" class = "grid" hidden><input type = "text" id = "A56" class = "grid" hidden><input type = "text" id = "A57" class = "grid" hidden><input type = "text" id = "A58" class = "grid" hidden><input type = "text" id = "A59" class = "grid" hidden><p1 id="br5"></p1>
+<input type = "text" id = "A60" class = "grid" hidden><input type = "text" id = "A61" class = "grid" hidden><input type = "text" id = "A62" class = "grid" hidden><input type = "text" id = "A63" class = "grid" hidden><input type = "text" id = "A64" class = "grid" hidden><input type = "text" id = "A65" class = "grid" hidden><input type = "text" id = "A66" class = "grid" hidden><input type = "text" id = "A67" class = "grid" hidden><input type = "text" id = "A68" class = "grid" hidden><input type = "text" id = "A69" class = "grid" hidden><p1 id="br6"></p1>
+<input type = "text" id = "A70" class = "grid" hidden><input type = "text" id = "A71" class = "grid" hidden><input type = "text" id = "A72" class = "grid" hidden><input type = "text" id = "A73" class = "grid" hidden><input type = "text" id = "A74" class = "grid" hidden><input type = "text" id = "A75" class = "grid" hidden><input type = "text" id = "A76" class = "grid" hidden><input type = "text" id = "A77" class = "grid" hidden><input type = "text" id = "A78" class = "grid" hidden><input type = "text" id = "A79" class = "grid" hidden><p1 id="br7"></p1>
+<input type = "text" id = "A80" class = "grid" hidden><input type = "text" id = "A81" class = "grid" hidden><input type = "text" id = "A82" class = "grid" hidden><input type = "text" id = "A83" class = "grid" hidden><input type = "text" id = "A84" class = "grid" hidden><input type = "text" id = "A85" class = "grid" hidden><input type = "text" id = "A86" class = "grid" hidden><input type = "text" id = "A87" class = "grid" hidden><input type = "text" id = "A88" class = "grid" hidden><input type = "text" id = "A89" class = "grid" hidden><p1 id="br8"></p1>
+<input type = "text" id = "A90" class = "grid" hidden><input type = "text" id = "A91" class = "grid" hidden><input type = "text" id = "A92" class = "grid" hidden><input type = "text" id = "A93" class = "grid" hidden><input type = "text" id = "A94" class = "grid" hidden><input type = "text" id = "A95" class = "grid" hidden><input type = "text" id = "A96" class = "grid" hidden><input type = "text" id = "A97" class = "grid" hidden><input type = "text" id = "A98" class = "grid" hidden><input type = "text" id = "A99" class = "grid" hidden><span title = "Click to Remove the Last Row"><input type = "button" id = "OldRow" value = "&#x97;" onclick = "ChangeTable(20);" class = "gridb" hidden></span><br>
+<canvas id = "spacer2" width = "0" height = "0"></canvas><span title = "Click to Add a New Row"><input type = "button" id = "NewRow" value = "&#x2b;" onclick = "ChangeTable(21);" class = "gridb" hidden></span><br>
+<font face = "Copperplate Gothic" size = "6" id = "BTitle"></font><font face = "Didot" size = "5" id = "BText"></font><input type = "text" id = "BStd"><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "CTitle"></font><font face = "Didot" size = "5" id = "CText"></font><input type = "text" id = "CStd"></span><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "DTitle"></font><font face = "Didot" size = "5" id = "DText"></font><input type = "text" id = "DStd"></span><br>
+<span title = "Select One Answer From Each"><font face = "Copperplate Gothic" size = "6" id = "ETitle"></font><font face = "Didot" size = "5" id = "EText"></font><select name = "parte1" id = "parte1"><option id = "BlkE1" value = "Blank"></option><option id = "IncE1" value = "Inc">Increase the</option><option id = "DecE1" value = "Dec">Decrease the</option></select><select name = "parte2" id = "parte2"><option id = "BlkE2" value = "Blank"></option><option id = "PercE2" value = "Perc"></option><option id = "FlatE2" value = "Flat"></option></select></span><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "FTitle"></font><font face = "Didot" size = "5" id = "FText"></font><input type = "text" id = "FStd"></span><br>
+<style>
+.grid{
+width : 100px;
+height : 100px;
+background-color: #FFFFFF;
+border: 4px solid #000000; 
+font-size: 25px;
+cursor: text;}
+.grid:focus{
+background-color: #FFFF33;
+border: 5px inset #66FF00; }
+.gridb{
+width: 57px;
+height: 30px;
+font-size: 20px; }
+</style><br><br>
+<font face = "Courier" size = "4" id = "emailcode"></font>
+<font face = "impact" size = "5" id = "subm"></font><input type = "button" id = "subq" value = "Submit Question" onclick = "endprocedure();">
+
+<input type = "hidden" name = "studId" id = "studId" value = "">
+<input type = "hidden" name = "order" id = "order" value = "">
+<input type = "hidden" name = "varsq1" id = "varsq1" value = "">
+<input type = "hidden" name = "stanswersq1" id = "stanswersq1" value = "">
+<input type = "hidden" name = "varsq2" id = "varsq2" value = "">
+<input type = "hidden" name = "stanswersq2" id = "stanswersq2" value = "">
+<input type = "hidden" name = "varsq3" id = "varsq3" value = "">
+<input type = "hidden" name = "stanswersq3" id = "stanswersq3" value = "">
+<input type = "hidden" name = "varsq4" id = "varsq4" value = "">
+<input type = "hidden" name = "stanswersq4" id = "stanswersq4" value = "">
+<input type = "hidden" name = "varsq5" id = "varsq5" value = "">
+<input type = "hidden" name = "stanswersq5" id = "stanswersq5" value = "">
+<input type = "hidden" name = "varsq6" id = "varsq6" value = "">
+<input type = "hidden" name = "stanswersq6" id = "stanswersq6" value = "">
+<input type = "hidden" name = "varsq7" id = "varsq7" value = "">
+<input type = "hidden" name = "stanswersq7" id = "stanswersq7" value = "">
+<input type = "hidden" name = "varsq8" id = "varsq8" value = "">
+<input type = "hidden" name = "stanswersq8" id = "stanswersq8" value = "">
+<input type = "hidden" name = "varsq9" id = "varsq9" value = "">
+<input type = "hidden" name = "stanswersq9" id = "stanswersq9" value = "">
+<input type = "hidden" name = "varsq10" id = "varsq10" value = "">
+<input type = "hidden" name = "stanswersq10" id = "stanswersq10" value = "">
+<input type = "hidden" name = "varsq11" id = "varsq11" value = "">
+<input type = "hidden" name = "stanswersq11" id = "stanswersq11" value = "">
+<input type = "hidden" name = "varsq12" id = "varsq12" value = "">
+<input type = "hidden" name = "stanswersq12" id = "stanswersq12" value = "">
+<input type = "hidden" name = "varsq13" id = "varsq13" value = "">
+<input type = "hidden" name = "stanswersq13" id = "stanswersq13" value = "">
+
+</body>
+
+<script type = "text/javascript">
+var stInfo = window.location.href.split("&stid=")[1];
+var theRest = window.location.href.split("&stid=")[0];
+var firstName = stInfo.split("_")[1];
+var lastName = stInfo.split("_")[0];
+var idNum = stInfo.split("_")[2];
+document.getElementById("Student").innerHTML = firstName + " " + lastName + " (" + idNum + ")";
+var daStuff = theRest.split("?str=")[1];
+document.getElementById("subm").innerHTML = "Submit THIS QUESTION ONLY: ";
+const timerSet = setInterval(function() {
+	var now = new Date();
+	var nowH = now.getHours();
+	var nowM = now.getMinutes();
+	var nowS = now.getSeconds();
+	var whenst = 3600 * nowH + 60 * nowM + nowS;
+	var remainst = 5400 + Number(daStuff) - whenst;
+	var remH = Math.floor(remainst/3600);
+	var remM = Math.floor(( remainst - 3600 * remH ) / 60);
+	var remS = remainst - 3600 * remH - 60 * remM;
+	if ( remH > 0 ) { var dispH = remH + " hours, "; }
+	else { var dispH = ""; }
+	if ( remM > 9 ) { var dispM = remM + " minutes, "; }
+	else { if ( remM > 0 ) { var dispM = "0" + remM + " minutes, "; } 
+		else { var dispM = ""; }}
+	if ( remS > 9 ) { var dispS = remS + " seconds"; }
+	else { if ( remS > 0 ) { var dispS = "0" + remS + " seconds"; } 
+		else { var dispS = ""; }}
+	if ( remainst > 0 ) { document.getElementById("Timer").innerHTML = "Test Time Remaining: " + dispH + dispM + dispS; }
+	else { endprocedure(); }}, 1000);
+setTimeout( function() { document.getElementById("Timer").innerHTML = "Time Elapsed"; }, 3600000);
+const caps = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const lowly = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const digits = ["0","1","2","3","4","5","6","7","8","9"];
+const symbols = ["&dollar;","&amp;","&commat;","&num;","&ast;","&plus;","&equals;","&minus;","&percnt;","&excl;","&quest;","&gt;","&lt;","&VerticalLine;","&Hat;","&sol;"];
+const mixed = [];
+for ( p = 0; p < 26; p++ ) { 	mixed[2*p] = caps[p];
+				mixed[2*p+1] = lowly[p]; }
+var prob1 = Math.round(Math.random()*5) + 3;
+var pb2 = Math.random() + 1.35;
+var pb3 = Math.random() + 1.35;
+var prob2 = Math.round(prob1 * Math.max(pb2,pb3));
+var prob3 = Math.round(prob2 * Math.min(pb2,pb3));
+var cost = Math.round(Math.random()*10) + 5;
+var prize1 = Math.round(.5 + 0.1 * Math.random() * cost + 0.2*cost)*5;
+var pr2 = 0.5 * Math.random() + 0.25;
+var pr3 = 0.5 * Math.random() + 0.25;
+var prize2 = Math.round(prize1 * Math.max(pr2,pr3));
+var prize3 = Math.round(prize2 * Math.min(pr2,pr3));
+if ( prob2 == 0 ) { prob2 = 0.5*prob1 + 0.5*prob3; }
+if ( prob3 == 0 ) { prob3 = 0.5*prob1 + 0.5*prob2; }
+const q12vls = [prob1,prob2,prob3];
+var Fprob = Math.min.apply(null,q12vls);
+var FInd = q12vls.findIndex(function(k) { return k == Fprob; });
+q12vls[FInd] = 1000;
+var Sprob = Math.min.apply(null,q12vls);
+var SInd = q12vls.findIndex(function(k) { return k == Sprob; });
+q12vls[SInd] = 1000;
+var Tprob = Math.min.apply(null,q12vls);
+q12vls[0] = prize1;
+q12vls[1] = prize2;
+q12vls[2] = prize3;
+var Fprz = Math.max.apply(null,q12vls);
+var FInd = q12vls.findIndex(function(k) { return k == Fprz; });
+q12vls[FInd] = 0;
+var Sprz = Math.max.apply(null,q12vls);
+var SInd = q12vls.findIndex(function(k) { return k == Sprz; });
+q12vls[SInd] = 0;
+var Tprz = Math.max.apply(null,q12vls);
+q12vls[0] = Fprob;
+q12vls[1] = Sprob;
+q12vls[2] = Tprob;
+q12vls[3] = Fprz;
+q12vls[4] = Sprz;
+q12vls[5] = Tprz;
+q12vls[6] = cost;
+q12vls[7] = Math.floor(cost * 0.8 * Math.random());
+
+if( q12vls[0] == q12vls[1] ) { q12vls[1] = Math.round(0.5 * q12vls[1] + 0.5 * q12vls[2]); }
+if( q12vls[1] == q12vls[2] ) { q12vls[1] = Math.round(0.5 * q12vls[1] + 0.5 * q12vls[0]); }
+if( q12vls[3] == q12vls[4] ) { q12vls[4] = Math.round(0.5 * q12vls[4] + 0.5 * q12vls[5]); }
+if( q12vls[4] == q12vls[5] ) { q12vls[4] = Math.round(0.5 * q12vls[4] + 0.5 * q12vls[3]); }
+if( q12vls[5] == "0" && q12vls[4] > 1) { q12vls[5] = 0.5 * q12vls[4]; }
+if( q12vls[5] == "0" && q12vls[4] < 2) { q12vls[3] = Number(q12vls[3]) + 1; 
+					 q12vls[4] = Number(q12vls[4]) + 1; 
+					 q12vls[5] = Number(q12vls[5]) + 1; 
+					 q12vls[6] = Number(q12vls[6]) + 1; }
+
+var theQ1 = "No one likes to spend thousands of dollars of unwanted home-repairs, so when a friend of yours noticed an advertisement online for &quot;<em>Generic Home Maintenance,</em>&quot; claiming you could save thousands of dollars per year in your utility bills through recommended, and often forgotten, maintenance, you thought it was worth looking into.  Being a good friend, you begin to gather information on their past customer reviews and the repair/replacement costs of major household items.  This company will inspect and complete any issues they find, for an annual service charge of &dollar;[G]0, and in the past they found issues with a drafty windows for [C]&percnt; of customers, [B]&percnt; with leaky pipes, and [A]&percnt; furnace needing replacement.  The cost of replacing these items, if not fixed, are respectfully, &dollar;[F]00, &dollar;[E]00 and &dollar;[D]00.<br>Determine the following: <br><em>Multiple values should be seperated with commas.<br>Decimal answers should be rounded to 4 places after the decimal point.</em>";
+var theQ2 = "Mount Olympus Gymnasium and Health Spa offers three types of membership passanges: The Achilles (Standard Package for &dollar;[E]0), the Odysseus (Basic Package for &dollar;[F]0), and the Hercules (Deluxe Package for &dollar;[D]0).  The membership recruiters, known as Promethians, are paid, in part, from commission.  There receive a flat payment of &dollar;[G] for each new member they sign up, as well as 5&percnt; of the membership fees for the particular package signed.  This is done to encourage Promethians to actively recruit all membership levels.  When a potential member arrives at Olympus, there is a [A]&percnt; likelihood of them signing on as a Herculean, a [B]&percnt; probabilitity they will become an Achillean, and a [C]&percnt; chance of an Odyssean.<br>Determine the following: <br><em>Multiple values should be seperated with commas.<br>Decimal answers should be rounded to 4 places after the decimal point.</em>";
+const parts1 = ["Construct the Probability Distribution Table for net savings. <em>Be sure to include row headings</em>", "Determine the probability that the savings from this plan outweigh the cost.", "What are the expected net savings?", "What is the [variance/standard deviation]?", "If this company wanted to make the expected net savings more in favor of the customer, he could","A rival company is offering a similar service, advertising [double/triple] the repair savings, and increasing the annual fee by [H]0.  Determine this new mean and [variance/standard deviation]."];
+const parts2 = ["Construct the Probability Distribution Table for commission earned. <em>Be sure to include row headings</em>", "Determine the probability that the flat payment is more than the percentage payment.", "What is the expected commission payment?", "What is the [variance/standard deviation]?", "The gym is making an effort to increase membership in their Hercules Package by motivating the Promethians to push more potential members in that direction.  They could ","Zeus, the owner of Olympic Gym, is considering changing the commission program to decrease the flat payment by [H] and increase the percentage payment by [double/triple].  Determine this new mean and [variance/standard deviation]."];
+
+if (Math.random() < 0.5) { 	var topic = "repairs";
+				document.getElementById("QText").innerHTML = theQ1;
+				document.getElementById("PercE2").innerHTML = "Percentage of Issues Found.";
+				document.getElementById("FlatE2").innerHTML = "Annual Fee."; 
+				parts1[5] = parts1[5].split("[H]").join(q12vls[7]);
+				if ( Math.random() < 0.5 ) { 	parts1[5] = parts1[5].split("[double/triple]").join('double'); 
+								document.getElementById("varsq4").value = "double"; }
+				else { 	parts1[5] = parts1[5].split("[double/triple]").join('triple'); 
+					document.getElementById("varsq4").value = "triple"; }
+				if ( Math.random() < 0.5 ) { 	parts1[3] = parts1[3].split("[variance/standard deviation]").join('variance'); 
+								document.getElementById("varsq3").value = "variance"; }
+				else { 	parts1[3] = parts1[3].split("[variance/standard deviation]").join('standard deviation'); 
+					document.getElementById("varsq3").value = "standard deviation"; }
+				if ( Math.random() < 0.5 ) { 	parts1[5] = parts1[5].split("[variance/standard deviation]").join('variance'); 
+								document.getElementById("varsq5").value = "variance"; }
+				else { 	parts1[5] = parts1[5].split("[variance/standard deviation]").join('standard deviation'); 
+					document.getElementById("varsq5").value = "standard deviation"; }
+				for (q = 0; q < 6; q++ ) {
+					var PT = caps[q] + "Title";
+					var PQ = caps[q] + "Text";
+					document.getElementById(PT).innerHTML = "Part " + caps[q] + ": ";
+					document.getElementById(PQ).innerHTML = parts1[q]; }}
+
+else {  var topic = "gods";
+	document.getElementById("QText").innerHTML = theQ2;
+	document.getElementById("PercE2").innerHTML = "Percentage Portion of Commission.";
+	document.getElementById("FlatE2").innerHTML = "Flat Amount Portion of Commision.";
+	parts2[5] = parts2[5].split("[H]").join(q12vls[7]); 
+	if ( Math.random() < 0.5 ) { 	parts2[5] = parts2[5].split("[double/triple]").join('double'); 
+					document.getElementById("varsq4").value = "double"; }
+	else { 	parts2[5] = parts2[5].split("[double/triple]").join('triple'); 
+		document.getElementById("varsq4").value = "triple"; }
+	if ( Math.random() < 0.5 ) { 	parts2[3] = parts2[3].split("[variance/standard deviation]").join('variance'); 
+					document.getElementById("varsq3").value = "variance"; }
+	else { 	parts2[3] = parts2[3].split("[variance/standard deviation]").join('standard deviation'); 
+		document.getElementById("varsq3").value = "standard deviation"; }
+	if ( Math.random() < 0.5 ) { 	parts2[5] = parts2[5].split("[variance/standard deviation]").join('variance'); 
+					document.getElementById("varsq5").value = "variance"; }
+	else { 	parts2[5] = parts2[5].split("[variance/standard deviation]").join('standard deviation'); 
+		document.getElementById("varsq5").value = "standard deviation"; }
+	for (q = 0; q < 6; q++ ) {
+		var PT = caps[q] + "Title";
+		var PQ = caps[q] + "Text";
+		document.getElementById(PT).innerHTML = "Part " + caps[q] + ": ";
+		document.getElementById(PQ).innerHTML = parts2[q]; }}
+
+for ( v = 0; v < 7; v++ ) { 	document.getElementById("QText").innerHTML = document.getElementById("QText").innerHTML.split("["+caps[v]+"]").join(q12vls[v]); }
+
+function endprocedure() {
+	document.getElementById("subq").value = "Working";
+	document.getElementById("subq").disabled = true;
+	document.getElementById("subq").style = "background-color: red;";
+	clearInterval(timerSet);
+	document.getElementById("OldCol").disabled = true;
+	document.getElementById("OldRow").disabled = true;
+	document.getElementById("NewCol").disabled = true;
+	document.getElementById("NewRow").disabled = true;
+	for ( q = 0; q < 6; q++ ) {
+		if ( q == 0 ) { var parta = "";
+				for ( a = 0; a < 100; a++ ) {	if ( a < 10 ) { var cellId = "A0" + String(a);}
+								else { var cellId = "A" + String(a); }
+								if ( document.getElementById(cellId).hidden == false ) {if ( parta != "" ) { parta = parta + ","; }
+															parta = parta + document.getElementById(cellId).value; }
+								document.getElementById(cellId).disabled = true; }
+								document.getElementById("stanswersq1").value = parta; }
+		else { if ( q == 4 ) {	if ( document.getElementById("parte1").value != "Blank" && document.getElementById("parte2").value != "Blank" ) {
+					var ptEans = document.getElementById("parte1").value + "," + document.getElementById("parte2").value; }
+				else { var ptEans = ""; } 
+				document.getElementById("stanswersq5").value = ptEans; 
+				document.getElementById("parte1").disabled = true;
+				document.getElementById("parte2").disabled = true; }
+		else {	var ansID = caps[q] + "Std";
+			var stoId = "stanswersq" + String(q+1);
+			document.getElementById(ansID).disabled = true;
+			var answer = document.getElementById(ansID).value;
+			document.getElementById(stoId).value = answer; }}}
+	document.getElementById("order").value = "Question 12";
+	document.getElementById("studId").value = document.getElementById("Student").innerHTML;
+	var varlist = q12vls.join(',');
+	document.getElementById("varsq1").value	= topic;
+	document.getElementById("varsq2").value	= varlist;
+	var stdAns = "";
+	var dataset = "{" + document.getElementById("varsq1").value + "}{" + document.getElementById("varsq2").value + "}";
+	for ( p = 1; p < 7; p++ ) { 	stdAns = stdAns + "pb" + document.getElementById("stanswersq" + String(p)).value + "pf"; }
+	var theCodiest = codify(stdAns, dataset);
+ 	var thisUrl = window.location.href;
+	var newUrl = thisUrl.split("daringpigeon").join('handitin');
+	newUrl = newUrl + "?who=" + document.getElementById("Student").innerHTML + "&what=MATH1342Test1Q12&eek=" + theCodiest; 
+	var subme = window.open(newUrl); }
+
+function ansCode(a) {
+	const Stans = a.split("");
+	var A = "";
+	for ( k = 0; k < Stans.length; k++ ) {
+		if ( k < Stans.length - 1 ) {
+		if( Stans[k] == "p" && Stans[k+1] == "b" ) {
+					var capi = Math.floor(Math.random()*26);
+					var starter = caps[capi];
+					A = A + starter;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( Stans[k] == "p" && Stans[k+1] == "f" ) {
+					var fini = Math.floor(Math.random()*36);
+					if ( fini < 10 ) { var finisher = digits[fini]; }
+					else { var finisher = lowly[fini-10]; } 
+					A = A + finisher;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( digits.indexOf(Stans[k]) > -1 ) {
+			if ( digits.indexOf(Stans[k+1]) > -1 ) { var val = digits.indexOf(Stans[k]) * 10 + Number(digits.indexOf(Stans[k+1]));
+								 var encv = numenc(val - 17);
+								 A = A + String(encv);
+								 Stans[k+1] = ""; }
+			else { if ( Stans[k] < 7 ) { var encv = 1 * Stans[k] + 3; }
+				else { var encv = Stans[k] - 7; }
+				A = A + encv; }}
+		else { if ( mixed.indexOf(Stans[k]) > -1 ) { 	var val = Math.floor(mixed.indexOf(Stans[k])/2);
+								var enc = Math.floor(val * 3.5);
+								if ( enc < 10 ) { var encv = "0" + enc; }
+								else { var encv = String(enc); }
+								A = A + encv; }
+			else { A = A + "."; }}}}
+return A; }
+
+function codify(a,b) {
+	var A = ansCode(a);
+	var fn = document.getElementById("studId").value.split(" ")[0];
+	var ln = document.getElementById("studId").value.split(" ")[1];
+	var id = document.getElementById("studId").value.split("(")[1].split(")")[0];
+ 	var f3 = fn.split("")[0] + fn.split("")[1];
+	if (fn.length < 3) { f3 = f3 + "-"; }
+	else { f3 = f3 + fn.split("")[2]; }
+ 	var l3 = ln.split("")[0] + ln.split("")[1];
+	if (ln.length < 3) { l3 = l3 + "-"; }
+	else { l3 = l3 + ln.split("")[2]; }
+	var unlet = String(lenc(l3)) + String(lenc(f3)) +  String(idenc(id));
+	const randCdcs = [];
+	const sortCdcs = [];
+	var cdor = "";
+	var ultimo = "";
+	var primo = "";
+	var numero = unlet.split("")[18];
+	for ( t = 0; t < 9; t++ ) {	ultimo = ultimo + String(unlet.split("")[t]);
+					primo = primo + String(unlet.split("")[t+9]);
+					numero = numero + String(unlet.split("")[t+19]);}
+
+	const codeces = [ultimo, primo, numero, A];
+	for ( i = 0; i < 6; i++ ) { randCdcs[i] = Math.random(); }
+	for ( j = 0; j < 6; j++ ) {	var minimus = Math.min.apply(null,randCdcs);
+					var minInd = randCdcs.indexOf(minimus);
+					randCdcs[minInd] = 2;
+					sortCdcs[j] = codeces[minInd];
+					var cheese = minInd*3;
+					cdor = cdor + mixed[cheese]; }
+	
+var goodstuff = cdor + sortCdcs.join('') + b;
+goodstuff = goodstuff.split(" ").join('');
+var leng = goodstuff.length;
+const gs = goodstuff.split("");
+var badstuff = "";
+for ( b = 0; b < leng; b++ ) {
+	if ( mixed.indexOf(gs[b]) > -1 ) { badstuff = badstuff + gs[b]; }
+	if ( digits.indexOf(gs[b]) > -1 ) { 	if ( Math.random() < 0.5 ) { 
+							var digs = Number(gs[b]);
+							if ( digs < 6 ) {	var tester = Math.floor(Math.random()*3);
+										var lind = 3 * digs + 1 * tester; }
+							else { 	var tester = Math.floor(Math.random() * 2);
+								var lind = 2 * digs + 1 * tester + 6; }  
+							badstuff = badstuff + lowly[lind]; }
+						else { badstuff = badstuff + gs[b]; }}
+	else {  var tester = Math.floor(Math.random()*16);
+		badstuff = badstuff + symbols[tester]; }}
+
+document.getElementById("emailcode").innerHTML = "This code may be emailed to be with the other codes, or by itself: <br>" + badstuff; 
+return badstuff;}
+
+function lenc(a) {
+	var fl = caps.indexOf(a.split("")[0]);
+	var sl = caps.indexOf(a.split("")[1]);
+	var last = a.split("")[2];
+	if ( last == "-" ) { var ll = 50; }
+	else { var ll = caps.indexOf(last); }
+	var theletters = String(numenc(fl)) + String(numenc(sl)) + String(numenc(ll)); 
+return theletters; }
+
+function numenc(n) {
+	var m = 1 * n + 17;
+	var powpow = Math.pow(m,7)
+	var lefty = powpow - Math.floor(powpow/155)*155;
+	if ( lefty < 10 ) { var nenc = "00" + String(lefty); }
+	else { if ( lefty < 100 ) { var nenc = "0" + String(lefty); }
+	else { var nenc = String(lefty); }}
+return nenc; }
+
+function idenc(i) {
+	var first = i.split("")[0];
+	var second = i.split("")[1] + i.split("")[2];
+	var third = i.split("")[3] + i.split("")[4];
+	var forth = i.split("")[5] + i.split("")[6];
+	if ( first == "0" ) { var f = "a"; }
+	else {  if ( first == "1" ) { var f = "b"; }
+		else { var f = "c"; }}
+	var s = numenc(second);
+	var t = numenc(third);
+	var l = numenc(forth);
+	var retty = f + String(s) + String(t) + String(l);
+return retty; }
+
+const xvals = [];
+const pvals = [];
+
+function ChangeTable(n) {
+	var N = String(n);
+	if (document.getElementById("A90").hidden == false || document.getElementById("A09").hidden == false) { if ( N.split("")[1] == "1" ) { 
+		document.getElementById("AText").innerHTML = document.getElementById("AText").innerHTML + "<br><em>Seriously?? You are trying to tack on even more boxes? What are you possibly going to fill this table with? Start deleting things. Please!</em>";
+		return null; }}
+	if ( document.getElementById("A00").hidden == true ) {
+		document.getElementById("A00").hidden = false; 
+		document.getElementById("OldCol").hidden = false;
+		document.getElementById("NewRow").hidden = false;
+		document.getElementById("OldRow").hidden = false; }
+	else {	if ( N.split("")[0] == "1" ) { var RowCol = "Col"; }
+		else { var RowCol = "Row"; }
+		if ( N.split("")[1] == "1" ) { var what2do = "Add"; }
+		else { var what2do = "Del"; }
+		if ( RowCol == "Col" ) { 
+			for ( r = 0; r < 10; r++ ) {	var rowLead = "A"+String(r) +"0";
+				if ( document.getElementById(rowLead).hidden == false ) {
+					var hiding = "F";
+					var colInd = 0;
+					var newInd = 0;
+					var canwid = 0;
+					while ( hiding == "F" ) {
+						var cellId = "A" + String(r) + String(colInd);
+						if ( document.getElementById(cellId).hidden == true ) { hiding = "T";
+													newInd = colInd; 
+													var lastInd = colInd - 1; }
+						else { canwid = canwid + 112; }
+						colInd = colInd + 1; }
+					if ( what2do == "Add" ) {	document.getElementById("A" + String(r) + String(newInd)).hidden = false;
+									canwid = canwid + 57; }			 
+					else {	document.getElementById("A" + String(r) + String(lastInd)).hidden = true; 
+						canwid = canwid - 169; }
+			document.getElementById("spacer1").width = canwid;
+			document.getElementById("spacer2").width = canwid;}}}
+		else {	for ( c = 0; c < 10; c++ ) {	var colLead = "A0" + String(c);
+				if ( document.getElementById(colLead).hidden == false ) {
+					var hiding = "F";
+					var nohid = c - 1;
+					var rowInd = 0;
+					var frsInd = 0;
+					while ( hiding == "F" ) {
+						var cellId = "A" + String(rowInd) + String(c);
+						if ( document.getElementById(cellId).hidden == true ) {	hiding = "T";
+													frsInd = rowInd;
+													var finInd = rowInd - 1; }
+						rowInd = rowInd + 1; }
+					if ( what2do == "Add" ) {	document.getElementById("A" + String(frsInd) + String(c)).hidden = false; 
+									document.getElementById("br" + finInd).innerHTML = "<br>"; }
+
+					else { 	document.getElementById("A" + String(finInd) + String(c)).hidden = true; 
+						document.getElementById("br" + finInd).innerHTML = "";
+						document.getElementById("br" + String(finInd-1)).innerHTML = ""; }}}}}}
+
+
+</script></html>

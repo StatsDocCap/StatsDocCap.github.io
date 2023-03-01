@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsGetStarted">Test 1</title>
+
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id="Title">Test 1....A Dramatic First Step in a Voyage of Test-Taking.....Tests, Begun!</font><br> <h1 id = "fun"></h1>
+<h1 name = "trapdoor" id = "itsatrap"></h1><br>
+<h1 id = "TestStatus"></h1>
+<font face = "WildWest" size = "5" id="Inst1">Please fill out the information below:</font><br>
+<p1 id="First">First Name: </p1><input type = "text" name = "firstname" id = "ftxt">
+<p1 id="Last"></p1> Last Name: <input type = "text" name = "lastname" id = "ltxt">
+<p1 id="Psid"></p1> ID Number: <input type = "text" name = "psid" id = "ptxt">
+<p1 id="codelab"> TestCode (from Instructor): </p1><input type = "text" name = "code" id = "code"><br>
+<p1 id="Inst2">Once you have that information filled out, click the button below to begin your test.<br></p1><font face = "Bedrock" size = "5"><b><em>After you begin your test, Do Not Refresh your browser.  Doing so will give you a new exam!</em></b></font><br><br>
+<p1 id = "linkTitle"></p1><br>
+<a id = "Link1" target = "_blank" href = "http://100.20.27.153/"></a><br>
+<a id = "Link2" target = "_blank" href = "http://www.casa.uh.edu/CourseWare/Support/Calculator.htm"></a><br>
+<a id = "Link3" target = "_blank" href = "https://uofh-my.sharepoint.com/:b:/g/personal/mgcaputo_cougarnet_uh_edu/EXsv01FaZaFBjZu6tFREZnYBeoDcSf547fbc6-MWlHpUoA"></a><br><br><br>
+<input type = "button" name = "startbut" id = "startbut" value = "Click to Begin" onclick = "sort();"><br>
+
+<font face = "Palatino" size = "6" id = "directions"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title0" ></font><font face = "Ttf" size = "5" id = "Ans0"></font><br>
+<font face = "Calibri" size = "4" id="Text0"></font> <br><br>
+<canvas id = "graphic0" width = "0" height = "0"></canvas><br>
+<select name = "pull0A" id = "pull0A" onchange = "pulley(10);" hidden><option id = "Blk0A" value = "Blank"></option><option id = "Opt1A0" value = "Option1"></option><option id = "Opt2A0" value = "Option2"></option><option id = "Opt3A0" value = "Option3"></option><option id = "Opt4A0" value = "Option4"></option><option id = "Opt5A0" value = "Option5"></option><option id = "NoOpt0A" value = "NoOption"></option></select><select name = "pull0B" id = "pull0B" onchange = "pulley(20);" hidden><option id = "Blk0B" value = "Blank"></option><option id = "Opt1B0" value = "Option1"></option><option id = "Opt2B0" value = "Option2"></option><option id = "Opt3B0" value = "Option3"></option><option id = "Opt4B0" value = "Option4"></option><option id = "Opt5B0" value = "Option5"></option><option id = "NoOpt0B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A0" id = "A0" value = "" onclick = "Choice(00);" hidden><font face = "Calibri" size = "4" id="q0AText"></font><br>
+<input type = "button" name = "B0" id = "B0" value = "" onclick = "Choice(10);" hidden><font face = "Calibri" size = "4" id="q0BText"></font><br>
+<input type = "button" name = "C0" id = "C0" value = "" onclick = "Choice(20);" hidden><font face = "Calibri" size = "4" id="q0CText"></font><br>
+<input type = "button" name = "D0" id = "D0" value = "" onclick = "Choice(30);" hidden><font face = "Calibri" size = "4" id="q0DText"></font><br>
+<input type = "button" name = "E0" id = "E0" value = "" onclick = "Choice(40);" hidden><font face = "Calibri" size = "4" id="q0EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title1" ></font><font face = "Ttf" size = "5" id = "Ans1"></font><br>
+<font face = "Calibri" size = "4" id="Text1"></font> <br><br>
+<canvas id = "graphic1" width = "0" height = "0"></canvas><br>
+<select name = "pull1A" id = "pull1A" onchange = "pulley(11);" hidden><option id = "Blk1A" value = "Blank"></option><option id = "Opt1A1" value = "Option1"></option><option id = "Opt2A1" value = "Option2"></option><option id = "Opt3A1" value = "Option3"></option><option id = "Opt4A1" value = "Option4"></option><option id = "Opt5A1" value = "Option5"></option><option id = "NoOpt1A" value = "NoOption"></option></select><select name = "pull1B" id = "pull1B" onchange = "pulley(21);" hidden><option id = "Blk1B" value = "Blank"></option><option id = "Opt1B1" value = "Option1"></option><option id = "Opt2B1" value = "Option2"></option><option id = "Opt3B1" value = "Option3"></option><option id = "Opt4B1" value = "Option4"></option><option id = "Opt5B1" value = "Option5"></option><option id = "NoOpt1B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A1" id = "A1" value = "" onclick = "Choice(01);" hidden><font face = "Calibri" size = "4" id="q1AText"></font><br>
+<input type = "button" name = "B1" id = "B1" value = "" onclick = "Choice(11);" hidden><font face = "Calibri" size = "4" id="q1BText"></font><br>
+<input type = "button" name = "C1" id = "C1" value = "" onclick = "Choice(21);" hidden><font face = "Calibri" size = "4" id="q1CText"></font><br>
+<input type = "button" name = "D1" id = "D1" value = "" onclick = "Choice(31);" hidden><font face = "Calibri" size = "4" id="q1DText"></font><br>
+<input type = "button" name = "E1" id = "E1" value = "" onclick = "Choice(41);" hidden><font face = "Calibri" size = "4" id="q1EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title2" ></font><font face = "Ttf" size = "5" id = "Ans2"></font><br>
+<font face = "Calibri" size = "4" id="Text2"></font> <br><br>
+<canvas id = "graphic2" width = "0" height = "0"></canvas><br>
+<select name = "pull2A" id = "pull2A" onchange = "pulley(12);" hidden><option id = "Blk2A" value = "Blank"></option><option id = "Opt1A2" value = "Option1"></option><option id = "Opt2A2" value = "Option2"></option><option id = "Opt3A2" value = "Option3"></option><option id = "Opt4A2" value = "Option4"></option><option id = "Opt5A2" value = "Option5"></option><option id = "NoOpt2A" value = "NoOption"></option></select><select name = "pull2B" id = "pull2B" onchange = "pulley(22);" hidden><option id = "Blk2B" value = "Blank"></option><option id = "Opt1B2" value = "Option1"></option><option id = "Opt2B2" value = "Option2"></option><option id = "Opt3B2" value = "Option3"></option><option id = "Opt4B2" value = "Option4"></option><option id = "Opt5B2" value = "Option5"></option><option id = "NoOpt2B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A2" id = "A2" value = "" onclick = "Choice(02);" hidden><font face = "Calibri" size = "4" id="q2AText"></font><br>
+<input type = "button" name = "B2" id = "B2" value = "" onclick = "Choice(12);" hidden><font face = "Calibri" size = "4" id="q2BText"></font><br>
+<input type = "button" name = "C2" id = "C2" value = "" onclick = "Choice(22);" hidden><font face = "Calibri" size = "4" id="q2CText"></font><br>
+<input type = "button" name = "D2" id = "D2" value = "" onclick = "Choice(32);" hidden><font face = "Calibri" size = "4" id="q2DText"></font><br>
+<input type = "button" name = "E2" id = "E2" value = "" onclick = "Choice(42);" hidden><font face = "Calibri" size = "4" id="q2EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title3" ></font><font face = "Ttf" size = "5" id = "Ans3"></font><br>
+<font face = "Calibri" size = "4" id="Text3"></font> <br><br>
+<canvas id = "graphic3" width = "0" height = "0"></canvas><br>
+<select name = "pull3A" id = "pull3A" onchange = "pulley(13);" hidden><option id = "Blk3A" value = "Blank"></option><option id = "Opt1A3" value = "Option1"></option><option id = "Opt2A3" value = "Option2"></option><option id = "Opt3A3" value = "Option3"></option><option id = "Opt4A3" value = "Option4"></option><option id = "Opt5A3" value = "Option5"></option><option id = "NoOpt3A" value = "NoOption"></option></select><select name = "pull3B" id = "pull3B" onchange = "pulley(23);" hidden><option id = "Blk3B" value = "Blank"></option><option id = "Opt1B3" value = "Option1"></option><option id = "Opt2B3" value = "Option2"></option><option id = "Opt3B3" value = "Option3"></option><option id = "Opt4B3" value = "Option4"></option><option id = "Opt5B3" value = "Option5"></option><option id = "NoOpt3B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A3" id = "A3" value = "" onclick = "Choice(03);" hidden><font face = "Calibri" size = "4" id="q3AText"></font><br>
+<input type = "button" name = "B3" id = "B3" value = "" onclick = "Choice(13);" hidden><font face = "Calibri" size = "4" id="q3BText"></font><br>
+<input type = "button" name = "C3" id = "C3" value = "" onclick = "Choice(23);" hidden><font face = "Calibri" size = "4" id="q3CText"></font><br>
+<input type = "button" name = "D3" id = "D3" value = "" onclick = "Choice(33);" hidden><font face = "Calibri" size = "4" id="q3DText"></font><br>
+<input type = "button" name = "E3" id = "E3" value = "" onclick = "Choice(43);" hidden><font face = "Calibri" size = "4" id="q3EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title4" ></font><font face = "Ttf" size = "5" id = "Ans4"></font><br>
+<font face = "Calibri" size = "4" id="Text4"></font> <br><br>
+<canvas id = "graphic4" width = "0" height = "0"></canvas><br>
+<select name = "pull4A" id = "pull4A" onchange = "pulley(14);" hidden><option id = "Blk4A" value = "Blank"></option><option id = "Opt1A4" value = "Option1"></option><option id = "Opt2A4" value = "Option2"></option><option id = "Opt3A4" value = "Option3"></option><option id = "Opt4A4" value = "Option4"></option><option id = "Opt5A4" value = "Option5"></option><option id = "NoOpt4A" value = "NoOption"></option></select><select name = "pull4B" id = "pull4B" onchange = "pulley(24);" hidden><option id = "Blk4B" value = "Blank"></option><option id = "Opt1B4" value = "Option1"></option><option id = "Opt2B4" value = "Option2"></option><option id = "Opt3B4" value = "Option3"></option><option id = "Opt4B4" value = "Option4"></option><option id = "Opt5B4" value = "Option5"></option><option id = "NoOpt4B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A4" id = "A4" value = "" onclick = "Choice(04);" hidden><font face = "Calibri" size = "4" id="q4AText"></font><br>
+<input type = "button" name = "B4" id = "B4" value = "" onclick = "Choice(14);" hidden><font face = "Calibri" size = "4" id="q4BText"></font><br>
+<input type = "button" name = "C4" id = "C4" value = "" onclick = "Choice(24);" hidden><font face = "Calibri" size = "4" id="q4CText"></font><br>
+<input type = "button" name = "D4" id = "D4" value = "" onclick = "Choice(34);" hidden><font face = "Calibri" size = "4" id="q4DText"></font><br>
+<input type = "button" name = "E4" id = "E4" value = "" onclick = "Choice(44);" hidden><font face = "Calibri" size = "4" id="q4EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title5" ></font><font face = "Ttf" size = "5" id = "Ans5"></font><br>
+<font face = "Calibri" size = "4" id="Text5"></font> <br><br>
+<canvas id = "graphic5" width = "0" height = "0"></canvas><br>
+<select name = "pull5A" id = "pull5A" onchange = "pulley(15);" hidden><option id = "Blk5A" value = "Blank"></option><option id = "Opt1A5" value = "Option1"></option><option id = "Opt2A5" value = "Option2"></option><option id = "Opt3A5" value = "Option3"></option><option id = "Opt4A5" value = "Option4"></option><option id = "Opt5A5" value = "Option5"></option><option id = "NoOpt5A" value = "NoOption"></option></select><select name = "pull5B" id = "pull5B" onchange = "pulley(25);" hidden><option id = "Blk5B" value = "Blank"></option><option id = "Opt1B5" value = "Option1"></option><option id = "Opt2B5" value = "Option2"></option><option id = "Opt3B5" value = "Option3"></option><option id = "Opt4B5" value = "Option4"></option><option id = "Opt5B5" value = "Option5"></option><option id = "NoOpt5B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A5" id = "A5" value = "" onclick = "Choice(05);" hidden><font face = "Calibri" size = "4" id="q5AText"></font><br>
+<input type = "button" name = "B5" id = "B5" value = "" onclick = "Choice(15);" hidden><font face = "Calibri" size = "4" id="q5BText"></font><br>
+<input type = "button" name = "C5" id = "C5" value = "" onclick = "Choice(25);" hidden><font face = "Calibri" size = "4" id="q5CText"></font><br>
+<input type = "button" name = "D5" id = "D5" value = "" onclick = "Choice(35);" hidden><font face = "Calibri" size = "4" id="q5DText"></font><br>
+<input type = "button" name = "E5" id = "E5" value = "" onclick = "Choice(45);" hidden><font face = "Calibri" size = "4" id="q5EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title6" ></font><font face = "Ttf" size = "5" id = "Ans6"></font><br>
+<font face = "Calibri" size = "4" id="Text6"></font> <br><br>
+<canvas id = "graphic6" width = "0" height = "0"></canvas><br>
+<select name = "pull6A" id = "pull6A" onchange = "pulley(16);" hidden><option id = "Blk6A" value = "Blank"></option><option id = "Opt1A6" value = "Option1"></option><option id = "Opt2A6" value = "Option2"></option><option id = "Opt3A6" value = "Option3"></option><option id = "Opt4A6" value = "Option4"></option><option id = "Opt5A6" value = "Option5"></option><option id = "NoOpt6A" value = "NoOption"></option></select><select name = "pull6B" id = "pull6B" onchange = "pulley(26);" hidden><option id = "Blk6B" value = "Blank"></option><option id = "Opt1B6" value = "Option1"></option><option id = "Opt2B6" value = "Option2"></option><option id = "Opt3B6" value = "Option3"></option><option id = "Opt4B6" value = "Option4"></option><option id = "Opt5B6" value = "Option5"></option><option id = "NoOpt6B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A6" id = "A6" value = "" onclick = "Choice(06);" hidden><font face = "Calibri" size = "4" id="q6AText"></font><br>
+<input type = "button" name = "B6" id = "B6" value = "" onclick = "Choice(16);" hidden><font face = "Calibri" size = "4" id="q6BText"></font><br>
+<input type = "button" name = "C6" id = "C6" value = "" onclick = "Choice(26);" hidden><font face = "Calibri" size = "4" id="q6CText"></font><br>
+<input type = "button" name = "D6" id = "D6" value = "" onclick = "Choice(36);" hidden><font face = "Calibri" size = "4" id="q6DText"></font><br>
+<input type = "button" name = "E6" id = "E6" value = "" onclick = "Choice(46);" hidden><font face = "Calibri" size = "4" id="q6EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title7" ></font><font face = "Ttf" size = "5" id = "Ans7"></font><br>
+<font face = "Calibri" size = "4" id="Text7"></font> <br><br>
+<canvas id = "graphic7" width = "0" height = "0"></canvas><br>
+<select name = "pull7A" id = "pull7A" onchange = "pulley(17);" hidden><option id = "Blk7A" value = "Blank"></option><option id = "Opt1A7" value = "Option1"></option><option id = "Opt2A7" value = "Option2"></option><option id = "Opt3A7" value = "Option3"></option><option id = "Opt4A7" value = "Option4"></option><option id = "Opt5A7" value = "Option5"></option><option id = "NoOpt7A" value = "NoOption"></option></select><select name = "pull7B" id = "pull7B" onchange = "pulley(27);" hidden><option id = "Blk7B" value = "Blank"></option><option id = "Opt1B7" value = "Option1"></option><option id = "Opt2B7" value = "Option2"></option><option id = "Opt3B7" value = "Option3"></option><option id = "Opt4B7" value = "Option4"></option><option id = "Opt5B7" value = "Option5"></option><option id = "NoOpt7B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A7" id = "A7" value = "" onclick = "Choice(07);" hidden><font face = "Calibri" size = "4" id="q7AText"></font><br>
+<input type = "button" name = "B7" id = "B7" value = "" onclick = "Choice(17);" hidden><font face = "Calibri" size = "4" id="q7BText"></font><br>
+<input type = "button" name = "C7" id = "C7" value = "" onclick = "Choice(27);" hidden><font face = "Calibri" size = "4" id="q7CText"></font><br>
+<input type = "button" name = "D7" id = "D7" value = "" onclick = "Choice(37);" hidden><font face = "Calibri" size = "4" id="q7DText"></font><br>
+<input type = "button" name = "E7" id = "E7" value = "" onclick = "Choice(47);" hidden><font face = "Calibri" size = "4" id="q7EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title8" ></font><font face = "Ttf" size = "5" id = "Ans8"></font><br>
+<font face = "Calibri" size = "4" id="Text8"></font> <br><br>
+<canvas id = "graphic8" width = "0" height = "0"></canvas><br>
+<select name = "pull8A" id = "pull8A" onchange = "pulley(18);" hidden><option id = "Blk8A" value = "Blank"></option><option id = "Opt1A8" value = "Option1"></option><option id = "Opt2A8" value = "Option2"></option><option id = "Opt3A8" value = "Option3"></option><option id = "Opt4A8" value = "Option4"></option><option id = "Opt5A8" value = "Option5"></option><option id = "NoOpt8A" value = "NoOption"></option></select><select name = "pull8B" id = "pull8B" onchange = "pulley(28);" hidden><option id = "Blk8B" value = "Blank"></option><option id = "Opt1B8" value = "Option1"></option><option id = "Opt2B8" value = "Option2"></option><option id = "Opt3B8" value = "Option3"></option><option id = "Opt4B8" value = "Option4"></option><option id = "Opt5B8" value = "Option5"></option><option id = "NoOpt8B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A8" id = "A8" value = "" onclick = "Choice(08);" hidden><font face = "Calibri" size = "4" id="q8AText"></font><br>
+<input type = "button" name = "B8" id = "B8" value = "" onclick = "Choice(18);" hidden><font face = "Calibri" size = "4" id="q8BText"></font><br>
+<input type = "button" name = "C8" id = "C8" value = "" onclick = "Choice(28);" hidden><font face = "Calibri" size = "4" id="q8CText"></font><br>
+<input type = "button" name = "D8" id = "D8" value = "" onclick = "Choice(38);" hidden><font face = "Calibri" size = "4" id="q8DText"></font><br>
+<input type = "button" name = "E8" id = "E8" value = "" onclick = "Choice(48);" hidden><font face = "Calibri" size = "4" id="q8EText"></font><br><br>
+
+<font face = "Impact" size = "5" id = "Title9" ></font><font face = "Ttf" size = "5" id = "Ans9"></font><br>
+<font face = "Calibri" size = "4" id="Text9"></font> <br><br>
+<canvas id = "graphic9" width = "0" height = "0"></canvas><br>
+<select name = "pull9A" id = "pull9A" onchange = "pulley(19);" hidden><option id = "Blk9A" value = "Blank"></option><option id = "Opt1A9" value = "Option1"></option><option id = "Opt2A9" value = "Option2"></option><option id = "Opt3A9" value = "Option3"></option><option id = "Opt4A9" value = "Option4"></option><option id = "Opt5A9" value = "Option5"></option><option id = "NoOpt9A" value = "NoOption"></option></select><select name = "pull9B" id = "pull9B" onchange = "pulley(29);" hidden><option id = "Blk9B" value = "Blank"></option><option id = "Opt1B9" value = "Option1"></option><option id = "Opt2B9" value = "Option2"></option><option id = "Opt3B9" value = "Option3"></option><option id = "Opt4B9" value = "Option4"></option><option id = "Opt5B9" value = "Option5"></option><option id = "NoOpt9B" value = "NoOption"></option></select><br>
+<input type = "button" name = "A9" id = "A9" value = "" onclick = "Choice(09);" hidden><font face = "Calibri" size = "4" id="q9AText"></font><br>
+<input type = "button" name = "B9" id = "B9" value = "" onclick = "Choice(19);" hidden><font face = "Calibri" size = "4" id="q9BText"></font><br>
+<input type = "button" name = "C9" id = "C9" value = "" onclick = "Choice(29);" hidden><font face = "Calibri" size = "4" id="q9CText"></font><br>
+<input type = "button" name = "D9" id = "D9" value = "" onclick = "Choice(39);" hidden><font face = "Calibri" size = "4" id="q9DText"></font><br>
+<input type = "button" name = "E9" id = "E9" value = "" onclick = "Choice(49);" hidden><font face = "Calibri" size = "4" id="q9EText"></font><br><br><br>
+
+<font face = "Palatino" size = "6" id = "directions2"></font><br><br>
+<input type = "button" name = "Question11" id = "Question11" value = "Click to Begin Question 11" onclick = "BeginFRQ(1);" hidden>
+<input type = "button" name = "Question12" id = "Question12" value = "Click to Begin Question 12" onclick = "BeginFRQ(2);" hidden>
+<input type = "button" name = "Question13" id = "Question13" value = "Click to Begin Question 13" onclick = "BeginFRQ(3);" hidden><br><br>
+<p1 id = "st"></p1><br>
+<p1 id = "sa"></p1><br>
+<p1 id = "ak"></p1><br>
+<a id = "emailcode" target = "_blank;"></a><br>
+<font face = "Monospace" size  = "5" class = "qind" id = "qleft">You do not currently have an answer recorded for the following: </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft0">[1</font><font face = "Monospace" size = "5" class = "qind" id = "qleft0A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft0B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft1">[2</font><font face = "Monospace" size = "5" class = "qind" id = "qleft1A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft1B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft2">[3</font><font face = "Monospace" size = "5" class = "qind" id = "qleft2A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft2B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft3">[4</font><font face = "Monospace" size = "5" class = "qind" id = "qleft3A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft3B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft4">[5</font><font face = "Monospace" size = "5" class = "qind" id = "qleft4A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft4B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft5">[6</font><font face = "Monospace" size = "5" class = "qind" id = "qleft5A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft5B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft6">[7</font><font face = "Monospace" size = "5" class = "qind" id = "qleft6A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft6B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft7">[8</font><font face = "Monospace" size = "5" class = "qind" id = "qleft7A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft7B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft8">[9</font><font face = "Monospace" size = "5" class = "qind" id = "qleft8A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft8B">]  </font><font face = "Monospace" size  = "5" class = "qind" id = "qleft9">[10</font><font face = "Monospace" size = "5" class = "qind" id = "qleft9A"></font><font face = "Monospace" size = "5" class = "qind" id = "qleft9B">]</font><br>
+<input type = "button" id = "sbut" value = "Click to Submit" onclick = "endProcedure();">
+<style>
+.qind{
+background-color: #FFFF00;
+color: #000000; }
+</style>
+
+<input type = "hidden" name = "studId" id = "studId" value = "">
+<input type = "hidden" name = "order" id = "order" value = "">
+<input type = "hidden" name = "varsq1" id = "varsq1" value = "">
+<input type = "hidden" name = "stanswersq1" id = "stanswersq1" value = "">
+<input type = "hidden" name = "varsq2" id = "varsq2" value = "">
+<input type = "hidden" name = "stanswersq2" id = "stanswersq2" value = "">
+<input type = "hidden" name = "varsq3" id = "varsq3" value = "">
+<input type = "hidden" name = "stanswersq3" id = "stanswersq3" value = "">
+<input type = "hidden" name = "varsq4" id = "varsq4" value = "">
+<input type = "hidden" name = "stanswersq4" id = "stanswersq4" value = "">
+<input type = "hidden" name = "varsq5" id = "varsq5" value = "">
+<input type = "hidden" name = "stanswersq5" id = "stanswersq5" value = "">
+<input type = "hidden" name = "varsq6" id = "varsq6" value = "">
+<input type = "hidden" name = "stanswersq6" id = "stanswersq6" value = "">
+<input type = "hidden" name = "varsq7" id = "varsq7" value = "">
+<input type = "hidden" name = "stanswersq7" id = "stanswersq7" value = "">
+<input type = "hidden" name = "varsq8" id = "varsq8" value = "">
+<input type = "hidden" name = "stanswersq8" id = "stanswersq8" value = "">
+<input type = "hidden" name = "varsq9" id = "varsq9" value = "">
+<input type = "hidden" name = "stanswersq9" id = "stanswersq9" value = "">
+<input type = "hidden" name = "varsq10" id = "varsq10" value = "">
+<input type = "hidden" name = "stanswersq10" id = "stanswersq10" value = "">
+</body>
+
+<script type = "text/JavaScript">
+
+const caps = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const digits = ["0","1","2","3","4","5","6","7","8","9"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const alphamon = ["April","August","December","February","January","July","June","March","May","November","October","September"];
+const dscrpt = ["BLUE","RED","GREEN","PURPLE","YELLOW","BLACK","WHITE","PINK","VIOLET","INDIGO","GRAY","ORANGE","RIPE","ROTTEN","CHEAP","EXPENSIVE","HAPPY","SAD","ANGRY","PERPLEXED","SINGING","DANCING","JUMPING","RUNNING","DISCOUNTED","RARE","SNEAKY","EVIL","GOOD","PUZZLED","GRAND"];
+const fruits = ["APPLE","PEAR","LEMON","ORANGE","PINEAPPLE","GRAPE","GRAPEFRUIT","STRAWBERRY","RASPBERRY","BLUEBERRY","LIME","WATERMELON"];
+const funny = ["There are two types of people in the world.  Those that can extrapolate from incomplete data sets.", "There are 10 kinds of people in the world.  Those that understand binary, and those that don't.", "Question: Do the numbers 2.5, <sup>5</sup>/<sub>2</sub> and 2 <sup>1</sup>/<sub>2</sub> constitute math's version of the &quot;there&quot;, &quot;their&quot;, and &quot;they're&quot; argument among Engliticians?<br> Answer: No.", "Interesting fact: Many world-famous mathematicians spent the final years of their lives in mental institutions.  Stay strong.", "As a child, using your imagination was probably a lot more fun than using imaginary number now.","&#128200;&#61;&#128513;","{(&#128020;<sup>3</sup>, &#129374;<sup>&#128020</sup>)|&#9975;+&#129531;=&#127831}...Obviously.","In Ancient Roman, mastering long division was something only geniouses could manage. After all, if you need to borrow an X from the L so that VII/III you would be horrified at the thought of a remainder!","Don't tell anyone, but my ATM PIN is the final four decimals places of &pi;.", "It has been stated that 99% of statistics should not be trusted.  This makes statiticians nearly 10% more trustworthy than an average duck-billed platypus.", "Just like people, some numbers are irrational, others are just plain odd.", "When the Triggy Family had parties, they usually kept their kids Sinch and Cosh out of sight.  They would always get dirty looks from their neighbor's wife, Evie Tothex.", "According to some: &#120529 &#8712; &#8476; According to others, &#120529 &#8712; <em>Greek Alphabet</em>; All can agree that &#120529 &#8712; &#129383;", "The function (2&pi;)<sup>-0.5</sup>e<sup>-(x^2)/2</sup> has been described by many as &quot;quite normal&quot;","&#3058;.  Not sure what it is or what it wants, but it was a result of the search &quot;numbers&quot;"]; 
+const quests = ["In a data set of [A] integers, the [Ba] was determined to be [C].  Calculate the value of the [Bb].","[D]A researcher wishes to determine the average amount a student at UH spends on food week.  To do this, he distributes a survey to first [E] students to leave the dining hall after 12:00 noon.  Identify the [F] in this situation./A researcher is trying to collect data on the percentage of houses in a new development that recycle on a weekly basis.  To do this, he selected a sample of [E] addresses in this development and records whether they left recyclables at the curb for pickup.  Identify the [F] in this situation./A researcher wishes to determine if there is a relationship between temperature and the percent of UH students attending class.  To do this, he monitors a group of [E] UH students over a 30 day period and keeps track of the high temperature and what percent of these students attended their scheduled classes.  Identify the [F] in this situation.[D]","Identify the type of data being described (Select an Answer from each Pulldown Menu):<br>[G]Let <em>X</em> represent the total rainfall, in inches, :Let <em>X</em> represent the number of days it rained :Let <em>X</em> represent the daily weather [Gend]in Seattle over the month of [H].","A researcher randomly selects [I] fish from among [J] fish in a particular tank, and puts [K] each of this selection into their own / this entire selection into one seperate [Kend] tank.  How many ways can this be done?","Records at the UH library show that [L]% of students check out books on History, that [M]% check out books on Science, and [N]% check out books on both.  Determine the probability that a randomly selected student at UH would check out a book on [Oa] History [Ob] Science.","An elementary classroom has [P] students in attendance, of which [Q] have blonde hair.  As part of a class project, a group of [R] students are selected to speak to the kindergardeners down the hall.  What is the probability that [S] of them have blonde hair?","Given:<br>S = {1,2,3,4,5,6,7,8,9}<br>A = {1,2,3,4,5}<br>B = {2,4,6,8}<br>C = {3,6,9}<br>Find: ([T][U][V])<sup>c</sup>.","Select, from the pulldown menus, [W] that are [X] to outliers.","In a certain town, the probability that someone has a second job is [Y].  In a sample of [Z] people surveyed, what is the probability that [AA][AB] of them have a second job?","The casting agent of a movie company knows that only [AC]% of available talent are suited for the lead actress role in the upcoming movie he is casting.  How many auditions should he expect to see before finding the first suitable candidate? <em>(Round to nearest whole number)</em>"];
+const choices = [];
+const questions = [];
+const ans = [];
+const randlist = [];
+const questvars = [];
+const randchoice = [];
+const sortlist = [];
+
+var varSwp = quests[0];
+var Aval = Math.random();
+var Bval = Math.random();
+var Cval = Math.random();
+
+var A = Math.floor(Aval * 1000);
+if ( A < 100 ) { A = A + 100; }
+if ( Bval < 0.5 ) { 	var Ba = "standard deviation";
+			var Bb = "variance"; }
+else {	var Ba = "variance";
+	var Bb = "standard deviation"; }
+var B = Ba.split("")[0];
+var C = Math.floor(Cval * 100)/10;
+if ( C < 0.2 ) { C = C + 0.2; }
+if ( C == 1 ) { C = 1.35; }
+varSwp = varSwp.split("[A]").join(A);
+varSwp = varSwp.split("[Ba]").join(Ba);
+varSwp = varSwp.split("[Bb]").join(Bb);
+varSwp = varSwp.split("[C]").join(C);
+questions[0] = varSwp;
+if ( B == "s" ) { 	var CA = Math.pow(C,2); 
+			var CB = Math.pow(C,0.5); }
+else { 	var CA = Math.pow(C,0.5); 
+	var CB = Math.pow(C,2); }
+choices[0] = Math.floor(CA*1000)/1000;
+choices[10] = Math.floor(CB*1000)/1000;
+choices[20] = Math.floor(A/C*1000)/1000;
+choices[30] = Math.floor(Math.pow(C,0.5)/A*10000000000)/10000000000;
+choices[40] = Math.floor(Math.pow(A*C,0.5)*10000)/10000;
+document.getElementById("varsq1").value = A + ";" + B + ";" + C;
+
+varSwp = quests[1];
+var Dval = 10 * Math.random();
+var Eval = Math.random();
+var Fval = Math.random();
+varSwp = varSwp.split("[D]").join('');
+if ( Dval < 3 ){var D = "food";
+		var subject1 = "students";
+		var subject2 = "UH students"; 
+		varSwp = varSwp.split("/")[0]; }
+else { if ( Dval < 7 ) { var D = "recycle"; 
+			 var subject1 = "houses";
+			 var subject2 = "houses in the development";
+			 varSwp = varSwp.split("/")[1]; }
+else { 	var D = "classes";
+	var subject1 = "students"; 
+	var subject2 = "UH students";
+	varSwp = varSwp.split("/")[2]; }}
+var E = Math.floor(Eval * 100) * 10;
+if ( E < 100 ) { E = E + 100; }
+if ( Fval < 0.5 ) { var F = "sample"; }
+else { var F = "population"; }
+varSwp = varSwp.split("[E]").join(E);
+varSwp = varSwp.split("[F]").join(F);
+questions[1] = varSwp;
+if ( F == "sample" ) {  choices[1] = "The " + String(E) + " " + subject1 + " data was collected on.";
+			choices[11] = "All " + subject2 + ".";}
+else { 	choices[11] = "The " + String(E) + " " + subject1 + " data was collected on.";
+	choices[1] = "All " + subject2 + ".";}
+choices[21] = "All " + subject1 + " in the country.";
+if ( D == "food" ) { 	choices[31] = "The students of the " + String(E) + " interviewed who purchased lunch.";
+			choices[41] = "All UH students, faculty, staff, and administrators."; }
+if ( D == "recycle" ) {	choices[31] = "The houses of the " + String(E) + " monitored that recycle.";
+			choices[41] = "All houses that are considered part of any development.";}
+if ( D == "classes" ) {	choices[31] = "The students of the " + String(E) + " monitored that attended class.";
+			choices[41] = "The 30 days the students were monitored.";}
+document.getElementById("varsq2").value = D + ";" + E + ";" + F;
+
+varSwp = quests[2];
+var Gval = 10 * Math.random();
+var Hval = 12 * Math.random();
+
+if ( Gval < 3 ) { var G = "rainfall"; }
+else { if ( Gval < 7 ) { var G = "raindays"; }
+else { var G = "weather"; }}
+
+var H = months[Math.floor(Hval)];
+
+var beginning = varSwp.split("[G]")[0];
+var ending = varSwp.split("[Gend]")[1];
+ending = ending.split("[H]").join(H);
+var middle1 = varSwp.split("[Gend]")[0].split("[G]")[1].split(":")[0];
+var middle2 = varSwp.split("[Gend]")[0].split("[G]")[1].split(":")[1];
+var middle3 = varSwp.split("[Gend]")[0].split("[G]")[1].split(":")[2];
+
+if ( G == "rainfall" ) { varSwp = beginning + middle1 + ending; }
+if ( G == "raindays" ) { varSwp = beginning + middle2 + ending; }
+if ( G == "weather" ) { varSwp = beginning + middle3 + ending; }
+questions[2] = varSwp;
+choices[2] = "Menu1: Quantitative, Categorical;Menu2: Discrete, Continuous, No Additional Answer";
+choices[12] = "Menu1: Quantitative, Categorical;Menu2: Discrete, Continuous, No Additional Answer";
+choices[22] = "Menu1: Quantitative, Categorical;Menu2: Discrete, Continuous, No Additional Answer";
+choices[32] = "Menu1: Quantitative, Categorical;Menu2: Discrete, Continuous, No Additional Answer";
+choices[42] = "Menu1: Quantitative, Categorical;Menu2: Discrete, Continuous, No Additional Answer";
+document.getElementById("varsq3").value = G + ";" + H;
+
+varSwp = quests[3];
+var Ival = Math.random();
+var Jval = Math.random();
+var Kval = Math.random();
+
+var I = Math.floor(Ival * 10);
+if ( I < 3 ) { I = I + 3; }
+var J = Math.floor(Jval * 10 );
+if ( J < 3 ) { J = J + 3; }
+
+var picked = Math.min(I, J);
+var pickedFrom = Math.max(I, J) + 3;
+
+beginning = varSwp.split("[K]")[0];
+beginning = beginning.split("[I]").join(picked);
+beginning = beginning.split("[J]").join(pickedFrom);
+ending = varSwp.split("[Kend]")[1];
+middle1 = varSwp.split("[Kend]")[0].split("[K]")[1].split("/")[0];
+middle2 = varSwp.split("[Kend]")[0].split("[K]")[1].split("/")[1];
+
+if ( Kval < 0.5) { 	var K = "nPr"; 
+			varSwp = beginning + middle1 + ending; }
+else {	var K = "nCr";
+	varSwp = beginning + middle2 + ending; }
+questions[3] = varSwp;
+
+if ( K == "nPr" ) {	choices[3] = Math.round(counting(pickedFrom,picked,1));
+			choices[13] = Math.round(counting(pickedFrom,picked,2)); }
+else {	choices[3] = Math.round(counting(pickedFrom,picked,2));
+	choices[13] = Math.round(counting(pickedFrom,picked,1)); }
+choices[23] = Math.floor(counting(pickedFrom,picked,3));
+choices[33] = Math.floor(counting(pickedFrom,picked,4));
+choices[43] = Math.floor(pickedFrom * picked);
+document.getElementById("varsq4").value = I + ";" + J + ";" + K;
+
+varSwp = quests[4];
+
+var Lval = Math.random();
+var Mval = Math.random();
+var Nval = Math.random();
+var Oval = Math.random();
+
+var L = Math.floor(Lval * 50);
+if ( L < 10 ) { L = L + 12; }
+var M = Math.floor(Mval * 50);
+if ( M < 10 ) { M = M + 14; }
+var N = Math.floor(Nval * 10);
+if ( N < 2 ) { N = N + 3; }
+if ( L == M && L < 45 ) { L = 1*L + 8; }
+if ( L == M && L > 45 ) { L = L - 12; }
+if ( Oval < 0.5 ) { 	var O = "either/or";
+			var Oa = "either";
+			var Ob = "or"; }
+else {	var O = "neither/nor";
+	var Oa = "neither";
+	var Ob = "nor"; }
+
+varSwp = varSwp.split("[L]").join(L);
+varSwp = varSwp.split("[M]").join(M);
+varSwp = varSwp.split("[N]").join(N);
+varSwp = varSwp.split("[Oa]").join(Oa);
+varSwp = varSwp.split("[Ob]").join(Ob);
+
+questions[4] = varSwp;
+
+if (O == "either/or") {	choices[4] = Math.round(L + M - N)/100;
+			choices[14] = Math.round(100 + N - L - M)/100; }
+else {	choices[14] = Math.round(L + M - N)/100;
+	choices[4] = Math.round(100 + N - L - M)/100; }
+
+choices[24] = Math.round(L + M)/100;
+choices[34] = Math.round(100 - L - M)/100;
+choices[44] = Math.round(M * L)/10000;
+document.getElementById("varsq5").value = L + ";" + M + ";" + N + ";" + O;
+
+varSwp = quests[5];
+var Pval = Math.random();
+var Qval = Math.random();
+var Rval = Math.random();
+var Sval = Math.random();
+
+var P = 20 + Math.floor(20*Pval);
+var Q = 3 + Math.floor(5*Qval);
+var R = 5 + Math.floor(5*Rval);
+var S = Math.floor((R-2) * Sval);
+if (S > Q ) { S = Q; }
+
+varSwp = varSwp.split("[P]").join(P);
+varSwp = varSwp.split("[Q]").join(Q);
+varSwp = varSwp.split("[R]").join(R);
+if ( S == 0 ) { varSwp = varSwp.split("[S]").join('none'); }
+else {  if ( R == S ) { varSwp = varSwp.split("[S]").join('all'); }
+	else { varSwp = varSwp.split("[S]").join(S); }}
+
+questions[5] = varSwp;
+
+var othersTot = P - Q;
+var othersSel = R - S;
+var prob = counting(Q,S,2) * counting(othersTot,othersSel,2) / counting(P,R,2);
+choices[5] = Math.round(prob*100000)/100000;
+var prob = counting(Q,S,2) / counting(P,R,2);
+choices[15] = Math.round(prob*100000)/100000;
+var prob = (S/Q)*(R/P);
+choices[25] = Math.round(prob*100000)/100000;
+var prob = counting(othersTot,othersSel,2) / counting(P,R,2);
+choices[35] = Math.round(prob,100000)/100000;
+var prob = 1 - Number(choices[5]);
+choices[45] = Math.round(prob*100000)/100000;
+document.getElementById("varsq6").value = P + ";" + Q + ";" + R + ";" + S;
+
+varSwp = quests[6];
+var Tval = 10 * Math.random();
+var Uval = Math.random();
+var Vval = 10 * Math.random();
+
+if ( Tval < 5 ) { 	if ( Math.round(Tval) == Math.floor(Tval)) { var T = "A"; }
+			else { var T = "A<sup>c</sup>"; }}
+else {  if ( Math.round(Tval) == Math.floor(Tval)) { var T = "B"; }
+	else { var T = "B<sup>c</sup>"; }}
+
+if ( Uval < 0.5 ) { var U = "union"; }
+else { var U = "intersection"; }
+
+if ( T == "A" || T == "A<sup>c</sup>" ) { 	if ( Vval < 5 ) { 	if ( Math.floor(Vval) == Math.round(Vval)) { var V = "B"; }
+									else { var V = "B<sup>c</sup>"; }}
+						else {	if ( Math.floor(Vval) == Math.round(Vval)) { var V = "C"; }
+							else { var V = "C<sup>c</sup>"; }}}
+else {  if ( Math.floor(Vval) == Math.round(Vval)) { var V = "C"; }
+	else { var V = "C<sup>c</sup>"; }}
+
+varSwp = varSwp.split("[T]").join(T);
+if ( U == "union" ) { varSwp = varSwp.split("[U]").join('&cup;'); }
+else { varSwp = varSwp.split("[U]").join('&cap;'); }
+varSwp = varSwp.split("[V]").join(V);
+
+questions[6] = varSwp;
+const options = ["{7,9}","{6,8}","{7,8}","{6,9}","{1,3,5}","{2,4}","{1,2,4,5}","{3}","{1,5,7}","{3,9}","{2,4,8}","{6}","{1,3,5,6,7,8,9}","{2,4,6,7,8,9}","{1,2,4,5,6,7,8,9}","{3,6,7,8,9}","{1,2,3,4,5,7,9}","{1,2,3,4,5,7,8}","{1,2,3,4,5,7,8,9}","{1,3,5,6,7,9}","{1,2,4,5,6,7,8}","{2,3,4,6,8,9}"];
+if ( U == "union" ) { 	if ( T == "A" ) { 	if ( V == "B" ) { choices[6] = options[0]; }
+						if ( V == "B<sup>c</sup>" ) { choices[6] = options[1];}
+						if ( V == "C" ) { choices[6] = options[2];}
+						if ( V == "C<sup>c</sup>" ) { choices[6] = options[3];}}
+			if ( T == "A<sup>c</sup>" ) {	if ( V == "B" ) { choices[6] = options[4]; }
+							if ( V == "B<sup>c</sup>" ) { choices[6] = options[5];}
+							if ( V == "C" ) { choices[6] = options[6];}
+							if ( V == "C<sup>c</sup>" ) { choices[6] = options[7];}}
+			if ( T == "B" ) { 	if ( V == "C" ) { choices[6] = options[8];}
+						if ( V == "C<sup>c</sup>" ) { choices[6] = options[9];}}
+			if ( T == "B<sup>c</sup>" ) {	if ( V == "C" ) { choices[6] = options[10];}
+							if ( V == "C<sup>c</sup>" ) { choices[6] = options[11];}}}
+else { if ( T == "A" ) { if ( V == "B" ) { choices[6] = options[12]; }
+			 if ( V == "B<sup>c</sup>" ) { choices[6] = options[13];}
+			 if ( V == "C" ) { choices[6] = options[14];}
+			 if ( V == "C<sup>c</sup>" ) { choices[6] = options[15];}}
+	if ( T == "A<sup>c</sup>" ) {	if ( V == "B" ) { choices[6] = options[16]; }
+					if ( V == "B<sup>c</sup>" ) { choices[6] = options[17];}
+					if ( V == "C" ) { choices[6] = options[6];}
+					if ( V == "C<sup>c</sup>" ) { choices[6] = options[18];}}
+	if ( T == "B" ) { if ( V == "C" ) { choices[6] = options[19];}
+			  if ( V == "C<sup>c</sup>" ) { choices[6] = options[20];}}
+	if ( T == "B<sup>c</sup>" ) {	if ( V == "C" ) { choices[6] = options[21];}
+					if ( V == "C<sup>c</sup>" ) { choices[6] = options[22];}}}
+for ( m = 1; m < 5; m++ ) { 	var chIn = Math.floor(16*Math.random());
+				if ( choices.indexOf(options[chIn]) == -1 ) { choices[6+10*m] = options[chIn]; }
+				else { m = m - 1; }}
+				
+document.getElementById("varsq7").value = T + ";" + U + ";" + V;
+	
+varSwp = quests[7];
+var Wval = 10 * Math.random();
+var Xval = 10 * Math.random();
+
+if ( Wval < 2 ) { var W = "CC"; }
+else {  if ( Wval < 5 ) { var W = "CD"; }
+	else {  if ( Wval < 8 ) { var W = "DC"; }
+		else { var W = "DD"; }}}
+
+if ( W == "CC" ) { varSwp = varSwp.split("[W]").join('two measures of center'); }
+if ( W == "CD" ) { varSwp = varSwp.split("[W]").join('first, a measure of center, then a measure of dispersion'); }
+if ( W == "DC" ) { varSwp = varSwp.split("[W]").join('first, a measure of dispersion, then a measure of center'); }
+if ( W == "DD" ) { varSwp = varSwp.split("[W]").join('two measures of dispersion'); }
+
+if ( Xval < 2 ) { var X = "CC"; }
+else {  if ( Xval < 5 ) { var X = "CN"; }
+	else {  if ( Xval < 8 ) { var X = "NC"; }
+		else { var X = "NN"; }}}
+
+if ( X == "CC" && W == "CC" ) { if ( Math.random() < 0.5 ) { X = "NC"; }
+				else { W = "DC"; }}
+if ( X == "NN" && W == "DD" ) { if ( Math.random() < 0.5 ) { X = "CN"; }
+				else { W = "CD"; }}
+
+if ( X == "CC" ) { varSwp = varSwp.split("[X]").join('both reactant'); }
+if ( X == "CN" ) { varSwp = varSwp.split("[X]").join('reactant and resistant, respectfully,'); }
+if ( X == "NC" ) { varSwp = varSwp.split("[X]").join('resistant and reactant, respectfully,'); }
+if ( X == "NN" ) { varSwp = varSwp.split("[X]").join('both resistant'); }
+
+document.getElementById("varsq8").value = W + ";" + X;
+questions[7] = varSwp;
+
+choices[7] = "Menu1/2: Select First/Second Measure, Mean, Median, Mode, Variance, Standard Deviation, Range, Interquartile Range";
+choices[17] = choices[7];
+choices[27] = choices[7];
+choices[37] = choices[7];
+choices[47] = choices[7];
+
+varSwp = quests[8];
+var Yval = Math.random();
+var Zval = Math.random();
+var AAval = 10*Math.random();
+var ABval = Math.random();
+
+var Y = Math.floor(Yval * 500)/1000;
+if ( Y < .1 ) { Y = Math.floor((Y + .1)*1000)/1000; }
+var Z = Math.floor(Zval * 10);
+var AB = Math.floor(ABval * 10);
+if (AB == Z) { AB = AB + 2; }
+var samp = Math.max(Z,AB);
+var slct = Math.min(Z,AB);
+if ( samp < 5 ) { samp = samp + 5; }
+if ( slct == 0 ) { slct = 2; }
+if ( AAval < 2 ) { var AA = "exactly"; }
+else { if ( AAval < 4 ) { var AA = "less than"; }
+else { if ( AAval < 6 ) { var AA = "at most"; }
+else { if ( AAval < 8 ) { var AA = "at least"; }
+else { var AA = "more than";}}}}
+
+varSwp = varSwp.split("[Y]").join(Y);
+varSwp = varSwp.split("[Z]").join(samp);
+varSwp = varSwp.split("[AA]").join(AA);
+varSwp = varSwp.split("[AB]").join(slct);
+
+document.getElementById("varsq9").value = Y + ";" + samp + ";" + AA + ";" + slct;
+questions[8] = varSwp;
+
+var scs = Y;
+var flr = 1 - Y;
+var nos = slct;
+var nof = samp - slct;
+
+var ex = counting(samp,nos,2) * Math.pow(scs,nos) * Math.pow(flr,nof);
+var lt = 0;
+for (z = 0; z < nos; z++ ) { lt = lt + counting(samp,z,2) * Math.pow(scs,z) * Math.pow(flr,samp-z); }
+var am = ex + lt;
+var al = 1 - lt;
+var mt = 1 - am;
+
+choices[8] = ex;
+choices[18] = lt;
+choices[28] = mt;
+choices[38] = am;
+choices[48] = al;
+if ( AA == "less than" ) { 	choices[8] = lt; 
+				choices[18] = ex; }
+if ( AA == "more than" ) { 	choices[8] = mt; 
+				choices[28] = ex; }
+if ( AA == "at most" ) { 	choices[8] = am; 
+				choices[38] = ex; }
+if ( AA == "at least" ) { 	choices[8] = al; 
+				choices[48] = ex; }
+
+varSwp = quests[9];
+var ACval = Math.random();
+
+var AC = Math.floor(ACval * 15);
+if (AC < 5) { AC = AC + 11; }
+
+varSwp = varSwp.split("[AC]").join(AC);
+questions[9] = varSwp;
+document.getElementById("varsq10").value = AC;
+
+choices[9] = Math.round(100/AC);
+choices[19] = Math.round(1/AC);
+choices[29] = Number(choices[9]) + 1;
+choices[39] = Math.floor(100000/AC)/1000;
+choices[49] = Math.round(AC/10);
+
+const nch = [0,3,4,5,8,9];
+for ( k = 0; k < 6; k++ ) {
+	const chs = [];
+	for ( j = 0; j < 5; j++) {
+		var chInd = 10*j + Number(nch[k]);
+		chs[j] = choices[chInd];
+		for ( h = 0; h < j; h++ ) {  
+ 			if ( chs[j] == chs[h] ) { chs[j] = 1.15 * Math.max.apply(null,chs); }}
+		choices[chInd] = chs[j]; }}
+
+function endProcedure() {
+	document.getElementById("sbut").disabled = true;
+	document.getElementById("Question11").disabled = true;
+	document.getElementById("Question12").disabled = true;
+	document.getElementById("Question13").disabled = true;
+	document.getElementById("sbut").value = "Please Wait...";
+	clearInterval(timerSet);
+	var idfn = document.getElementById("itsatrap").innerHTML.split(" ")[0];
+	if ( document.getElementById("ftxt").value.length < 3 ) { var idf3 = idfn.toUpperCase().split("")[0]+idfn.toUpperCase().split("")[1] + "-"; }
+	else { var idf3 = idfn.toUpperCase().split("")[0]+idfn.toUpperCase().split("")[1]+idfn.toUpperCase().split("")[2]; }
+	var idln = document.getElementById("itsatrap").innerHTML.split(" ")[1];
+	if ( document.getElementById("ltxt").value.length < 3 ) { var idl3 = idln.toUpperCase().split("")[0]+idln.toUpperCase().split("")[1] + "-"; }
+	else { var idl3 = idln.toUpperCase().split("")[0]+idln.toUpperCase().split("")[1]+idln.toUpperCase().split("")[2]; }
+	var idid = document.getElementById("itsatrap").innerHTML.split(" ")[2];
+	var lettEnc = String(lenc(idl3)) + String(lenc(idf3));
+	var idEnc = idenc(idid);
+	var ident = lettEnc + idEnc;
+	var stAns = "";
+	for ( a = 0; a < 10; a++ ) { var b = a + 1;
+		var qp = 0;
+		var SA = "Ans" + String(a);
+		if ( document.getElementById(SA).innerHTML == "" ) { var answer1 = "Z"; }
+		else { var answer1 = document.getElementById(SA).innerHTML.split("Answer: ")[1]; }
+		if ( caps.indexOf(answer1) == -1 ) { 
+			var answer1A = answer1.split(";")[0].split("")[0];
+			if ( answer1A == "M" ) { answer1A = "M" + answer1.split(";")[0].split("")[1] + answer1.split(";")[0].split("")[2]; }
+			var answer1B = answer1.split(";")[1].split("")[0];
+			if ( answer1B == "M" ) { answer1B = "M" + answer1.split(";")[1].split("")[1] + answer1.split(";")[1].split("")[2]; }
+			stAns = stAns + "L" + answer1A + ";" + answer1B + "L";
+			document.getElementById("pull"+String(a)+"A").disabled = true;
+			document.getElementById("pull"+String(a)+"B").disabled = true; }
+		else { stAns = stAns + answer1; 
+		for ( c = 0; c < 5; c++ ) {
+			var QB = caps[c] + String(a);
+			document.getElementById(QB).disabled = true; }}}
+	document.getElementById("sbut").style = "background-color: red;";
+	var anslist = ans.join('');
+	document.getElementById("st").innerHTML = ident;
+	document.getElementById("sa").innerHTML = stAns;
+	document.getElementById("ak").innerHTML = anslist;
+	var theCodiest = codify(); 
+	var thisUrl = window.location.href;
+	var newUrl = thisUrl.split("1342Test1").join('handitin');
+	newUrl = newUrl + "?who=" + document.getElementById("Student").innerHTML + "&what=MATH1342Test1&eek=" + theCodiest; 
+	var subme = window.open(newUrl);}
+var hour;
+var mins;
+var secs;
+function codify() { 
+	const randCdcs = [];
+	const sortCdcs = [];
+	var cdor = "";
+	var stdnt = document.getElementById("st").innerHTML;
+	var ultimo = "";
+	var primo = "";
+	var numero = stdnt.split("")[18];
+	for ( t = 0; t < 9; t++ ) {	ultimo = ultimo + String(stdnt.split("")[t]);
+					primo = primo + String(stdnt.split("")[t+9]);
+					numero = numero + String(stdnt.split("")[t+19]);}
+
+	var saki = document.getElementById("sa").innerHTML;
+	var kiev = document.getElementById("ak").innerHTML;
+	var pheonix = sortlist.join('');
+	const codeces = [ultimo, primo, numero, kiev, saki, pheonix];
+	for ( i = 0; i < 6; i++ ) { randCdcs[i] = Math.random(); }
+	for ( j = 0; j < 6; j++ ) {	var minimus = Math.min.apply(null,randCdcs);
+					var minInd = randCdcs.indexOf(minimus);
+					randCdcs[minInd] = 2;
+					sortCdcs[j] = codeces[minInd];
+					var cheese = Math.pow(minInd,2);
+					cdor = cdor + caps[cheese]; }
+	var varnish = "";
+	for ( v = 0; v < 10; v++ ) { 	var varsFind = "varsq" + String(v+1);
+					varnish = varnish + "{" + document.getElementById(varsFind).value + "}"; }
+var goodstuff = cdor + sortCdcs.join('') + varnish;
+document.getElementById("st").innerHTML = "Below is your code.  The exam is not submitted until you email this code to me,";
+document.getElementById("sa").innerHTML = "<em>and you will have a copy in your &quot;Sent&quot; messages.</em>";
+document.getElementById("ak").innerHTML = goodstuff;
+document.getElementById("emailcode").href = "mailto:caputoattendance@gmail.com?subject=test1code&body="+ goodstuff;
+document.getElementById("emailcode").innerHTML = goodstuff;
+return goodstuff; }
+
+function lenc(a) {
+	var fl = caps.indexOf(a.split("")[0]);
+	var sl = caps.indexOf(a.split("")[1]);
+	var last = a.split("")[2];
+	if ( last == "-" ) { var ll = 50; }
+	else { var ll = caps.indexOf(last); }
+	var theletters = String(numenc(fl)) + String(numenc(sl)) + String(numenc(ll)); 
+return theletters; }
+
+function numenc(n) {
+	var powpow = Math.pow(n,7)
+	var lefty = powpow - Math.floor(powpow/155)*155;
+	if ( lefty < 10 ) { var nenc = "00" + String(lefty); }
+	else { if ( lefty < 100 ) { var nenc = "0" + String(lefty); }
+	else { var nenc = String(lefty); }}
+return nenc; }
+
+function idenc(i) {
+	var first = i.split("")[0];
+	var second = i.split("")[1] + i.split("")[2];
+	var third = i.split("")[3] + i.split("")[4];
+	var forth = i.split("")[5] + i.split("")[6];
+	if ( first == "0" ) { var f = "a"; }
+	else {  if ( first == "1" ) { var f = "b"; }
+		else { var f = "c"; }}
+	var s = numenc(second);
+	var t = numenc(third);
+	var l = numenc(forth);
+	var retty = f + String(s) + String(t) + String(l);
+return retty; }
+var startingTime = 0;
+function sort() {
+	var d = new Date();
+	var mon = d.getMonth() + 1;
+	var monName = months[mon];
+	var day = d.getDate();
+	hour = d.getHours();
+	var year = d.getYear() + 1900;
+	mins = d.getMinutes();
+	secs = d.getSeconds();
+
+var theCode = document.getElementById("code").value;
+if (theCode == "") {document.getElementById("Title").innerHTML = "<em><b>Seriously?  You're not even going to make something up for the code?</b></em>"; 
+return null; }
+var testdate = unCode(theCode,year);
+const timebroken = testdate.split("");
+var hours = timebroken[8] + timebroken[9];
+startingTime = 3600 * hour + 60 * mins + secs;
+const totTime = 5400;
+const timerSet = setInterval(function(){timer(startingTime,totTime)},1000);
+setTimeout(function(){endMessage()},totTime*1000);
+if ( hour > 12 ) { hour = hour - 12; }
+	if (mon < 10) { var heyMon = "0" + String(mon); }
+		else { var heyMon = String(mon); }
+	if (day < 10) { var heyDay = "0" + String(day); }
+		else { var heyDay = String(day); }
+	if (hour < 10) { var notYours = "0" + String(hour); }
+		else {var notYours = String(hour);}
+
+	var theNow = heyMon + heyDay + String(year) + notYours;
+	var FirstName = document.getElementById("ftxt").value;
+	var LastName = document.getElementById("ltxt").value;
+	var studid = document.getElementById("ptxt").value; 
+
+	if ( FirstName == "" || LastName == "" || studid == "" ) { 	document.getElementById("Title").innerHTML = "<b><em>YOU MUST HAVE ALL OF THE FOLLOWING COMPLETED TO CONTINUE: <br>FIRST NAME,  LAST NAME, AND STUDENT ID!!!</em></b>"; 
+									return null; }
+	if (parseInt(studid) < 1000000 || parseInt(studid) > 9999999 ){ document.getElementById("Title").innerHTML = "<b><em>STUDENT ID MUST BE A 7-DIGIT NUMBER!!!</em></b>"; 
+									return null; }
+
+if (testdate == theNow) { var escapeHatch = "Loud Silence"; }
+else { document.getElementById("letsGetStarted").innerHTML = "We have a problem!";
+var escapeHatch = prompt("Enter Another Code:", "");}
+if (escapeHatch == "Loud Silence") { document.getElementById("itsatrap").innerHTML = FirstName + " " + LastName + " " + studid + " " + monName + " " + day + ", " + year;
+document.getElementById("directions").innerHTML = "For Questions 1 - 10, click your answer choice (A, B, C, D, or E). Your selection will appear above that question.";
+document.getElementById("directions2").innerHTML = "For Questions 11 - 13, Click the Buttons Below to Answer. The questions will appear in a new window.  You must submit each of these questions seperately."; }
+else {	document.getElementById("letsGetStarted").innerHTML = "INVALID TEST TIME";
+	document.getElementById("Title").innerHTML = "<b>You have attempted to view the test at the wrong time, and you have been caught!</b> Refresh your page and sign in at the correct time.";
+	const timerSet = setInterval(function() { document.getElementById("Title").innerHTML = document.getElementById("Title").innerHTML + "<b>&#129327;You have attempted to view the test early, and you have been caught!</b> Refresh your page and sign in at the correct time.&#128562;<br>"},3000);
+	return null; }
+
+	document.getElementById("ftxt").disabled = true;
+	document.getElementById("ltxt").disabled = true;
+	document.getElementById("ptxt").disabled = true;
+	document.getElementById("code").disabled = true;
+	document.getElementById("startbut").disabled = true;
+	document.getElementById("Inst1").innerHTML = "Information you entered:";
+	document.getElementById("Inst2").innerHTML = ""; 
+
+	for ( haha = 0; haha < 6; haha++ ) {
+		var giggle = Math.random() * 70;
+		var chuckle = Math.floor(giggle);
+		var gafow = 128512 + chuckle;
+		var lol = "&#" + String(gafow) + ";"; 
+	document.getElementById("fun").innerHTML = document.getElementById("fun").innerHTML + lol + "  "; }
+	document.getElementById("fun").innerHTML = document.getElementById("fun").innerHTML + "<br>" + funny[Math.floor(Math.random()*14.78)];
+
+document.getElementById("linkTitle").innerHTML = "Useful links provided below:";
+document.getElementById("Link1").innerHTML = "R Studio";
+document.getElementById("Link2").innerHTML = "Casa Calculator";
+document.getElementById("Link3").innerHTML = "Test 1 Formulas";
+
+for ( b = 0; b < 10; b++ ) { randlist[b] = Math.random(); }
+for ( e = 0; e < 50; e++ ) { randchoice[e] = Math.random(); }
+for ( c = 0; c < 10; c++ ) {
+	var nextQR = Math.min.apply(null,randlist);
+	var nextQ = randlist.indexOf(nextQR);
+	randlist[nextQ] = 10;
+	if ( nextQ == 2 || nextQ == 7 ) { sortlist[c] = String(nextQ) + "99999"; }
+	else {	var choiceorder = "";
+		var ch0 = Number(randchoice[5 * c]);
+		var ch1 = Number(randchoice[5 * c + 1]);
+		var ch2 = Number(randchoice[5 * c + 2]);
+		var ch3 = Number(randchoice[5 * c + 3]);
+		var ch4 = Number(randchoice[5 * c + 4]);
+		for ( f = 0; f < 5; f++ ) {
+			var miny = Math.min(ch0,ch1,ch2,ch3,ch4);
+			if ( miny == ch0 ) { 	ans[c] = f;
+						choiceorder = choiceorder + "0"; 
+						ch0 = 100; }
+			if ( miny == ch1 ) { 	choiceorder = choiceorder + "1"; 
+						ch1 = 100; }
+			if ( miny == ch2 ) { 	choiceorder = choiceorder + "2"; 
+						ch2 = 100; }
+			if ( miny == ch3 ) { 	choiceorder = choiceorder + "3"; 
+						ch3 = 100; }
+			if ( miny == ch4 ) { 	choiceorder = choiceorder + "4"; 
+						ch4 = 100; }}
+		sortlist[c] = String(nextQ) + choiceorder; }}
+var qorder = sortlist.join('');
+document.getElementById("order").value = qorder;
+
+for ( q = 0; q < 10; q++ ) {
+	var qAct = Number(q) + 1;
+	var qustStff = sortlist[q];
+	var qNum = qustStff.split("")[0];
+	var QT = "Title" + String(q); 
+	var Qtx = "Text" + String(q);
+	document.getElementById(QT).innerHTML = "Question " +String(qAct) + ":";
+	document.getElementById(Qtx).innerHTML = questions[qNum];
+	const cNum = sortlist[q].split("");
+	cNum.splice(0,1);
+	for ( c = 0; c < 5; c++ ) {
+	if ( cNum[0] < 9 ){	var CB = caps[c] + String(q);
+				var Ctx = "q" + String(q) + caps[c] + "Text";
+				document.getElementById(CB).hidden = false;
+				document.getElementById(CB).value = caps[c];
+				document.getElementById(Ctx).innerHTML = choices[10*cNum[c]+Number(qNum)]; }} 
+	if ( qNum == 2 ) {	document.getElementById("pull" + String(q) + "A").hidden = false;
+				document.getElementById("Blk" + String(q) + "A").innerHTML = "Make a Selection";
+				document.getElementById("Opt1A" + String(q)).innerHTML = "Categorical";
+				document.getElementById("Opt2A" + String(q)).innerHTML = "Quantitative";
+				document.getElementById("Opt3A" + String(q)).hidden = true;
+				document.getElementById("Opt4A" + String(q)).hidden = true;
+				document.getElementById("Opt5A" + String(q)).hidden = true;
+				document.getElementById("NoOpt" + String(q) + "A").innerHTML = "None of these";
+				document.getElementById("pull" + String(q) + "B").hidden = false;
+				document.getElementById("Blk" + String(q) + "B").innerHTML = "Make a Selection";
+				document.getElementById("Opt1B" + String(q)).innerHTML = "Discrete";
+				document.getElementById("Opt2B" + String(q)).innerHTML = "Continuous";
+				document.getElementById("Opt3B" + String(q)).hidden = true;
+				document.getElementById("Opt4B" + String(q)).hidden = true;
+				document.getElementById("Opt5B" + String(q)).hidden = true;
+				document.getElementById("NoOpt" + String(q) + "B").innerHTML = "None of these"; 
+				document.getElementById("qleft" + String(q) + "A").innerHTML = "A"
+				document.getElementById("qleft" + String(q) + "B").innerHTML = "B]";
+				if ( G == "rainfall" ) { ans[q] = "WQ;CW";}
+				if ( G == "raindays" ) { ans[q] = "WQ;DW";}
+				if ( G == "weather" ) { ans[q] = "WC;NW";}}
+	else {	if ( qNum == 7 ) {
+		document.getElementById("pull" + String(q) + "A").hidden = false;
+		document.getElementById("Blk" + String(q) + "A").innerHTML = "Make a Selection";
+		document.getElementById("Opt1A" + String(q)).innerHTML = "Mean";
+		document.getElementById("Opt2A" + String(q)).innerHTML = "Median";
+		document.getElementById("Opt3A" + String(q)).innerHTML = "Mode";
+		document.getElementById("Opt4A" + String(q)).innerHTML = "Standard Deviation";
+		document.getElementById("Opt5A" + String(q)).innerHTML = "Range";
+		document.getElementById("NoOpt" + String(q) + "A").innerHTML = "Interquartile Range";
+		document.getElementById("pull" + String(q) + "B").hidden = false;
+		document.getElementById("Blk" + String(q) + "B").innerHTML = "Make a Selection";
+		document.getElementById("Opt1B" + String(q)).innerHTML = "Mean";
+		document.getElementById("Opt2B" + String(q)).innerHTML = "Median";
+		document.getElementById("Opt3B" + String(q)).innerHTML = "Mode";
+		document.getElementById("Opt4B" + String(q)).innerHTML = "Standard Deviation";
+		document.getElementById("Opt5B" + String(q)).innerHTML = "Range";
+		document.getElementById("NoOpt" + String(q) + "B").innerHTML = "Interquartile Range";
+				document.getElementById("qleft" + String(q) + "A").innerHTML = "A"
+				document.getElementById("qleft" + String(q) + "B").innerHTML = "B]";
+		if ( W.split("")[0] == "C" ) {  if (X.split("")[0] == "C") { var a1 = "M"; }
+						else { var a1 = "MM"; }}
+		else {  if (X.split("")[0] == "C") { 	var a1 = "SR"; }
+			else { var a1 = "I"; }}
+		if ( W.split("")[1] == "C" ) {  if (X.split("")[1] == "C") { var a2 = "M"; }
+						else { var a2 = "MM"; }}
+		else {  if (X.split("")[1] == "C") { 	var a2 = "SR"; }
+			else { var a2 = "I"; }}
+		ans[q] = "W" + a1 + ";" + a2 + "W"; }}}
+
+	var answs = ans.join('');
+	document.getElementById("studId").value = answs;
+	document.getElementById("Question11").hidden = false;
+	document.getElementById("Question12").hidden = false;
+	document.getElementById("Question13").hidden = false; }
+
+function counting(n,r,t) {
+	if ( r == 0 ) { return 1; }
+	var runprod = 1;
+	for ( j = 1; j < Number(n) + 1; j++ ) { runprod = runprod * j; }
+	var nfact = runprod;
+	var runprod = 1;
+	for ( k = 1; k < Number(r) + 1; k++ ) { runprod = runprod * k; }
+	var rfact = runprod;
+	var diff = Number(n) - Number(r);
+	runprod = 1;
+	for ( l = 1; l < diff + 1; l++ ) { runprod = runprod * l; }
+	var nPr = nfact / runprod;
+	var nCr = nPr / rfact;
+if ( t == 1 ) { return nPr; }
+if ( t == 2 ) { return nCr; }
+if ( t == 3 ) { return rfact; }
+if ( t == 4 ) { return nfact; }}
+
+function timer(a,b,c) {
+	var current = new Date();
+	var currentHours = current.getHours();
+	var currentMins = current.getMinutes();
+	var currentSecs = current.getSeconds();
+	var elapsed = 3600 * currentHours + 60 * currentMins + currentSecs - a;
+	var remaining = b - elapsed;
+	var remainingMins = Math.floor(remaining/60);
+	if (remainingMins < 10) {var remainingMins = "0" + String(remainingMins); }
+	else { var remainingMins = String(remainingMins); }
+	var remainingSecs = remaining - remainingMins * 60;
+	if (remainingSecs < 10) {var remainingSecs = "0" + String(remainingSecs); }
+		else { var remainingSecs = String(remainingSecs); }
+	if (remaining > 0) {
+		document.getElementById("TestStatus").innerHTML = "Test In Progress.  Time Remaining: " + remainingMins + " Minutes and " + remainingSecs + " Seconds."; 
+		document.getElementById("letsgetstarted").innerHTML = "Time Remaining: " + remainingMins + ":" + remainingSecs;	}
+	else { 
+		document.getElementById("TestStatus").innerHTML = "Test Concluded.  Time Elapsed.";
+		document.getElementById("letsgetstarted").innerHTML = "Time Elapsed.";
+		endProcedure();
+		clearInterval(timerSet); }}
+
+function ChoiceReset(f) {
+	for ( c = 0; c < 5; c++ ) {
+		var buttId = caps[c] + String(f);
+		document.getElementById(buttId).disabled = false;
+		var textId = "q" + String(f) + caps[c] + "Text";
+		document.getElementById(textId).style = "background-color: white; color: black; font-size: 20px;";
+		var stuff = document.getElementById(textId).innerHTML;
+		if ( stuff.split("")[0] == "<" ) { stuff = stuff.split("</em></b>")[0].split("<b><em>")[1]; }
+		document.getElementById(textId).innerHTML = stuff; }
+		return null; }
+
+function Choice(f) {
+	var lettnum = Math.floor(f/10);
+	var clett = caps[lettnum];
+	var cnum = f - 10 * lettnum;
+	var realNum = cnum + 1;
+	ChoiceReset(cnum);
+	var ansText = "Ans" + String(cnum);
+	var choiceText = "q" + String(cnum) + clett + "Text";
+	var buttId = clett + cnum;
+	document.getElementById(buttId).disabled = true;
+	document.getElementById(ansText).innerHTML = "Answer: " + clett; 
+	var stuff = document.getElementById(choiceText).innerHTML;
+	document.getElementById(choiceText).innerHTML = "<b><em>" + stuff + "</em></b>";
+	document.getElementById(choiceText).style = "background-color: yellow; color: red; font-size: 30px;"; 
+	document.getElementById("qleft" + String(cnum)).style = "color: #FFFF00;";
+	document.getElementById("qleft" + String(cnum) + "B").style = "color: #FFFF00;"; }
+
+function pulley(f) {
+	var lettInd = Math.floor(f/10);
+	if (lettInd == 1) { var lett = "A"; }
+	else { var lett = "B"; }
+	var qnum = f - lettInd * 10;
+	var realNum = qnum + 1;
+	var pullId = "pull" + qnum + lett;
+	var clId0 = "Blk" + qnum + lett;
+	var clId6 = "NoOpt" +  qnum + lett;
+	for (l = 0; l < 7; l++ ) {
+		if ( l == 0 ) { var clId = clId0; }
+		else { if ( l == 6 ) { var clId = clId6; }
+		else { var clId = "Opt" + String(l) + lett + qnum; }}
+		document.getElementById(clId).style = "background-color: white; color: black; font-size: 20px;"; }
+	var opt = document.getElementById(pullId).value;
+	if ( opt == "Blank" ) {	var optId = "Blk" + qnum + lett; }
+	else {  if ( opt == "NoOption" ) { var optId = "NoOpt" + qnum + lett; }
+		else {	var optNo = opt.split("Option")[1];
+			var optId = "Opt" + optNo + lett + qnum; }}
+	var txt = document.getElementById(optId).innerHTML;
+	if (txt == "Make a Selection" ) { txt = ""; }
+	var ansText = "Ans" + qnum;
+	document.getElementById(optId).style = "background-color: yellow; color: red; font-size: 30px;";
+	if ( lett == "A" ) { 	document.getElementById("qleft"+ String(qnum) + "A").style = "color: #FFFF00;";
+				document.getElementById("qleft"+ String(qnum) + "A").innerHTML = "0"; 
+				if ( document.getElementById("qleft" + String(qnum) + "B").innerHTML == "]") { 	document.getElementById("qleft" + String(qnum) + "B").style = "color: #FFFF00;";
+														document.getElementById("qleft" + String(qnum)).style = "color: #FFFF00;"; }}
+	else {  document.getElementById("qleft"+ String(qnum) + "B").innerHTML = "]"; 
+		if ( document.getElementById("qleft" + String(qnum) + "A").innerHTML == "0" ) { document.getElementById("qleft" + String(qnum) + "B").style = "color: #FFFF00;";
+													  document.getElementById("qleft" + String(qnum)).style = "color: #FFFF00;"; }}
+	if ( document.getElementById(ansText).innerHTML == "" ) { 	if ( lett == "A" ) { 	document.getElementById(ansText).innerHTML = "Answer: " + txt + ";"; }
+									else {  document.getElementById(ansText).innerHTML = "Answer: ;" + txt; }}
+	else { 	if ( lett == "A" ) { 	document.getElementById(ansText).innerHTML = "Answer: " + txt + ";" + document.getElementById(ansText).innerHTML.split(";")[1]; }
+		else {  document.getElementById(ansText).innerHTML = document.getElementById(ansText).innerHTML.split(";")[0] + ";" + txt; }}}
+	
+function endMessage() {
+	window.alert("Time Expired. Please Submit your Test!"); }
+
+function BeginFRQ(n) {
+	var fn = document.getElementById("ftxt").value;
+	var ln = document.getElementById("ltxt").value;
+	var idn = document.getElementById("ptxt").value;
+	var stTime = 3600 * hour + 60 * mins + 1*secs;
+	var thisUrl = window.location.href;
+	if ( n == 1 ) { var newUrl = thisUrl.split("1342Test1.html").join('slipperyzebra.html'); }
+	if ( n == 2 ) { var newUrl = thisUrl.split("1342Test1.html").join('daringpigeon.html'); }
+	if ( n == 3 ) { var newUrl = thisUrl.split("1342Test1.html").join('hornlessunicorn.html'); }
+	var urlParams = "?str=" + startingTime + "&stid=" + ln + "_" + fn + "_" + idn;
+	newUrl = newUrl + urlParams;
+	var newq = window.open(newUrl); }
+
+function unCode(n,y) { 
+	const m = n.toUpperCase().split("");
+	var lenny = m.length;
+	var numbToIt = m.splice(m.length-2,2).join('');
+	for ( t = 1; t < lenny-2; t++ ) {
+		m.splice(t,0,";");
+		var frontEnd = m.join('').split(";")[0];
+		var backEnd = m.join('').split(";")[1];
+		m.splice(t,1);
+		var frontCk = dscrpt.indexOf(frontEnd);
+		var backCk = fruits.indexOf(backEnd);
+		var mon = -1;
+		if ( frontCk > -1 && backCk > -1 ) { 	var hour = Number(backCk) + 1;
+							var day = Number(frontCk) + 1;
+							var monthish = Math.floor(numbToIt/10);
+							var almostnothing = numbToIt - monthish * 10;
+							if ( almostnothing < 2 ) { var alphMon = numbToIt; }
+							else { var alphMon = monthish; }
+							mon = months.indexOf(alphamon[alphMon]); 
+							if ( mon > -1 ) { var month = mon + 1; }
+							t = lenny; }}
+		if ( mon == -1 ) { document.getElementById("Title").innerHTML = "One of several possibilities has occurred:<br> (1) Your instructor has been body-snatched by aliens and is currently being digested in a pod.<br>(2) The numeric systems of the world have reach a catastrophic failure and existence needs to reboot<br>(3) That just ain't the right code due to:<br> (a) Attempted User Sneakiness<br>or<br>(b) Instructor needing a year-long vacation.<br> Answer unimportant.<br> Refresh and try again."; }
+		else { 	if ( hour < 10 ) { hour = "0" + String(hour); }
+			if ( day < 10 ) { day = "0" + String(day); }
+			if ( month < 10 ) { month = "0" + String(month); }
+		var unCoded = month + day + String(y) + hour;
+		return unCoded; }}
+
+</script>
+
+</html>

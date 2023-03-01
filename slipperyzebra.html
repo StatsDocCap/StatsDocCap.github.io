@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsgetstarted">Question 11</title>
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id = "Title">Question 11: Box and Whisker Plot</font><br>
+<font face = "Courier" size = "6" id = "Student"></font><br>
+<font face = "Arial" size = "6" id = "Timer"></font><br>
+<font face = "Garamond" size = "6" id = "QText"></font><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "ATitle"></font><font face = "Didot" size = "5" id = "AText"></font><input type = "text" id = "AStd"></span><br>
+<font face = "Copperplate Gothic" size = "6" id = "BTitle"></font><font face = "Didot" size = "5" id = "BText"></font><input type = "text" id = "BStd"><br>
+<span title = "Type None for No Answer, Lists should be have comma(,) seperators"><font face = "Copperplate Gothic" size = "6" id = "CTitle"></font><font face = "Didot" size = "5" id = "CText"></font><input type = "text" id = "CStd"></span><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "DTitle"></font><font face = "Didot" size = "5" id = "DText"></font><input type = "text" id = "DStd"></span><br>
+<span title = "Round Decimal Answers to 4 places"><font face = "Copperplate Gothic" size = "6" id = "ETitle"></font><font face = "Didot" size = "5" id = "EText"></font><input type = "text" id = "EStd"></span><br>
+<font face = "Copperplate Gothic" size = "6" id = "FTitle"></font><font face = "Didot" size = "5" id = "FText"></font><input type = "text" id = "FStd"><br>
+<font face = "Copperplate Gothic" size = "6" id = "GTitle"></font><font face = "Didot" size = "5" id = "GText"></font><input type = "text" id = "GStd"><br>
+<font face = "Copperplate Gothic" size = "6" id = "HTitle"></font><font face = "Didot" size = "5" id = "HText"></font><input type = "text" id = "HStd"><br>
+<font face = "Copperplate Gothic" size = "6" id = "ITitle"></font><font face = "Didot" size = "5" id = "IText"></font><input type = "text" id = "IStd"><br>
+<font face = "Copperplate Gothic" size = "6" id = "JTitle"></font><font face = "Didot" size = "5" id = "JText"></font><font face = "Arial" size = "5" id = "JLab1"></font><input type = "text" id = "JStd1"><font face = "Arial" size = "5" id = "JLab2"></font><input type = "text" id = "JStd2"><br><font face = "Arial" size = "5" id = "JLab3"></font><select name = "OutlierYN" id = "OutlierYN"><option value = "Blank">Yes/No</option><option value = "Yes">Yes</option><option value = "No">No</option></select><input type = "text" id = "JStd3" disabled><br>
+<font face = "Copperplate Gothic" size = "6" id = "KTitle"></font><font face = "Didot" size = "5" id = "KText"></font><select name = "Definition" id = "Definition"><option value = "Blank">Select:</option><option value = "Mean">Mean</option><option value = "Median">Median</option><option value = "Mode">Mode</option><option value = "StndDev">Standard Deviation</option><option value = "LQrt">Lower Quartile</option><option value = "UQrt">Upper Quartile</option><option value = "Range">Range</option><option value = "IQR">Interquartile Range</option><option value = "Outlier">Outlier(s)</option></select><br>
+<font face = "Copperplate Gothic" size = "6" id = "LTitle"></font><font face = "Didot" size = "5" id = "LText"></font><select name = "StdDevChng" id = "StdDevChng"><option value = "Blank">Select:</option><option value = "Inc">Increase</option><option value = "Dec">Decrease</option><option value = "Nuttin">Not Change</option></select><br>
+<font face = "Copperplate Gothic" size = "6" id = "MTitle"></font><font face = "Didot" size = "5" id = "MText"></font><br>
+<font face = "Courier" size = "5" id = "step">First, select the Left and Right End Styles from the menus below, then<br>Click a Button to Draw that Item<br>(Some Buttons are Intentionally Blocked until Ready)</font><br><input type = "button" id = "main" value = "Draw Center Horizontal Line" onclick = "drawBnW(1);" disabled><br><input type = "button" id = "rect" value = "Draw Rectangle" onclick = "drawBnW(2);" disabled><br><input type = "button" id = "medi" value = "Draw Center Vertical Line" onclick = "drawBnW(3);" disabled><br><input type = "button" id = "dots" value = "Add Dots" onclick = "drawBnW(4);" disabled><br><input type = "button" id = "erse" value = "Remove Accidental Dots" onclick = "drawBnW(5);" disabled><br><input type = "button" id = "final" value = "Finalize Plot" onclick = "drawBnW(6);" disabled><br><input type = "button" id = "clrPlt" value = "Clear and Redo Entire Question" onclick = "location.reload();">
+<canvas width="2000" height="550" id="graph"></canvas><br>
+<select name = "lst" id = "lst" style = "background-color:yellow;"><option value = "blnkL">Select Left End Style</option><option value = "VertL">Vertical Line</option><option value = "NoL">No Vertical Line</option></select>
+<canvas width="1500" height="15" id="shade1"></canvas>
+<select name = "rst" id = "rst" style = "background-color:yellow;"><option value = "blnkR">Select Right End Style</option><option value = "VertR">Vertical Line</option><option value = "NoR">No Vertical Line</option></select><br>
+<div class = "slidecontainer" >
+<input type = "text" size = "16" id = "endL" disabled hidden><input type = "range" style = "width: 750px; accent-color: #000000;" min = "0" max = "750" step = "10" value = "700" id = "slide1" hidden><input type = "range" style = "width: 0px; accent-color: #000000;" min = "0" max = "0" step = "10" value = "0" id = "slideR1" hidden><input type = "range" style = "width: 0px; accent-color: #000000;" min = "0" max = "0" step = "10" value = "0" id = "slideC" hidden><input type = "range" style = "width: 0px; accent-color: #000000;" min = "0" max = "0" step = "10" value = "0" id = "slideR2" hidden><input type = "range" style = "width: 750px; accent-color: #000000;" min = "750" max = "1500" step = "10" value = "800" id = "slide2" hidden><input type = "text" size = "17" id = "endR" disabled hidden>
+</div>
+<style>
+input[type='range']::-webkit-slider-runnable-track{
+appearance: none;
+width : 100%;
+height : 15px;
+background-color : #FFFFFF;
+outline : none;}
+input[type='range']::-webkit-slider-thumb{
+-webkit-appearance: none;
+appearance: none;
+width : 25px;
+height : 25px;
+background: #000000;
+outline : #000000; 
+cursor: e-resize;}
+</style><br><br>
+<font face = "courier" size = "5" id = "emailcode"></font>
+<font face = "impact" size = "5" id = "subm"></font><input type = "button" id = "subq" value = "Submit Question" onclick = "endprocedure();">
+
+<input type = "hidden" name = "studId" id = "studId" value = "">
+<input type = "hidden" name = "order" id = "order" value = "">
+<input type = "hidden" name = "varsq1" id = "varsq1" value = "">
+<input type = "hidden" name = "stanswersq1" id = "stanswersq1" value = "">
+<input type = "hidden" name = "varsq2" id = "varsq2" value = "">
+<input type = "hidden" name = "stanswersq2" id = "stanswersq2" value = "">
+<input type = "hidden" name = "varsq3" id = "varsq3" value = "">
+<input type = "hidden" name = "stanswersq3" id = "stanswersq3" value = "">
+<input type = "hidden" name = "varsq4" id = "varsq4" value = "">
+<input type = "hidden" name = "stanswersq4" id = "stanswersq4" value = "">
+<input type = "hidden" name = "varsq5" id = "varsq5" value = "">
+<input type = "hidden" name = "stanswersq5" id = "stanswersq5" value = "">
+<input type = "hidden" name = "varsq6" id = "varsq6" value = "">
+<input type = "hidden" name = "stanswersq6" id = "stanswersq6" value = "">
+<input type = "hidden" name = "varsq7" id = "varsq7" value = "">
+<input type = "hidden" name = "stanswersq7" id = "stanswersq7" value = "">
+<input type = "hidden" name = "varsq8" id = "varsq8" value = "">
+<input type = "hidden" name = "stanswersq8" id = "stanswersq8" value = "">
+<input type = "hidden" name = "varsq9" id = "varsq9" value = "">
+<input type = "hidden" name = "stanswersq9" id = "stanswersq9" value = "">
+<input type = "hidden" name = "varsq10" id = "varsq10" value = "">
+<input type = "hidden" name = "stanswersq10" id = "stanswersq10" value = "">
+<input type = "hidden" name = "varsq11" id = "varsq11" value = "">
+<input type = "hidden" name = "stanswersq11" id = "stanswersq11" value = "">
+<input type = "hidden" name = "varsq12" id = "varsq12" value = "">
+<input type = "hidden" name = "stanswersq12" id = "stanswersq12" value = "">
+<input type = "hidden" name = "varsq13" id = "varsq13" value = "">
+<input type = "hidden" name = "stanswersq13" id = "stanswersq13" value = "">
+</body>
+
+<script type = "text/javascript">
+var stInfo = window.location.href.split("&stid=")[1];
+var theRest = window.location.href.split("&stid=")[0];
+var firstName = stInfo.split("_")[1];
+var lastName = stInfo.split("_")[0];
+var idNum = stInfo.split("_")[2];
+document.getElementById("Student").innerHTML = firstName + " " + lastName + " (" + idNum + ")";
+var daStuff = theRest.split("?str=")[1];
+const timerSet = setInterval(function() {
+	var now = new Date();
+	var nowH = now.getHours();
+	var nowM = now.getMinutes();
+	var nowS = now.getSeconds();
+	var whenst = 3600 * nowH + 60 * nowM + nowS;
+	var remainst = 5400 + Number(daStuff) - whenst;
+	var remH = Math.floor(remainst/3600);
+	var remM = Math.floor(( remainst - 3600 * remH ) / 60);
+	var remS = remainst - 3600 * remH - 60 * remM;
+	if ( remH > 0 ) { var dispH = remH + " hours, "; }
+	else { var dispH = ""; }
+	if ( remM > 9 ) { var dispM = remM + " minutes, "; }
+	else { if ( remM > 0 ) { var dispM = "0" + remM + " minutes, "; } 
+		else { var dispM = ""; }}
+	if ( remS > 9 ) { var dispS = remS + " seconds"; }
+	else { if ( remS > 0 ) { var dispS = "0" + remS + " seconds"; } 
+		else { var dispS = ""; }}
+	if ( remainst > 0 ) { document.getElementById("Timer").innerHTML = "Test Time Remaining: " + dispH + dispM + dispS; }
+	else { endprocedure(); }}, 1000);
+setTimeout( function() { document.getElementById("Timer").innerHTML = "Time Elapsed"; }, 5400000);
+
+	const caps = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+	const lowly = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+	const digits = ["0","1","2","3","4","5","6","7","8","9"];
+	const symbols = ["&dollar;","&amp;","&commat;","&num;","&ast;","&plus;","&equals;","&minus;","&percnt;","&excl;","&quest;","&gt;","&lt;","&VerticalLine;","&Hat;","&sol;"];
+	const mixed = [];
+	for ( p = 0; p < 26; p++ ) { 	mixed[2*p] = caps[p];
+					mixed[2*p+1] = lowly[p]; }
+var listSize = 10 + Math.floor(Math.random() * 6);
+var list1 = String(Math.random()).split("").splice(2,16).join('');
+var list2 = String(Math.random()).split("").splice(2,16).join('');
+var listVals = list1 + list2;
+const stow = [];
+const list = [];
+for ( y = 0; y < listSize; y++ ) {
+	var curr = listVals.split("").splice(2*y,2).join(''); 
+	stow[y] = Number(curr); }
+for ( w = 0; w < listSize; w++) {
+	var tiny = Math.min.apply(null,stow); 
+	list[w] = tiny;
+	var tmloc = stow.findIndex( function(u) { return u == tiny; });
+	stow[tmloc] = 100; }
+var dispList = list.join(', ');
+var theQ1 = "The US Treasury was interested in how many people were collecting commemorative &quot;State Name&quot; quarters.  To do this, they asked a sample of 100 randomly selected people from " + listSize + " randomly selected states, if they were collecting these quarters.  The results are as follows:<br>" + dispList + "<br>Determine the following: <br><em>Type &quot;None&quot; for values that do not exist.<br>Multiple values should be seperated with commas.<br>Decimal answers should be rounded to 4 places after the decimal point.</em>";
+var theQ2 = "The Department of Transportation was trying to determine proper budget allocation for road repair.  As part of this process, they sent out a questionaire to " + listSize + " randomly selected people with at least one registered vehicle asking how many times in the past year they sustained major vehicle damage as a result of hitting a pothole.  The results are as follows:<br>" + dispList + "<br>Determine the following: <br><em>Type &quot;None&quot; for values that do not exist.<br>Multiple values should be seperated with commas.<br>Decimal answers should be rounded to 4 places after the decimal point.</em>";
+if (Math.random() < 0.5) { 	var topic = "quarters";
+				document.getElementById("QText").innerHTML = theQ1; }
+else {  var topic = "potholes";
+	document.getElementById("QText").innerHTML = theQ2; }
+const parts = ["Mean", "Median", "Mode(s)", "Variance", "Standard Deviation", "Lower Quartile", "Upper Quartile", "Range", "Interquartile Range", "Range of Possible Outliers: ", "Select the Term Defined As: [definition] ", "If a value of [valFromList] in this list of data were replaced with [newVal], the standard deviation would ", "Create a Box and Whisker Plot, following directions below:"];
+const defs = ["The calculated center of the data.", "The middle, or average of two middle, data values.", "The most frequently occuring value(s) in the data set.", "The mean distance of each data point to the mean of the data.", "The value of the 25<sup>th</sup> percentile.","The value of the 50<sup>th</sup> percentile.", "The value of the 75<sup>th</sup> percentile.", "The spread of the entire data set.", "The spread of the middle half of the data set.", "Values that are distant from, and do not fit the trend of, the majority of the data."];
+var defCh = Math.floor(Math.random()*10);
+var defin = defs[defCh];
+parts[10] = parts[10].split("[definition]").join(defin);
+var numSloc = Math.floor(Math.random()*listSize*0.333);
+if ( Math.floor(numSloc/2)*2 - numSloc == 0 ) { numSloc = listSize - numSloc - 1; }
+if ( numSloc == listSize - 1 ) { var dist = list[numSloc] - list[numSloc - 1]; }
+else { if ( numSloc == 0 ) { var dist = list[numSloc + 1] - list[numSloc]; }
+	else { var dist = Math.min(list[numSloc+1] - list[numSloc],list[numSloc] - list[numSloc - 1]); }}
+if ( Math.random() < 0.5 ) { 	var newLV = Math.ceil(Number(list[numSloc]) + dist * Math.random()); 
+				if (list[numSloc] == newLV ) { newLV = 1 * newLV + 2; }}
+else {  var newLV = Math.floor(list[numSloc] - dist * Math.random()); 
+	if (list[numSloc] == newLV) { newLV = newLV - 2; }}
+parts[11] = parts[11].split("[valFromList]").join(list[numSloc]);
+parts[11] = parts[11].split("[newVal]").join(newLV);
+
+for (q = 0; q < 13; q++ ) {
+	var PT = caps[q] + "Title";
+	var PQ = caps[q] + "Text";
+	document.getElementById(PT).innerHTML = "Part " + caps[q] + ": ";
+	document.getElementById(PQ).innerHTML = parts[q]; }
+document.getElementById("JLab1").innerHTML = "Values less than: ";
+document.getElementById("JLab2").innerHTML = " and Values greater than: ";
+document.getElementById("JLab3").innerHTML = "Does this data set contain outliers? If it does, list them.";
+document.getElementById("subm").innerHTML = "Click to Submit <em>this question only</em>"
+var lineMin = Math.floor(list[0]/10);
+var lineMax = Math.floor(list[list.length - 1]/10);
+var lineStop = lineMax - lineMin + 1;
+var lineJump = Math.floor( 1500/(lineStop));
+var line = document.getElementById("shade1");
+var s = line.getContext("2d");
+s.beginPath();
+s.lineStyle = "black";
+s.lineWidth = "50px";
+s.moveTo(0,0);
+s.lineTo(1500,0);
+s.stroke();
+for ( l = 0; l < lineStop + 1; l++ ) {
+	var sentiment = String(Number(lineMin) + Number(l)) + "0";
+	if ( l == lineStop ) { var wordSt = 1475; }
+	else { var wordSt = lineJump * l; }
+	s.beginPath();
+	s.textStyle = "black";
+	s.textFont = "Arial 30px";
+	s.fillText(sentiment,wordSt,15);
+	s.stroke();}
+
+function endprocedure() {
+	document.getElementById("subq").value = "Working";
+	document.getElementById("subq").disabled = true;
+	document.getElementById("subq").style = "background-color: red;";
+	clearInterval(timerSet);
+	for ( q = 0; q < 9; q++ ) {
+		var ansID = caps[q] + "Std";
+		var stoId = "stanswersq" + String(q+1);
+		document.getElementById(ansID).disabled = true;
+		var answer = document.getElementById(ansID).value;
+		document.getElementById(stoId).value = answer; }
+	document.getElementById("order").value = "Question 11";
+	document.getElementById("studId").value = document.getElementById("Student").innerHTML;
+	document.getElementById("varsq1").value	= dispList;
+	document.getElementById("stanswersq10").value = document.getElementById("JStd1").value + "," + document.getElementById("JStd2").value + "," + document.getElementById("OutlierYN").value + "," + document.getElementById("JStd3").value;
+	document.getElementById("JStd1").disabled = true;
+	document.getElementById("JStd2").disabled = true;
+	document.getElementById("JStd3").disabled = true;
+	document.getElementById("OutlierYN").disabled = true;
+	document.getElementById("varsq11").value = defCh;
+	document.getElementById("stanswersq11").value = document.getElementById("Definition").value;
+	document.getElementById("Definition").disabled = true;
+	document.getElementById("varsq12").value = list[numSloc] + "," + newLV;
+	document.getElementById("stanswersq12").value = document.getElementById("StdDevChng").value;
+	document.getElementById("StdDevChng").disabled = true;
+	document.getElementById("stanswersq13").value = lm.value + "," + olds1 + "," + oldr1 + "," + oldc + "," + oldr2 + "," + olds2 + "," + rm.value;
+	var dotList = dotx.join(',');
+	document.getElementById("varsq13").value = dotList;
+	var stdAns = "";
+	var dataset = "{" + document.getElementById("varsq1").value + "}{" + document.getElementById("varsq11").value + "}{" + document.getElementById("varsq12").value + "}{" + document.getElementById("varsq13").value + "}";
+	for ( p = 1; p < 14; p++ ) { 	stdAns = stdAns + "pb" + document.getElementById("stanswersq" + String(p)).value + "pf"; }
+	var theCodiest = codify(stdAns, dataset); 
+	var thisUrl = window.location.href;
+	var newUrl = thisUrl.split("slipperyzebra").join('handitin');
+	newUrl = newUrl + "?who=" + document.getElementById("Student").innerHTML + "&what=MATH1342Test1Q11&eek=" + theCodiest; 
+	var subme = window.open(newUrl); }
+
+function ansCode(a) {
+	const Stans = a.split("");
+	var A = "";
+	for ( k = 0; k < Stans.length; k++ ) {
+		if ( k < Stans.length - 1 ) {
+		if( Stans[k] == "p" && Stans[k+1] == "b" ) {
+					var capi = Math.floor(Math.random()*26);
+					var starter = caps[capi];
+					A = A + starter;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( Stans[k] == "p" && Stans[k+1] == "f" ) {
+					var fini = Math.floor(Math.random()*36);
+					if ( fini < 10 ) { var finisher = digits[fini]; }
+					else { var finisher = lowly[fini-10]; } 
+					A = A + finisher;
+					Stans[k] = ""; 
+					Stans[k+1] = ""; }
+		if ( digits.indexOf(Stans[k]) > -1 ) {
+			if ( digits.indexOf(Stans[k+1]) > -1 ) { var val = digits.indexOf(Stans[k]) * 10 + Number(digits.indexOf(Stans[k+1]));
+								 var encv = numenc(val - 17);
+								 A = A + String(encv);
+								 Stans[k+1] = ""; }
+			else { if ( Stans[k] < 7 ) { var encv = 1 * Stans[k] + 3; }
+				else { var encv = Stans[k] - 7; }
+				A = A + encv; }}
+		else { if ( mixed.indexOf(Stans[k]) > -1 ) { 	var val = Math.floor(mixed.indexOf(Stans[k])/2);
+								var enc = Math.floor(val * 3.5);
+								if ( enc < 10 ) { var encv = "0" + enc; }
+								else { var encv = String(enc); }
+								A = A + encv; }
+			else { A = A + "."; }}}}
+return A; }
+
+function codify(a,b) {
+	var A = ansCode(a);
+	var fn = document.getElementById("studId").value.split(" ")[0];
+	var ln = document.getElementById("studId").value.split(" ")[1];
+	var id = document.getElementById("studId").value.split("(")[1].split(")")[0];
+ 	var f3 = fn.split("")[0] + fn.split("")[1];
+	if (fn.length < 3) { f3 = f3 + "-"; }
+	else { f3 = f3 + fn.split("")[2]; }
+ 	var l3 = ln.split("")[0] + ln.split("")[1];
+	if (ln.length < 3) { l3 = l3 + "-"; }
+	else { l3 = l3 + ln.split("")[2]; }
+	var unlet = String(lenc(l3)) + String(lenc(f3)) +  String(idenc(id));
+	const randCdcs = [];
+	const sortCdcs = [];
+	var cdor = "";
+	var ultimo = "";
+	var primo = "";
+	var numero = unlet.split("")[18];
+	for ( t = 0; t < 9; t++ ) {	ultimo = ultimo + String(unlet.split("")[t]);
+					primo = primo + String(unlet.split("")[t+9]);
+					numero = numero + String(unlet.split("")[t+19]);}
+
+	const codeces = [ultimo, primo, numero, A];
+	for ( i = 0; i < 6; i++ ) { randCdcs[i] = Math.random(); }
+	for ( j = 0; j < 6; j++ ) {	var minimus = Math.min.apply(null,randCdcs);
+					var minInd = randCdcs.indexOf(minimus);
+					randCdcs[minInd] = 2;
+					sortCdcs[j] = codeces[minInd];
+					var cheese = minInd*3;
+					cdor = cdor + mixed[cheese]; }
+	
+var goodstuff = cdor + sortCdcs.join('') + b;
+goodstuff = goodstuff.split(" ").join('');
+var leng = goodstuff.length;
+const gs = goodstuff.split("");
+var badstuff = "";
+for ( b = 0; b < leng; b++ ) {
+	if ( mixed.indexOf(gs[b]) > -1 ) { badstuff = badstuff + gs[b]; }
+	if ( digits.indexOf(gs[b]) > -1 ) { 	if ( Math.random() < 0.5 ) { 
+							var digs = Number(gs[b]);
+							if ( digs < 6 ) {	var tester = Math.floor(Math.random()*3);
+										var lind = 3 * digs + 1 * tester; }
+							else { 	var tester = Math.floor(Math.random() * 2);
+								var lind = 2 * digs + 1 * tester + 6; }  
+							badstuff = badstuff + lowly[lind]; }
+						else { badstuff = badstuff + gs[b]; }}
+	else {  var tester = Math.floor(Math.random()*16);
+		badstuff = badstuff + symbols[tester]; }}
+
+document.getElementById("emailcode").innerHTML = "This code may be emailed to be with the other codes, or by itself: <br>" + badstuff; 
+return badstuff;}
+
+function lenc(a) {
+	var fl = caps.indexOf(a.split("")[0]);
+	var sl = caps.indexOf(a.split("")[1]);
+	var last = a.split("")[2];
+	if ( last == "-" ) { var ll = 50; }
+	else { var ll = caps.indexOf(last); }
+	var theletters = String(numenc(fl)) + String(numenc(sl)) + String(numenc(ll)); 
+return theletters; }
+
+function numenc(n) {
+	var m = 1 * n + 17;
+	var powpow = Math.pow(m,7)
+	var lefty = powpow - Math.floor(powpow/155)*155;
+	if ( lefty < 10 ) { var nenc = "00" + String(lefty); }
+	else { if ( lefty < 100 ) { var nenc = "0" + String(lefty); }
+	else { var nenc = String(lefty); }}
+return nenc; }
+
+function idenc(i) {
+	var first = i.split("")[0];
+	var second = i.split("")[1] + i.split("")[2];
+	var third = i.split("")[3] + i.split("")[4];
+	var forth = i.split("")[5] + i.split("")[6];
+	if ( first == "0" ) { var f = "a"; }
+	else {  if ( first == "1" ) { var f = "b"; }
+		else { var f = "c"; }}
+	var s = numenc(second);
+	var t = numenc(third);
+	var l = numenc(forth);
+	var retty = f + String(s) + String(t) + String(l);
+return retty; }
+
+var grp = document.getElementById("graph");
+var l = grp.getContext("2d");
+
+l.beginPath
+l.fillStyle = "yellow";
+l.rect(840,535,130,15);
+l.fill();
+
+l.beginPath(); 
+l.fillStyle = "yellow";
+l.strokeStyle = "#DC143C;"
+l.lineWidth = "150px;"
+l.moveTo(65,75);
+l.lineTo(65,500);
+l.lineTo(35,500);
+l.lineTo(75,535);
+l.lineTo(115,500);
+l.lineTo(85,500);
+l.lineTo(85,75);
+l.closePath();
+l.fill();
+l.stroke();
+
+l.beginPath(); 
+l.fillStyle = "yellow";
+l.strokeStyle = "#DC143C;"
+l.lineWidth = "150px;"
+l.moveTo(65+1670,75);
+l.lineTo(65+1670,500);
+l.lineTo(35+1670,500);
+l.lineTo(75+1670,535);
+l.lineTo(115+1670,500);
+l.lineTo(85+1670,500);
+l.lineTo(85+1670,75);
+l.closePath();
+l.fill();
+l.stroke();
+
+var s1 = document.getElementById("slide1");
+var s2 = document.getElementById("slide2");
+var rm = document.getElementById("rst");
+var lm = document.getElementById("lst");
+var sr1 = document.getElementById("slideR1");
+var sr2 = document.getElementById("slideR2");
+var scm = document.getElementById("slideC");
+var out = document.getElementById("OutlierYN");
+
+var olds1 = 700;
+var olds2 = 800;
+var oldr1 = 750;
+var oldr2 = 750;
+var oldc = 750;
+
+lm.onchange = function() {
+lm.style = "background-color: white;"
+l.beginPath();
+l.clearRect(25,50,100,500);
+if( rm.value != "blnkR" ) {
+	document.getElementById("main").disabled = false;
+	document.getElementById("step").innerHTML = document.getElementById("step").innerHTML.split("<br>")[1]+"<br>"+document.getElementById("step").innerHTML.split("<br>")[2]; }}
+
+rm.onchange = function() {
+rm.style = "background-color: white;"
+l.beginPath();
+l.clearRect(25+1670,50,100,500);
+if( lm.value != "blnkR" ) {
+	document.getElementById("main").disabled = false;
+	document.getElementById("step").innerHTML = document.getElementById("step").innerHTML.split("<br>")[1]+"<br>"+document.getElementById("step").innerHTML.split("<br>")[2]; }}
+
+out.onchange = function() {
+if ( out.value == "Yes" ) { document.getElementById("JStd3").disabled = false; }
+else {  document.getElementById("JStd3").disabled = true; 
+	document.getElementById("JStd3").value = "";}} 
+
+s1.oninput = function() { 
+var s1val = this.value;
+var right = olds2 - s1val;
+var oldr1 = (1*s1val + 1*olds2) / 2;
+var oldr2 = (1*s1val + 1*olds2) / 2;
+if (olds1>s1val) {
+l.beginPath();
+l.fillStyle = "yellow";
+l.rect(1*s1val+150,535,right,15);
+l.fill();
+	if ( document.getElementById("step").innerHTML == "<b><em>Center Horizontal in Progress</em></b>") {
+		l.beginPath();
+		l.fillStyle = "black";
+		l.rect(1*s1val+150,245,right,10);
+		l.fill();
+		if (document.getElementById("lst").value == "VertL" ) { 
+			l.beginPath();
+			l.fillStyle = "black";
+			l.rect(1*s1val+150,200,10,100);
+			l.fill();
+
+			l.beginPath();
+			l.clearRect(1*s1val+160,255,right-10,55);
+			l.fill();
+
+			l.beginPath();
+			l.clearRect(1*s1val+160,190,right-10,55);
+			l.fill();}}}
+else{
+l.beginPath();
+l.clearRect(150,0,s1val,550);
+l.fill();
+
+if (document.getElementById("lst").value == "VertL" ) {
+	l.beginPath();
+	l.fillStyle = "black";
+	l.rect(1*s1val+150,200,10,100);
+	l.fill(); }}
+olds1 = s1val;}
+
+s2.oninput = function() { 
+var s2val = this.value;
+oldr1 = (1*olds1 + 1*s2val) / 2;
+oldr2 = (1*olds1 + 1*s2val) / 2;
+var right = s2val - olds1;
+if ( olds2 < s2val ) {
+l.beginPath();
+l.fillStyle = "yellow";
+l.rect(1*olds1+150,535,right,15);
+l.fill(); 
+	if ( document.getElementById("step").innerHTML == "<b><em>Center Horizontal in Progress</em></b>") {
+		l.beginPath();
+		l.fillStyle = "black";
+		l.rect(1*olds1+150,245,right,10);
+		l.fill();
+		if (document.getElementById("rst").value == "VertR" ) { 
+			l.beginPath();
+			l.fillStyle = "black";
+			l.rect(1*s2val+150,200,10,100);
+			l.fill();
+
+			l.beginPath();
+			l.clearRect(1*olds1+160,255,right-10,55);
+			l.fill();
+
+			l.beginPath();
+			l.clearRect(1*olds1+160,190,right-10,55);
+			l.fill(); }
+		else { if (document.getElementById("rst").value == "SadR" || document.getElementById("rst").value == "HapR") { 
+
+			l.beginPath();
+			l.clearRect(1*olds1+160,255,2000-olds2,55);
+			l.fill();
+
+			l.beginPath();
+			l.clearRect(1*olds1+160,190,2000-olds2,55);
+			l.fill();
+
+			l.beginPath();
+			l.fillStyle = "yellow";
+			l.lineStyle = "black";
+			l.lineWidth = "100px";
+			l.arc(1*s2val+200,250,50,0,2*Math.PI);
+			l.fill();
+			l.stroke(); 
+
+			l.beginPath();
+			l.fillStyle = "white";
+			l.lineStyle = "black";
+			l.lineWidth = "50px";
+			l.arc(1*s2val+215,232,15,0,2*Math.PI);
+			l.fill();
+			l.stroke();
+
+			l.beginPath();
+			l.fillStyle = "white";
+			l.lineStyle = "black";
+			l.lineWidth = "50px";
+			l.arc(1*s2val+185,232,15,0,2*Math.PI);
+			l.fill();
+			l.stroke();
+
+			l.beginPath();
+			l.fillStyle = "black";
+			l.lineStyle = "black";
+			l.lineWidth = "50px";
+			l.arc(1*s2val+215,240,5,0,2*Math.PI);
+			l.fill();
+			l.stroke();
+
+			l.beginPath();
+			l.fillStyle = "black";
+			l.lineStyle = "black";
+			l.lineWidth = "50px";
+			l.arc(1*s2val+185,240,5,0,2*Math.PI);
+			l.fill();
+			l.stroke();
+
+			if (document.getElementById("rst").value == "HapR") { 
+			l.beginPath();
+			l.fillStyle = "black";
+			l.arc(1*s2val+200,250,40, 0,Math.PI);
+			l.fill();
+			l.stroke(); 
+
+			l.beginPath();
+			l.fillStyle = "yellow";
+			l.arc(1*s2val+200,250,30,0,Math.PI);
+			l.fill();
+			l.stroke();}
+
+			else {
+			l.beginPath();
+			l.fillStyle = "black";
+			l.arc(1*s2val+200,290,30,Math.PI,0);
+			l.fill();
+			l.stroke(); 
+
+			l.beginPath();
+			l.fillStyle = "yellow";
+			l.arc(1*s2val+200,290,20,Math.PI,0);
+			l.fill();
+			l.stroke();}}}}}
+else {
+l.beginPath();
+l.fillStyle="white";
+l.clearRect(1*s2val+150,535,1500-s2val,15);
+l.fill(); 
+	if ( document.getElementById("step").innerHTML == "<b><em>Center Horizontal in Progress</em></b>") {
+		l.beginPath();
+		l.fillStyle = "white";
+		l.clearRect(1*s2val+150,0,1500-s2val,550);
+		l.fill();
+		if (document.getElementById("rst").value == "VertR" ) { 
+			l.beginPath();
+			l.fillStyle = "black";
+			l.rect(1*s2val+140,200,10,100);
+			l.fill();}}} 
+olds2 = s2val;}
+
+sr1.oninput = function() { 
+var r1val = this.value;
+oldc = Math.floor((1*r1val + 1*oldr2) / 2);
+var right = oldr2 - r1val;
+if ( oldr1 > r1val ){
+l.beginPath();
+l.fillStyle = "yellow";
+l.rect(1*r1val+150,520,right,15);
+l.fill(); 
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*r1val+150,100,right,300);
+l.fill();
+l.beginPath();
+l.clearRect(1*r1val+160,110,right-20,280);
+l.fill();}
+else {
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*r1val+150,100,10,300);
+l.fill();
+l.beginPath();
+l.clearRect(1*olds1+150,520,r1val - olds1,15);
+l.fill();
+l.beginPath();
+l.clearRect(1*olds1+150,0,r1val - olds1, 245);
+l.fill();
+l.beginPath();
+l.clearRect(1*olds1+150,255,r1val - olds1, 245);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*olds1+150,245,r1val - olds1 - 10,10);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*olds1+150,200,10,100);
+l.fill();}
+oldr1 = r1val;}
+
+sr2.oninput = function() { 
+var r2val = this.value;
+oldc = Math.floor(( 1*r2val + 1*oldr1 ) / 2);
+var cent = r2val - oldr1;
+var right = olds2 - r2val;
+if ( oldr2 < r2val ){
+l.beginPath();
+l.fillStyle = "yellow";
+l.rect(1*oldr1+150,520,cent,15);
+l.fill(); 
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*oldr1+150,100,cent,300);
+l.fill();
+l.beginPath();
+l.clearRect(1*oldr1+160,110,cent-20,280);
+l.fill();}
+else {
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*r2val+140,100,10,300);
+l.fill();
+l.beginPath();
+l.clearRect(1*r2val+150,520,right,15);
+l.fill();
+l.beginPath();
+l.clearRect(1*r2val+150,0,r2val - oldr1 - 20, 245);
+l.fill();
+l.beginPath();
+l.clearRect(1*r2val+150,255,r2val - oldr1 - 20, 245);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*r2val+150,245,olds2 - r2val - 10,10);
+l.fill();
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*olds2+150,200,10,100);
+l.fill();}
+oldr2 = r2val;}
+
+scm.oninput = function(){
+var medval = this.value;
+l.beginPath();
+l.fillStyle = "yellow";
+l.rect(1*medval +145,505,10,15);
+l.fill();
+l.beginPath();
+l.clearRect(1*oldr1+145,505,medval - oldr1-5,15);
+l.fill();
+l.beginPath();
+l.clearRect(1*medval+155,505,oldr2 - medval,15);
+l.fill();
+l.beginPath();
+l.clearRect(1*oldr1+160,110,oldr2 - oldr1-20,280);
+l.fill(); 
+l.beginPath();
+l.fillStyle = "black";
+l.rect(1*medval +145,110,10,280);
+l.fill();}
+
+s1.onmousedown = function(){
+s1.max = olds2;
+s2.min = olds2;
+s1.style="width:"+olds2+"px; accent-color: #000000;";
+var rightwid = 1500 - olds2;
+s2.style="width:"+rightwid+"px; accent-color: #000000";}
+
+s2.onmousedown = function(){
+s2.min = olds1;
+s1.max = olds1;
+s1.style="width:"+olds1+"px; accent-color: #000000";
+var newwid = 1500 - olds1;
+s2.style="width:"+newwid+"px; accent-color: #000000";}
+
+sr1.onmousedown = function(){
+var widL = oldr2 - olds1;
+sr1.min = olds1;
+sr1.max = oldr2;
+sr2.min = oldr2;
+var widR = olds2 - oldr2;
+sr2.style="width:"+widR+"px; accent-color: #000000";
+sr1.style="width:"+ widL +"px; accent-color: #000000;";}
+
+sr2.onmousedown = function(){
+var widL = oldr1 - olds1;
+sr2.min = oldr1;
+sr2.max = olds2;
+sr1.max = oldr1;
+var widR = olds2 - oldr1;
+sr2.style="width:"+widR+"px; accent-color: #000000";
+sr1.style="width:"+widL+"px; accent-color: #000000";
+v1.innerHTML = sr1.style.width;
+v2.innerHTML = sr2.style.width;}
+
+var dotting = "Add";
+const dotx = [];
+function drawBnW(n) {
+if ( n == 1 ) {
+	var oldLook = document.getElementById("main").style;
+	lm.disabled = true;
+	rm.disabled = true;
+	document.getElementById("endL").hidden = false;
+	document.getElementById("endR").hidden = false;
+	s2.hidden = false;
+	s1.hidden = false;
+	document.getElementById("main").style = "background-color: yellow;";
+	document.getElementById("main").disabled = true;
+	document.getElementById("rect").style = oldLook;
+	document.getElementById("rect").disabled = false;
+	document.getElementById("dots").disabled = false;	
+	document.getElementById("medi").style = oldLook;
+	document.getElementById("step").innerHTML = "<b><em>Center Horizontal in Progress</em></b>";}
+if ( n == 2 ) {
+	var ran = olds2 - olds1;
+	var nwgr = document.getElementById("graph");
+	var g = nwgr.getContext("2d");
+	g.beginPath();
+	g.fillStyle = "blue";
+	g.rect(1*olds1+150,535,ran,15);
+	g.fill();
+	var rslWid = Math.floor(ran/2);
+	var rgtWid = 1500 - olds2;
+	var oldLook = document.getElementById("rect").style;
+	sr2.hidden = false;
+	sr1.hidden = false;
+	sr1.style = "width: " + rslWid + "px; accent-color: black;";
+	sr1.min = olds1;
+	sr1.max = oldr1;
+	sr1.value = oldr1;
+	sr2.style = "width: " + rslWid + "px; accent-color: black;";
+	sr2.min = oldr2;
+	sr2.max = olds2;
+	sr2.value = oldr2;
+	s1.style = "width: " + olds1 + "px; accent-color: #0000FF;";
+	s2.style = "width: " + rgtWid + "px; accent-color: #0000FF;";
+	s1.max = olds1;
+	s2.min = olds2;
+	s1.disabled = true;
+	s2.disabled = true;
+	document.getElementById("main").style = "background-color: blue;";	
+	document.getElementById("rect").style = "background-color: yellow;";
+	document.getElementById("rect").disabled = true;
+	document.getElementById("medi").disabled = false;
+	document.getElementById("step").innerHTML = "<b><em>Rectangle in Progress</em></b>"; }
+if ( n == 3 ) {
+	var spn = oldr2 - oldr1;
+	var fngr = document.getElementById("graph");
+	var f = fngr.getContext("2d");
+	f.beginPath();
+	f.fillStyle = "green";
+	f.rect(1*oldr1+150,520,spn,15);
+	f.fill();
+	sr1.max = oldr1;
+	sr2.min = oldr2;
+	scm.min = oldr1;
+	scm.max = oldr2;
+	var srlwid = oldr1 - olds1;
+	var srrwid = olds2 - oldr2;
+	sr1.style = "width: " + srlwid + "px; accent-color: #008000;";
+	sr2.style = "width: " + srrwid + "px; accent-color: #008000;";
+	sr1.disabled = true;
+	sr2.disabled = true;
+	scm.hidden = false;
+	var cenwid = oldr2 - oldr1;
+	scm.style = "width: " + cenwid + "px; accent-color: #000000;";
+	scm.value = oldc;
+	document.getElementById("medi").style = "background-color: yellow;";	
+	document.getElementById("rect").style = "background-color: green;";
+	document.getElementById("medi").disabled = true;
+	document.getElementById("final").disabled = false;	
+	document.getElementById("step").innerHTML = "<b><em>Center Vertical in Progress</em></b>";}
+if ( n == 4 ) {
+	if ( dotting == "Add" ) {
+		document.getElementById("erse").disabled = false;
+		document.getElementById("main").disabled = true;
+		document.getElementById("dots").value = "Finished Adding Dots";
+		dotting = "Done";
+		var dotgr = document.getElementById("graph");
+		dotgr.addEventListener("click",addDot);
+		dotgr.style = "cursor: crosshair;";
+		document.getElementById("step").innerHTML = "<b><em>Adding Dots in Progress</em></b>";}
+	else {	document.getElementById("erse").disabled = true;
+		document.getElementById("dots").disabled = true;
+		document.getElementById("dots").style = "background-color: orange;";
+		document.getElementById("erse").style = "background-color: orange;";
+		var dtfgr = document.getElementById("graph");
+		dtfgr.removeEventListener("click",addDot);
+		dtfgr.style = "cursor: default;"; }}
+if ( n == 5 ) {	if ( dotting == "Done" ) {
+			dotting = "Erasing";
+			document.getElementById("erse").value = "Return to Adding Dots";
+			var dtegr = document.getElementById("graph");
+			dtegr.removeEventListener("click",addDot);
+			dtegr.addEventListener("click",removeDot); }			
+		else {  dotting = "Done";
+			document.getElementById("erse").value = "Remove Accidental Dots";
+			var dtagr = document.getElementById("graph");
+			dtagr.removeEventListener("click",removeDot);
+			dtagr.addEventListener("click",addDot); }}
+if ( n == 6 ) { document.getElementById("final").disabled = true;
+		scm.disabled = true;
+		document.getElementById("step").innerHTML = "<b><em>Final Graph</em></b>";
+		document.getElementById("erse").disabled = true; 
+		document.getElementById("dots").disabled = true; }}
+
+function addDot(e) {
+	var gra = document.getElementById("graph");
+	var xstrt = gra.offsetLeft;
+	var xposr = e.pageX;
+	var xval = xposr - xstrt;
+	dotx[dotx.length] = xval;
+	var j = gra.getContext("2d");
+	j.beginPath();
+	j.fillStyle = "black";
+	j.arc(xval,250,5,0,2*Math.PI);
+	j.fill(); }
+
+function removeDot(e) {
+	var gre = document.getElementById("graph");
+	var xstrt = gre.offsetLeft;
+	var xposr = e.pageX;
+	var xval = xposr - xstrt;
+	dotx[dotx.length] = "-" + xval;
+	var k = gre.getContext("2d");
+	k.beginPath();
+	k.clearRect(xval-5,245,10,10); }
+
+</script></html>

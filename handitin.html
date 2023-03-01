@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id = "letsgetstarted">Ignore Me</title>
+</head>
+<body>
+<font face = "Comic Sans MS" size = "7" id = "Title">If you are reading this, I am submitting your code for scoring.  Soon I will disapper and a &quot;Success&quot; message will appear.</font>
+<font face = "Comic Sans MS" size = "7" id = "codey">But here is your code again: </font>
+<form id = "myform" method = "post" action = "https://script.google.com/macros/s/AKfycbwBXYDTKbEH2Xrrz-RUu17PkVH5imGt9lqAaIRi7FaLdiYHAjT0bCuNO8TtrDrQ8H1H/exec" >
+<input type = "hidden" name = "identifiers" id = "identifiers" value = "">
+<input type = "hidden" name = "coursetest" id = "coursetest" value = "">
+<input type = "hidden" name = "code" id = "code" value = "">
+</form>
+</body>
+<script type = "text/javascript">
+var thisUrl = window.location.href;
+var codex = thisUrl.split("&eek=")[1];
+thisUrl = thisUrl.split("&eek=")[0];
+var testInfo = thisUrl.split("&what=")[1];
+thisUrl = thisUrl.split("&what=")[0];
+var studInfo = thisUrl.split("?who=")[1];
+thisUrl = thisUrl.split("?who=")[0];
+
+document.getElementById("codey").innerHTML = document.getElementById("codey").innerHTML + codex;
+document.getElementById("identifiers").value = studInfo;
+document.getElementById("coursetest").value = testInfo;
+document.getElementById("code").value = codex;
+document.getElementById("myform").submit();
+</script>
+</html>
