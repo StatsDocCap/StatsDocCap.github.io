@@ -568,7 +568,7 @@ function endProcedure() {
 	document.getElementById("Question12").disabled = true;
 	document.getElementById("Question13").disabled = true;
 	document.getElementById("sbut").value = "Please Wait...";
-	clearInterval(timerSet);
+	document.getElementById("st").innerHTML = "poop";
 	var idfn = document.getElementById("itsatrap").innerHTML.split(" ")[0];
 	if ( document.getElementById("ftxt").value.length < 3 ) { var idf3 = idfn.toUpperCase().split("")[0]+idfn.toUpperCase().split("")[1] + "-"; }
 	else { var idf3 = idfn.toUpperCase().split("")[0]+idfn.toUpperCase().split("")[1]+idfn.toUpperCase().split("")[2]; }
@@ -605,7 +605,7 @@ function endProcedure() {
 	var theCodiest = codify(); 
 	var thisUrl = window.location.href;
 	var newUrl = thisUrl.split("1342Test1").join('handitin');
-	newUrl = newUrl + "?who=" + document.getElementById("Student").innerHTML + "&what=MATH1342Test1&eek=" + theCodiest; 
+	newUrl = newUrl + "?who=" + document.getElementById("itsatrap").innerHTML + "&what=MATH1342Test1&eek=" + theCodiest; 
 	var subme = window.open(newUrl);}
 var hour;
 var mins;
